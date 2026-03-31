@@ -1,7 +1,7 @@
 import type { LocaleObject, NuxtI18nOptions } from '@nuxtjs/i18n';
 
 export const getActiveLanguages = (): string[] => {
-  const activeLanguages = process.env.LANGUAGELIST || 'en,de';
+  const activeLanguages = process.env.LANGUAGELIST || 'de,en,fr,it,es';
   return activeLanguages.split(',').map((lang) => lang.trim());
 };
 

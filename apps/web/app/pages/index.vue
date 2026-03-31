@@ -1,44 +1,23 @@
 <template>
   <div>
-    <EditablePage :identifier="'index'" :type="'immutable'" />
+    <VideoBanner />
+    <BannerWidget />
+    <TextWidget />
+    <SizeGuide />
+    <ProductWidget />
+    <SizeGuide2 />
   </div>
 </template>
 
-<script lang="ts" setup>
-import type { Block } from '@plentymarkets/shop-api';
-import homepageTemplateDataDe from '~/composables/useCategoryTemplate/homepageTemplateDataDe.json';
-import homepageTemplateDataEn from '~/composables/useCategoryTemplate/homepageTemplateDataEn.json';
+<script setup lang="ts">
+import VideoBanner from "~/components/Home/VideoBanner.vue"
+import TextWidget from "~/components/Home/TextWidget.vue";
+import BannerWidget from "~/components/Home/BannerWidget.vue"
+import SizeGuide from "~/components/Home/SizeGuide.vue";
+import ProductWidget from "~/components/Home/ProductWidget.vue"
+import SizeGuide2 from "~/components/Home/SizeGuide2.vue";
 
 definePageMeta({
   pageType: 'static',
-  isBlockified: true,
-  type: 'immutable',
-  identifier: 'index',
-});
-
-const useLocaleSpecificHomepageTemplate = (locale: string) =>
-  locale === 'de' ? (homepageTemplateDataDe as Block[]) : (homepageTemplateDataEn as Block[]);
-
-const { $i18n } = useNuxtApp();
-const { t } = useI18n();
-
-const { setPageMeta } = usePageMeta();
-const route = useRoute();
-const { setDefaultTemplate } = useCategoryTemplate(
-  route?.meta?.identifier as string,
-  route.meta.type as string,
-  useNuxtApp().$i18n.locale.value,
-);
-
-const icon = 'home';
-setPageMeta(t('homepage.title'), icon);
-
-setDefaultTemplate(useLocaleSpecificHomepageTemplate($i18n.locale.value));
-
-const { getRobots, setRobotForStaticPage } = useRobots();
-getRobots();
-setRobotForStaticPage('Homepage');
-
-const { setBlocksListContext } = useBlockManager();
-setBlocksListContext('content');
+})
 </script>

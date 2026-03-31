@@ -1,6 +1,6 @@
 <template>
   <NarrowContainer class="mb-20 px-4 md:px-0" data-testid="category-layout">
-    <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">{{ title }}</h1>
+    <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">{{ title }} 123321</h1>
     <div class="md:flex gap-6" data-testid="category-page-content">
       <CategorySidebar class="md:w-[303px]" :is-open="isOpen" @close="close">
         <NuxtLazyHydrate when-visible>
@@ -23,7 +23,7 @@
             </template>
             {{ t('listSettings') }}
           </UiButton>
-        </div>
+        </div>777
         <section
           v-if="products?.length"
           class="grid grid-cols-1 2xs:grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 mb-10 md:mb-5"

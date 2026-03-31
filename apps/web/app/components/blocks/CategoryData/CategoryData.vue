@@ -1,5 +1,5 @@
 <template>
-  <div :style="inlineStyle" data-testid="category-data">
+  <div data-testid="category-data">
     <template
       v-if="props.content.displayCategoryImage === 'off' || (!imageUrl && props.content.displayCategoryImage !== 'off')"
     >
@@ -14,7 +14,7 @@
       >
         <div
           v-if="showNoTextMessage"
-          class="text-center"
+          class="text-left"
           role="alert"
           aria-live="polite"
           data-testid="no-text-selected"

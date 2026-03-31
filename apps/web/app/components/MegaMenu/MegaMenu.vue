@@ -1,8 +1,7 @@
 <template>
   <header ref="referenceRef" :class="headerClass" class="relative w-full md:sticky md:shadow-md z-10">
     <div
-      class="flex justify-between items-center flex-wrap md:flex-nowrap px-4 md:px-10 py-2 md:py-5 w-full border-0 border-neutral-200"
-      :style="{ backgroundColor: headerBackgroundColor }"
+      class="flex justify-between items-center flex-wrap md:flex-nowrap px-4 md:px-10 py-2 md:py-5 w-full border-0 border-neutral-200 bg-white"
       data-testid="navbar-top"
     >
       <div class="flex items-center">
@@ -29,10 +28,9 @@
 
       <slot />
     </div>
-
     <nav v-if="viewport.isGreaterOrEquals('lg')" ref="floatingRef">
       <ul
-        class="flex flex-wrap px-6 py-2 bg-white border-b border-b-neutral-200 border-b-solid"
+        class="flex flex-wrap justify-center items-center px-6 py-2 bg-white border-b border-b-neutral-200 border-b-solid"
         @blur="
           (event: FocusEvent) => {
             if (!(event.currentTarget as Element).contains(event.relatedTarget as Element)) {

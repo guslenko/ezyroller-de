@@ -1,8 +1,8 @@
 <template>
   <div
-    class="rounded-md hover:shadow-lg flex flex-col"
+    class="border-none flex flex-col px-1"
     data-testid="product-card"
-    :class="{ 'border border-neutral-200': configuration?.cardBorders }"
+    :class="{ 'border border-gray-300': configuration?.cardBorders }"
   >
     <div class="relative overflow-hidden">
       <UiBadges
@@ -19,6 +19,8 @@
         :class="[{ 'size-48': isFromSlider }, 'relative group/image flex items-center justify-center']"
         as="image"
       >
+      
+        <duv class="bg-[#f3f3f3] rounded-xl border border-gray-200 shadow-md">
         <NuxtImg
           :src="imageUrl"
           :alt="imageAlt"
@@ -29,11 +31,12 @@
           :width="getWidth()"
           :height="getHeight()"
           :class="[
-            'object-contain rounded-md aspect-square w-full transition-opacity duration-300',
+            'object-contain rounded-md aspect-square w-full transition-opacity duration-300 rounded-xl mix-blend-multiply brightness-[1] contrast-[1] p-4',
             effectiveHoverImageUrl ? 'group-hover/image:opacity-0' : '',
           ]"
           data-testid="image-slot"
         />
+        </duv>
         <NuxtImg
           v-if="effectiveHoverImageUrl"
           :src="effectiveHoverImageUrl"
@@ -49,19 +52,10 @@
         />
       </SfLink>
 
-      <template v-if="configuration?.showWishlistButton">
-        <slot name="wishlistButton">
-          <WishlistButton
-            square
-            class="absolute bottom-0 right-0 mr-2 mb-2 bg-white ring-1 ring-inset ring-neutral-200 !rounded-full"
-            :product="product"
-          />
-        </slot>
-      </template>
     </div>
 
     <div
-      class="p-2 border-t border-neutral-200 typography-text-sm flex flex-col flex-auto"
+      class="p-2 text-sm flex flex-col flex-auto"
       :class="{
         'items-center': configuration?.contentAlignment === 'center',
         'items-end': configuration?.contentAlignment === 'right',
@@ -70,16 +64,27 @@
     >
       <template v-for="key in configuration?.fieldsOrder" :key="key">
         <template v-if="key === 'title' && configuration?.fields?.title">
-          <SfLink
-            :tag="NuxtLink"
-            :to="productPath"
-            class="no-underline"
-            variant="secondary"
-            data-testid="productcard-name"
-          >
-            {{ name }}
-          </SfLink>
-        </template>
+  <div class="flex flex-col gap-2">
+
+
+
+    <!-- Название товара (вариант или обычное) -->
+    <SfLink
+      :tag="NuxtLink"
+      :to="productPath"
+      class="no-underline font-medium leading-medium text-sm text-gray-700 hover:text-black"
+      variant="secondary"
+      data-testid="productcard-name"
+    >
+      {{ product.variation?.name || name }}
+    </SfLink>
+
+    
+  </div>
+</template>
+
+
+
         <template v-if="key === 'manufacturer' && configuration?.fields?.manufacturer">
           <div
             v-if="manufacturer"
@@ -92,15 +97,6 @@
         <template v-if="key === 'rating' && configuration?.fields?.rating">
           <div class="flex items-center pt-1 gap-1" :class="{ 'mb-2': !shortDescription }">
             <SfRating size="xs" :half-increment="true" :value="rating ?? 0" :max="5" />
-            <SfCounter size="xs">{{ ratingCount }}</SfCounter>
-          </div>
-        </template>
-        <template v-if="key === 'previewText' && configuration?.fields?.previewText">
-          <div
-            v-if="shortDescription"
-            class="block py-2 font-normal typography-text-xs text-neutral-700 text-justify whitespace-pre-line break-words"
-          >
-            <div class="line-clamp-3" v-html="shortDescription" />
           </div>
         </template>
         <template v-if="key === 'price' && configuration?.fields?.price">
@@ -108,17 +104,17 @@
           <div v-if="showBasePrice" class="mb-2">
             <BasePriceInLine :base-price="basePrice" :unit-content="unitContent" :unit-name="unitName" />
           </div>
-          <div class="flex flex-col-reverse items-start md:flex-row md:items-center mt-auto">
-            <span class="block pb-2 font-bold typography-text-sm" data-testid="product-card-vertical-price">
+          <div class="flex flex-col items-start mt-auto pt-2 pb-1">
+            <span class="block font-semibold text-lg" data-testid="product-card-vertical-price">
               <span v-if="showFromText" class="mr-1">{{ t('account.ordersAndReturns.orderDetails.priceFrom') }}</span>
               <span>{{ format(price) }}</span>
               <span>{{ t('asterisk') }}</span>
             </span>
             <span
               v-if="crossedPrice && differentPrices(price, crossedPrice)"
-              class="typography-text-sm text-neutral-500 line-through md:ml-3 md:pb-2"
+              class="text-sm text-gray-400 flex font-normal line-through"
             >
-              {{ format(crossedPrice) }}
+              UVP {{ format(crossedPrice) }}
             </span>
           </div>
         </template>
@@ -126,7 +122,7 @@
           <UiButton
             v-if="canAddFromCategory"
             size="sm"
-            class="min-w-[80px] w-fit"
+            class="min-w-[80px] w-fit text-lg py-2 px-5"
             data-testid="add-to-basket-short"
             :disabled="loading"
             :variant="configuration?.addToCartStyle || 'primary'"

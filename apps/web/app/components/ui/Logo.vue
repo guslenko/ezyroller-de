@@ -3,10 +3,10 @@
     <template v-if="imageExtension === 'svg'">
       <NuxtImg
         ref="logo"
-        :src="headerLogo"
+        src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/ezyroller/img/ERLOGONEW.svg"
         :alt="`${storeName} logo`"
-        class="w-100 py-2"
-        width="150"
+        class="w-100 py-1 px-1 mx-auto hover:scale-110 transition delay-150 duration-25 ease-in-out origin-bottom hover:-rotate-6"
+        width="160"
         height="40"
         preload
       />
@@ -15,7 +15,7 @@
       <img
         id="logo"
         ref="logo"
-        :src="headerLogo"
+        src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/ezyroller/img/ERLOGONEW.svg"
         :alt="`${storeName} logo`"
         :width="imgWidth"
         :height="imgHeight"

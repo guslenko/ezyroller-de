@@ -1,27 +1,42 @@
 <template>
+  
+
   <NuxtLayout
     name="default"
     :breadcrumbs="breadcrumbs"
-    class="relative"
+    class="relative px-4 md:px-0"
     :class="{ 'pointer-events-none opacity-50': loading }"
   >
+
     <SfLoaderCircular v-if="loading" class="fixed top-[50%] right-0 left-0 m-auto z-[99999]" size="2xl" />
 
     <EditablePage
       :identifier="identifier"
       :type="'category'"
       data-testid="category-page-content"
-      :prevent-blocks-request="productsCatalog.category?.type === 'item'"
+      :prevent-blocks-request="true"
     />
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+
 import { categoryGetters, categoryTreeGetters } from '@plentymarkets/shop-api';
 import { SfLoaderCircular } from '@storefront-ui/vue';
 
 const { t, locale } = useI18n();
-const route = useRoute();
+
+const route = useRoute()
+
+const slugArray = Array.isArray(route.params.slug)
+  ? route.params.slug
+  : route.params.slug
+    ? [route.params.slug]
+    : []
+
+const slug = slugArray.join("/")
+
+
 const router = useRouter();
 const { setCategoriesPageMeta } = useCanonical();
 const { setBlocksListContext } = useBlockManager();
@@ -36,9 +51,8 @@ const identifier = computed(() =>
 
 definePageMeta({
   layout: false,
-  middleware: ['category-guard'],
   type: 'category',
-  isBlockified: true,
+  isBlockified: false,
   identifier: 0,
 });
 

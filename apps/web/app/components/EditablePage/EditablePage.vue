@@ -71,13 +71,6 @@ if (!props.preventBlocksRequest) {
   await getBlocksServer(props.identifier, props.type);
 }
 
-const { footerCache } = useFooter();
-addFooterBlock({
-  data,
-  cachedFooter: footerCache,
-  cleanData,
-});
-
 const {
   isClicked,
   clickedBlockIndex,

@@ -1,87 +1,21 @@
-<template>
-  <MegaMenu :categories="categoryTree">
-    <template v-if="viewport.isGreaterOrEquals('md')">
-      <UiSearch class="hidden md:block flex-1" />
-      <nav class="hidden ml-4 md:flex md:flex-row md:flex-nowrap">
-        <template v-if="localeCodes.length > 1">
-          <UiButton
-            v-if="!isLanguageSelectOpen"
-            class="group relative hover:!bg-header-400 active:!bg-header-400 mr-1 -ml-0.5 rounded-md cursor-pointer"
-            :aria-label="t('languageSelector')"
-            variant="tertiary"
-            :style="{ color: iconColor }"
-            square
-            data-testid="open-languageselect-button"
-            :disabled="(showConfigurationDrawer && isEditing) || (showConfigurationDrawer && disableActions)"
-            @click="toggleLanguageSelect()"
-          >
-            <template #prefix>
-              <SfIconLanguage class="relative" />
-            </template>
-          </UiButton>
-          <UiButton
-            v-else
-            class="group relative hover:!bg-header-400 active:bg-header-400 mr-1 -ml-0.5 rounded-md cursor-pointer"
-            :aria-label="t('languageSelector')"
-            :style="{ color: isActive ? iconColor : '' }"
-            variant="tertiary"
-            square
-            data-testid="open-languageselect-button"
-          >
-            <template #prefix>
-              <SfIconLanguage class="relative" />
-            </template>
-          </UiButton>
-        </template>
-        <UiButton
-          class="group relative hover:!bg-header-400 active:bg-header-400 mr-1 -ml-0.5 rounded-md"
-          :tag="NuxtLink"
-          :to="localePath(paths.wishlist)"
-          :style="{ color: iconColor }"
-          :aria-label="t('numberInWishlist', { count: wishlistItemIds.length })"
-          variant="tertiary"
-          square
-          data-testid="wishlist-page-navigation"
-        >
-          <template #prefix>
-            <SfIconFavorite />
-            <SfBadge
-              :content="wishlistItemIds.length"
-              :style="{ backgroundColor: iconColor, outlineColor: headerBackgroundColor, color: headerBackgroundColor }"
-              class="outline group-hover:outline-primary-800 group-active:outline-primary-700 flex justify-center items-center text-xs min-w-[16px] min-h-[16px]"
-              data-testid="wishlist-badge"
-              placement="top-right"
-              :max="99"
-            />
-          </template>
-        </UiButton>
-        <UiButton
-          class="group relative hover:!bg-header-400 active:!bg-header-400 mr-1 -ml-0.5 rounded-md"
-          :tag="NuxtLink"
-          :style="{ color: iconColor }"
-          :to="localePath(paths.cart)"
-          :aria-label="t('numberInCart', { count: cartItemsCount })"
-          variant="tertiary"
-          square
-        >
-          <template #prefix>
-            <SfIconShoppingCart />
-            <SfBadge
-              :content="cartItemsCount"
-              :style="{ backgroundColor: iconColor, outlineColor: headerBackgroundColor, color: headerBackgroundColor }"
-              class="outline group-hover:outline-primary-800 group-active:outline-primary-700 flex justify-center items-center text-xs min-w-[16px] min-h-[16px]"
-              data-testid="cart-badge"
-              placement="top-right"
-              :max="99"
-            />
-          </template>
-        </UiButton>
+<template>    
+    <div class="mx-auto border-b border-slate-300">
+    <div class="max-w-screen-3xl flex items-center mx-auto py-3">
+
+
+      <UiLogo />
+
+      <UiSearch class="hidden md:block flex-1 relative z-30 px-10" />
+      
+      <nav class="hidden ml-4 md:flex md:flex-row md:flex-nowrap max-w-screen-3xl">
+
+        <LanguageSelectorNew />
+        
         <SfDropdown v-if="isAuthorized" v-model="isAccountDropdownOpen" placement="bottom-end" class="z-50">
           <template #trigger>
             <UiButton
               variant="tertiary"
-              class="relative hover:bg-header-400 active:bg-header-400 rounded-md"
-              :style="{ color: iconColor }"
+              class="group relative hover:!bg-slate-300 active:!bg-slate-300 mr-3 -ml-0.5 rounded-md cursor-pointer shadow-xs border border-slate-300 bg-slate-200 text-slate-700"
               :class="{ 'bg-primary-700': isAccountDropdownOpen }"
               data-testid="account-dropdown-button"
               @click="accountDropdownToggle()"
@@ -92,6 +26,7 @@
               {{ user?.firstName }}
             </UiButton>
           </template>
+          
           <ul class="rounded bg-white shadow-md border border-neutral-100 text-neutral-900 min-w-[152px] py-2">
             <li v-for="({ label, link }, labelIndex) in accountDropdown" :key="`label-${labelIndex}`">
               <template v-if="label === t('account.logout')">
@@ -112,10 +47,10 @@
             </li>
           </ul>
         </SfDropdown>
+        
         <UiButton
           v-else
-          :style="{ color: iconColor }"
-          class="group relative hover:!bg-header-400 active:!bg-header-400 mr-1 -ml-0.5 rounded-md"
+          class="group relative hover:!bg-slate-200 active:!bg-slate-200 mr-3 ml-3 px-4 -ml-0.5 rounded-md cursor-pointer shadow-xs bg-white text-slate-700"
           variant="tertiary"
           :aria-label="t('auth.login.openLoginForm')"
           square
@@ -123,22 +58,33 @@
         >
           <SfIconPerson />
         </UiButton>
+        <UiButton
+          class="group relative hover:!bg-slate-200 active:!bg-slate-200 mr-3 -ml-0.5 rounded-md cursor-pointer shadow-xs bg-swhite px-4 text-slate-700"
+          :tag="NuxtLink"
+          :to="localePath(paths.cart)"
+          :aria-label="t('numberInCart', { count: cartItemsCount })"
+          variant="tertiary"
+          square
+        >
+          <template #prefix>
+            <SfIconShoppingCart />
+            <SfBadge
+              :content="cartItemsCount"
+              :style="{ backgroundColor: iconColor, outlineColor: headerBackgroundColor, color: headerBackgroundColor }"
+              class="outline group-hover:outline-primary-800 group-active:outline-primary-700 flex justify-center items-center text-xs min-w-[16px] min-h-[16px]"
+              data-testid="cart-badge"
+              placement="top-right"
+              :max="99"
+            />
+          </template>
+        </UiButton>
       </nav>
-    </template>
+      
+    </div>
+    
 
     <div v-if="viewport.isLessThan('lg')">
-      <UiButton
-        variant="tertiary"
-        class="relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md md:hidden"
-        square
-        data-testid="open-languageselect-button"
-        :style="{ color: iconColor }"
-        :aria-label="t('languageSelector')"
-        :disabled="(showConfigurationDrawer && isEditing) || (showConfigurationDrawer && disableActions)"
-        @click="toggleLanguageSelect()"
-      >
-        <SfIconLanguage />
-      </UiButton>
+      <LanguageSelectorNew />
       <UiButton
         variant="tertiary"
         class="relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md md:hidden"
@@ -150,15 +96,20 @@
         <SfIconSearch />
       </UiButton>
     </div>
-  </MegaMenu>
-  <LanguageSelector />
+    <ErMenu />
+    </div>
+    
+
+
+
+  
   <UiModal
     v-if="viewport.isGreaterOrEquals('md') && isAuthenticationOpen"
     v-model="isAuthenticationOpen"
     tag="section"
     class="h-full md:w-[500px] md:h-fit m-0 p-0 overflow-y-auto"
   >
-    <header>
+    <header class="relative z-40">
       <UiButton
         :aria-label="t('closeDialog')"
         square
@@ -203,6 +154,7 @@
       <UiSearch :close="searchModalClose" />
     </SfModal>
   </NuxtLazyHydrate>
+  
 </template>
 
 <script setup lang="ts">
@@ -210,22 +162,20 @@ import {
   SfBadge,
   SfDropdown,
   SfIconClose,
-  SfIconLanguage,
   SfIconPerson,
   SfIconSearch,
   SfIconShoppingCart,
   SfListItem,
   SfModal,
-  SfIconFavorite,
   useDisclosure,
 } from '@storefront-ui/vue';
-import LanguageSelector from '~/components/LanguageSelector/LanguageSelector.vue';
+import LanguageSelectorNew from '~/components/LanguageSelector/LanguageSelectorNew.vue';
 import { paths } from '~/utils/paths';
 import { handleLogout } from '~/utils/logout';
+import ErMenu from "./ErMenu.vue";
 
 const isLogin = ref(true);
 const { data: cart } = useCart();
-const { wishlistItemIds } = useWishlist();
 const cartItemsCount = ref(0);
 const { getSetting: getIconColor } = useSiteSettings('iconColor');
 const { getSetting: getHeaderBackgroundColor } = useSiteSettings('headerBackgroundColor');

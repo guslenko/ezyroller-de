@@ -1,38 +1,6 @@
 <template>
   <div class="flex-1">
-    <template v-if="content?.showItemCount">
-      <div
-        class="flex items-center mb-6"
-        :class="{
-          'justify-end': content?.itemCountPosition === 'right',
-          'justify-center': content?.itemCountPosition === 'center',
-          'justify-start': content?.itemCountPosition === 'left',
-        }"
-        data-testid="item-count"
-      >
-        <span class="font-bold md:text-lg">
-          {{
-            t('numberOfProducts', {
-              count: products?.length ?? 0,
-              total: totalProducts,
-            })
-          }}
-        </span>
-      </div>
-    </template>
-
-    <template v-if="content?.paginationPosition === 'top' || content?.paginationPosition === 'both'">
-      <UiPagination
-        v-if="totalProducts > 0"
-        :key="`${totalProducts}-${itemsPerPage}`"
-        :current-page="getFacetsFromURL().page ?? 1"
-        :total-items="totalProducts"
-        :page-size="itemsPerPage"
-        :max-visible-pages="maxVisiblePages"
-        data-testid="pagination-top"
-      />
-    </template>
-    <section v-if="products?.length" :class="gridClasses" data-testid="category-grid">
+    <section v-if="products?.length" class="grid gap-2 md:gap-4 mb-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4" data-testid="category-grid">
       <NuxtLazyHydrate v-for="(product, index) in products" :key="productGetters.getVariationId(product)" when-visible>
         <UiProductCard :product="product" :configuration="content" :index="index" />
       </NuxtLazyHydrate>
@@ -97,7 +65,7 @@ const gridClasses = computed(() =>
       tablet: props.content?.itemsPerRowTablet,
       desktop: props.content?.itemsPerRowDesktop,
     },
-    ['gap-4', 'md:gap-6', 'mb-10', 'md:mb-5'],
+    ['gap-2', 'md:gap-4', 'mb-5'],
   ),
 );
 

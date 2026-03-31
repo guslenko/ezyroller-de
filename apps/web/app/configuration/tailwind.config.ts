@@ -3,16 +3,20 @@ import { tailwindConfig } from '@storefront-ui/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
-const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Red Hat Text';
+const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Noto Sans';
 
 export default {
   presets: [tailwindConfig],
   content: ['./**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
   safelist: [
-    {
-      pattern: /^col-span-(1[0-2]|[1-9])$/,
-    },
-  ],
+  {
+    pattern: /^col-span-(1[0-2]|[1-9])$/,
+  },
+  'grid-cols-4',
+  'grid-cols-2',
+  'grid-cols-7',
+],
+
   theme: {
     extend: {
       sfTypography: () => ({
@@ -77,7 +81,7 @@ export default {
         },
         editor: {
           'body-bg': '#F1F3F5',
-          button: '#062633',
+          button: '#016630',
         },
 
         header: {

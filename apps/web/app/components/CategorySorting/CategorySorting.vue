@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full" data-testid="category-sorting">
+  <div class="w-full border border-gray-300 rounded-xl shadow-md mb-4 pb-4" data-testid="category-sorting border-gray-200 shadow-lg rounded-lg">
     <h6
       v-if="!selectionModeCompact"
-      class="bg-primary-50/50 mb-4 px-4 py-2 rounded-none uppercase typography-headline-6 font-bold tracking-widest select-none"
+      class="bg-transparent border-b border-gray-300 mb-4 px-4 py-2 rounded-none uppercase font-bold tracking-widest select-none text-xs"
     >
       {{ t('sortBy') }}
     </h6>

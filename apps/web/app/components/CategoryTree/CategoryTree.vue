@@ -1,10 +1,10 @@
 <template>
   <div
     v-if="parent || (categoryTreeItem && categoryTreeGetters.getItems(categoryTreeItem)?.length)"
-    class="category-tree"
+    class="category-tree border border-gray-300 rounded-xl shadow-md mb-4"
   >
     <h6
-      class="py-2 px-4 mb-4 bg-primary-50/50 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest rounded-none select-none"
+      class="py-2 px-4 mb-4 bg-transparent border-b border-gray-300 text-xs font-bold text-black uppercase tracking-widest rounded-none select-none"
       data-testid="category-tree"
     >
       {{ t('category') }}
@@ -15,7 +15,7 @@
         :href="localePath(buildCategoryMenuLink(parent, categoryTree))"
         :count="categoryTreeGetters.getCount(parent)"
       >
-        <SfIconArrowBack size="sm" class="text-neutral-500 mr-2" />
+        <SfIconArrowBack size="sm" class="text-gray-500 mr-2" />
       </CategoryTreeItem>
     </template>
     <ul v-if="categoryTreeItem" class="mb-4 md:mt-2" data-testid="categories">
