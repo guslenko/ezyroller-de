@@ -1,38 +1,40 @@
 <template>
+
+  <section class="w-full py-4 px-4">
+    <div
+      class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+    >
+
+      <!-- IMAGE FIRST ON MOBILE -->
+      <div class="order-1 md:order-2">
+        <img
+          src="/images/ezrp.webp"
+          alt="Banner"
+          class="w-full h-auto object-cover rounded-lg"
+        />
+      </div>
+
+      <!-- TEXT SECOND ON MOBILE -->
+      <div class="order-2 md:order-1 text-gray-800">
+  <h1 class="text-base text-gray-700 uppercase font-normal tracking-[0.5em] block">EzyRoller</h1><h3 class="text-3xl uppercase font-bold mb-4 p-0">{{ $t("textWidgetTitle") }}</h3>
+  <p class="text-base font-medium leading-relaxed">
+    {{ $t("textWidgetP1") }}
+  </p>
+  <p class="text-base font-medium leading-relaxed pt-3">
+    {{ $t("textWidgetP2") }}
+  </p>
+  <p class="text-base font-medium leading-relaxed pt-3">
+    {{ $t("textWidgetP3") }}
+  </p>
+</div>
+
+
+    </div>
+  </section>
+
   <section class="w-full py-4 px-4 bg-white">
     <div class="max-w-screen-3xl px-6 mx-auto text-center relative">
       <div class="max-w-3xl mx-auto">
-
-      <!-- TITLE H1 -->
-      <h1 class="block text-lg font-bold mt-2 mb-0 text-black">
-        EzyRoller
-      </h1>
-
-      <!-- TITLE H2 -->
-      <h2
-        class="inline-block
-               text-4xl font-bold uppercase mt-0 mb-4 p-0
-               text-transparent bg-clip-text
-               bg-gradient-to-r
-               from-orange-500 via-teal-600 via-purple-500 to-pink-500
-               bg-[length:100%_100%] bg-[position:0%_0]
-               "
-      >
-        {{ $t("textWidgetTitle") }}
-      </h2>
-
-      <!-- PARAGRAPHS -->
-      <div class="space-y-3  text-xl text-black font-medium leading-relaxed mx-auto pb-2">
-        <p>{{ $t("textWidgetP1") }}</p>
-        <p><img
-          src="/images/ezrp.webp"
-          alt=""
-          class="px-2 mx-auto"
-        /></p>
-        <p>{{ $t("textWidgetP2") }}</p>
-        <p>{{ $t("textWidgetP3") }}</p>
-      </div>
-
       <!-- ROTATING WRAPPER -->
       <div
         ref="rotator"

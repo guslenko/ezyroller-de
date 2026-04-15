@@ -5,18 +5,34 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Noto Sans';
 
+
 export default {
   presets: [tailwindConfig],
   content: ['./**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
-  safelist: [
-  {
-    pattern: /^col-span-(1[0-2]|[1-9])$/,
-  },
-  'grid-cols-4',
-  'grid-cols-2',
-  'grid-cols-7',
-],
 
+    safelist: [
+    // твои цвета
+    'bg-black',
+    'bg-white',
+    'bg-lime-500',
+    'bg-sky-500',
+    'bg-red-600',
+    'bg-purple-700',
+    'bg-pink-600',
+    'bg-green-500',
+    'bg-blue-600',
+    'bg-purple-600',
+    'bg-red-700',
+    'bg-orange-500',
+    'bg-yellow-500',
+    'bg-teal-400',
+    'bg-amber-500',
+
+    // твой существующий паттерн
+    {
+      pattern: /^col-span-(1[0-2]|[1-9])$/,
+    },
+  ],
   theme: {
     extend: {
       sfTypography: () => ({
@@ -81,7 +97,11 @@ export default {
         },
         editor: {
           'body-bg': '#F1F3F5',
-          button: '#016630',
+          button: '#062633',
+          'toc-highlight': '#E6F0FF',
+          'toc-hover': '#F5FAFF',
+          'toc-selected': '#538AEA',
+          'icon-hover': 'rgba(6, 38, 51, 0.08)',
         },
 
         header: {
@@ -130,5 +150,5 @@ export default {
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [sfTypography, require('@savvywombat/tailwindcss-grid-areas')],
+  plugins: [sfTypography, require('@savvywombat/tailwindcss-grid-areas'), require('@tailwindcss/container-queries')],
 } as Config;

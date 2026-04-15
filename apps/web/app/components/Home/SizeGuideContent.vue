@@ -1,41 +1,16 @@
 <template>
 
-<section class="w-full">
-  <NuxtLink
-    to="/ersatzteile/zubehoer/basketballkorb"
-    class="relative block w-full"
-  >
-    <div
-      class="w-full bg-cover bg-center banner"
-      style="background-image: url('/images/sgbg.webp')"
-    ></div>
-
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1 z-20">
-      <div class="-rotate-3 text-white text-4xl uppercase font-bold drop-shadow-md pb-2">
-        {{ $t("sgC1") }}
-      </div>
-      <div class="-rotate-3 text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-        {{ $t("sgC2") }}
-      </div>
-    </div>
-
-    <div class="absolute inset-0 bg-black/20"></div>
-  </NuxtLink>
-</section>
-
-
-  
-
   <!-- TEXT SECTION -->
 
-  <section class="w-full py-4 px-4 bg-white">
-    <div class="max-w-screen-3xl px-6 py-4 mx-auto space-y-3 text-center relative text-xl">
-      <div class="max-w-3xl mx-auto">
+  <section class="w-full py-4 px-4">
+    <div
+      class="max-w-6xl mx-auto items-center"
+    >
       <p>
         {{ $t("sgC3") }}
       </p>
       </div>
-    </div>
+    
   </section>
 
   <!-- TWO-COLUMN SECTION -->
@@ -67,7 +42,7 @@
 
   <p class="text-base leading-relaxed pt-4">
    <NuxtLink
-          :to="localePath('/modelle/originals/mini')"
+          :to="$localePath($t('bizl1'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >
@@ -113,7 +88,7 @@
 
   <p class="text-base leading-relaxed pt-4">
     <NuxtLink
-          :to="localePath('/modelle/originals/classic')"
+          :to="$localePath($t('bizl7'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >
@@ -124,7 +99,7 @@
   </p>
   <p class="text-base leading-relaxed pt-2">
 <NuxtLink
-          :to="localePath('/modelle/x-series/classic-x')"
+          :to="$localePath($t('bizl2'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >
@@ -170,7 +145,7 @@
 
   <p class="text-base leading-relaxed pt-4">
     <NuxtLink
-          :to="localePath('/modelle/x-series/spinner-x')"
+          :to="$localePath($t('bizl3'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >
@@ -216,7 +191,7 @@
 
   <p class="text-base leading-relaxed pt-4">
     <NuxtLink
-          :to="localePath('/modelle/x-series/drifter-x')"
+          :to="$localePath($t('bizl4'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >
@@ -259,7 +234,7 @@
 
   <p class="text-base leading-relaxed pt-4">
     <NuxtLink
-          :to="localePath('/modelle/x-series/pro-x')"
+          :to="$localePath($t('bizl5'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >
@@ -305,7 +280,7 @@
 
   <p class="text-base leading-relaxed pt-4">
     <NuxtLink
-          :to="localePath('/modelle/x-series/drifter-pro-x')"
+          :to="$localePath($t('bizl6'))"
           class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium 
          transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
         >

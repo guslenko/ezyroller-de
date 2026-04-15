@@ -1,45 +1,35 @@
 <template>
-  
-
   <NuxtLayout
     name="default"
     :breadcrumbs="breadcrumbs"
-    class="relative px-4 md:px-0"
+    class="relative"
     :class="{ 'pointer-events-none opacity-50': loading }"
   >
-
     <SfLoaderCircular v-if="loading" class="fixed top-[50%] right-0 left-0 m-auto z-[99999]" size="2xl" />
 
-    <EditablePage
+    <EditableBlocks
       :identifier="identifier"
       :type="'category'"
       data-testid="category-page-content"
-      :prevent-blocks-request="true"
+      :prevent-blocks-request="productsCatalog.category?.type === 'item'"
     />
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-
 import { categoryGetters, categoryTreeGetters } from '@plentymarkets/shop-api';
+import type { Locale } from '#i18n';
 import { SfLoaderCircular } from '@storefront-ui/vue';
 
-const { t, locale } = useI18n();
+defineI18nRoute({
+  locales: process.env.LANGUAGELIST?.split(',') as Locale[],
+});
 
-const route = useRoute()
-
-const slugArray = Array.isArray(route.params.slug)
-  ? route.params.slug
-  : route.params.slug
-    ? [route.params.slug]
-    : []
-
-const slug = slugArray.join("/")
-
-
+const { locale } = useI18n();
+const route = useRoute();
 const router = useRouter();
-const { setCategoriesPageMeta } = useCanonical();
-const { setBlocksListContext } = useBlockManager();
+const { setCategoriesPageMeta } = useUrlPageMeta();
+const { setBlocksListContext } = useBlocksList();
 const { getFacetsFromURL, checkFiltersInURL } = useCategoryFilter();
 const { fetchProducts, data: productsCatalog, loading } = useProducts();
 const { data: categoryTree } = useCategoryTree();
@@ -51,8 +41,9 @@ const identifier = computed(() =>
 
 definePageMeta({
   layout: false,
+  middleware: ['category-guard'],
   type: 'category',
-  isBlockified: false,
+  isBlockified: true,
   identifier: 0,
 });
 
@@ -62,7 +53,7 @@ const breadcrumbs = computed(() => {
       categoryTree.value,
       categoryGetters.getId(productsCatalog.value.category),
     );
-    breadcrumb.unshift({ name: t('home'), link: '/' });
+    breadcrumb.unshift({ name: t('common.labels.home'), link: '/' });
 
     return breadcrumb;
   }

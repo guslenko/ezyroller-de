@@ -1,75 +1,28 @@
 {
-  "customerWish": "Notes and requests",
-  "customerWishMessage": "Enter your message to us here.",
-  "customerReference": "Your reference",
-  "customerReferencePlaceholder": "Enter your reference here.",
-  "CookieBar": {
-    "Accept All": "Accept All",
-    "Accept Selection": "Accept Selection",
-    "Back": "Back",
-    "Cookie Settings": "Cookie Settings",
-    "Further Settings": "Further Settings",
-    "More information": "More information",
-    "Privacy Settings": "Privacy Settings",
-    "Reject All": "Reject All",
-    "Show less": "Show less",
-    "about": {
-      "description": "We use cookies and similar technologies on our website and process personal data of visitors to our website (e.g. IP address), e.g. to personalise content, to integrate media from third-party providers or to analyse access to our website. Data processing only takes place when cookies are set. We share this data with third parties that we name in the settings. Data processing may be carried out with consent or on the basis of a legitimate interest. Consent can be given or refused. There is a right not to consent and to change or withdraw consent at a later date. Please note our {legal} and additional information regarding the use of personal data in our {policy}.",
-      "label": "We value your privacy"
+  "notifyMe": {
+    "notifyButtonTooltip": "We will notify you as soon as the product is available again.",
+    "notifyButton": "Notify me",
+    "form": {
+      "subTitle": "Enter your email address and we’ll let you know as soon as this item is back in stock.",
+      "emailLabel": "E-mail address",
+      "emailPlaceholder": "Your E-mail",
+      "turnstileFailed": "Turnstile validation failed",
+      "successCheckEmail": "Check your inbox! We've sent you a confirmation email."
     },
-    "essentials": {
-      "cookies": {
-        "payPal": {
-          "name": "paypal",
-          "provider": "PayPal (Europe) S.à r.l. et Cie, S.C.A.",
-          "status": "Required for PayPal payments."
-        },
-        "cloudflareTurnstile": {
-          "name": "Cloudflare Turnstile",
-          "provider": "Cloudflare",
-          "status": "Necessary for Cloudflare’s Turnstile service."
-        },
-        "consentCookie": {
-          "name": "consent-cookie",
-          "provider": "PlentyONE GmbH",
-          "status": "Stores consent selection."
-        },
-        "plentyId": {
-          "name": "plentyID",
-          "provider": "PlentyONE GmbH",
-          "status": "Stores information about the current session, for example if the user is logged in."
-        }
-      },
-      "description": "Essential cookies enable basic functions and are necessary for the proper functioning of the website.",
-      "label": "Essentials"
+    "aria": {
+      "openForm": "Open notification subscription form",
+      "closeForm": "Close notification form",
+      "formLabel": "Back in stock notification form",
+      "privacyPolicyLink": "Privacy policy (opens in new tab)",
+      "securityVerification": "Security verification",
+      "subscribeButton": "Subscribe to back in stock notifications"
     },
-    "externalMedia": {
-      "description": "Content by video platforms and social media platforms are blocked by default. If you accept cookies by external media, access to these contents requires no further consent.",
-      "label": "External media"
-    },
-    "functional": {
-      "description": "These cookies are used to store preferred settings and certain options selected by the user.",
-      "label": "Functional"
-    },
-    "keys": {
-      "Lifespan": "Lifespan",
-      "PrivacyPolicy": "Privacy Policy",
-      "Provider": "Provider",
-      "Status": "Status",
-      "script": "Script"
-    },
-    "marketing": {
-      "description": "Marketing cookies are used by third parties and publishers to display personalised advertisements by following users across websites.",
-      "label": "Marketing"
-    }
-  },
-  "previewModeBar": {
-    "label": "Editor controls",
-    "title": "Exit editor and visit live shop?",
-    "exitEditor": "Exit editor and visit live shop",
-    "unsavedChangesWarning": "You have unsaved changes.",
-    "saveAndExit": "Save changes and exit",
-    "exitWithoutSaving": "Exit without saving"
+    "notifyMeOptInMessage": "Your notification has been successfully confirmed. You will receive an email once the item is back in stock.",
+    "notifyMeOptInMessageError": "Failed to confirm your notification. Please try again or contact our support.",
+    "notifyMeUnsubscribeMessage": "You have been successfully unsubscribed from notifications.",
+    "notifyMeUnsubscribeMessageError": "Failed to unsubscribe from notifications. Please try again or contact our support.",
+    "outOfStock": "The product is currently out of stock",
+    "readAndAccepted": "I have read and accepted the {privacyPolicy}"
   },
   "account": {
     "accountSettings": {
@@ -116,13 +69,13 @@
     "ordersAndReturns": {
       "actions": "Actions",
       "amount": "Amount",
-      "more": "Show more",
       "continue": "Continue shopping",
       "details": "Details",
       "heading": "Orders & Returns",
       "listOfOrders": "List of orders",
+      "more": "Show more",
       "myOrders": "My orders",
-      "noOrders": "You haven’t shopped with us yet",
+      "noOrders": "You haven't shopped with us yet",
       "noOrdersAltText": "No orders",
       "noReturns": "You don't have any returns yet.",
       "orderAgain": {
@@ -186,8 +139,8 @@
       "shippingDate": "Shipping date",
       "shippingSummary": {
         "heading": "Shipping summary",
-        "shipTo": "Ship to",
-        "shippingMethod": "Shipping method"
+        "shippingMethod": "Shipping method",
+        "shipTo": "Ship to"
       },
       "status": "Status"
     },
@@ -195,25 +148,29 @@
       "heading": "Wishlist",
       "section": {
         "myWishlist": "My wishlist"
+      },
+      "notifications": {
+        "add": "The item was added to your wish list.",
+        "delete": "The item was removed from your wish list."
       }
     }
   },
-  "addProductToWishlist": "Add {label} to wishlist",
-  "addToCart": "Add to cart",
-  "addToCartShort": "Add",
-  "addToWishlist": "Add to wishlist",
-  "addedToCart": "Item added to Cart",
-  "address": "Addresses",
-  "closeAddressForm": "End address editing",
-  "addressContainer": {
+  "address": {
+    "billingRequired": "Please select a billing address.",
+    "edit": "Edit address",
+    "manage": "Manage your addresses",
+    "newBillingAddress": "New billing address",
+    "newShippingAddress": "New shipping address",
+    "pickSavedAddress": "Saved addresses",
+    "pickSavedSubtitle": "Select one of your saved addresses or create a new one",
+    "savedBillingAddresses": "Saved billing adresses",
+    "savedShippingAddresses": "Saved shipping adresses",
+    "shippingAddress": "Shipping address",
+    "shippingRequired": "Please select a shipping address.",
+    "unsavedWarning": "The address you entered has not yet been saved. Click Save address to proceed with the checkout.",
     "sameAsShippingAddress": "Same as shipping address"
   },
-  "allFromCategory": "All {name}",
-  "allProducts": "All items",
-  "allProductsLinkText": "Browse items",
-  "apply": "Apply",
-  "asterisk": "*",
-  "auth": {
+  "authentication": {
     "login": {
       "createAccount": "Don't have an account yet?",
       "createAccountLater": "Dont worry. You can create an account after your order",
@@ -228,28 +185,28 @@
       "success": "You have been logged in successfully"
     },
     "resetPassword": {
-      "title": "Reset password success",
       "anotherEmail": "I need to try another email address",
       "backToLogin": "Back to Login",
       "continue": "Continue",
-      "resetPassword": "Reset Password",
       "email": "Email",
       "emailSent": "Check your e-mail: We have sent instructions on how to reset your password",
       "heading": "Forgot password?",
-      "subHeading": "Don’t worry. We’ll send instructions on how to reset your password to your E-Mail",
-      "info": "Enter the email address you used to sign up. We will send you a password reset link, that you’ll be able to use to set a new password for your account.",
-      "thankYou": "Thank you, if there is an account registered with {0}, you should receive the password reset link in your inbox."
+      "info": "Enter the email address you used to sign up. We will send you a password reset link, that you'll be able to use to set a new password for your account.",
+      "resetPassword": "Reset Password",
+      "subHeading": "Don't worry. We'll send instructions on how to reset your password to your E-Mail",
+      "thankYou": "Thank you, if there is an account registered with {0}, you should receive the password reset link in your inbox.",
+      "title": "Reset password success"
     },
     "setNewPassword": {
-      "resetSucceded": "Your password has been successfully reset. You are now authenticated using your new password.",
-      "passwordsNotMatching": "Passwords do not match",
-      "rememberPassword": "Remember your password?",
       "button": "Save new password",
       "description": "Create the new password you want to use to log in to your account.",
       "heading": "Reset password",
       "help": "Between {min} and {max} characters with a mix of letters, numbers and symbols.",
       "password": "New password",
-      "repeatPassword": "Repeat new password"
+      "passwordsNotMatching": "Passwords do not match",
+      "rememberPassword": "Remember your password?",
+      "repeatPassword": "Repeat new password",
+      "resetSucceded": "Your password has been successfully reset. You are now authenticated using your new password."
     },
     "signup": {
       "alreadyHaveAccount": "Already have an account?",
@@ -265,93 +222,226 @@
       "passwordValidation": {
         "characters": "The password must contain between {min} and {max} characters.",
         "letters": "The password must contain at least one letter.",
-        "numbers": "The password must contain at least one digit."
+        "numbers": "The password must contain at least one digit.",
+        "invalidPassword": "At least 8 characters long and must contain at least one letter and one number."
       },
       "subheading": "Sign up now to enjoy awesome benefits",
       "submitLabel": "Sign up!",
       "success": "Your account has been created successfully"
     }
   },
-  "averageRating": "Average rating",
-  "back": "Back",
-  "backToCheckout": "Back to Checkout",
-  "backToShopping": "Back To Shopping",
-  "basePrice": "Base price",
-  "basedOnratings": "Based on {count} review(s)",
+  "availabilities": {
+    "availabilityBackOrder": "Back order",
+    "availabilityDiscontinued": "Discontinued",
+    "availabilityInStock": "In stock",
+    "availabilityInStoreOnly": "In store only",
+    "availabilityLimitedAvailability": "Limited availability",
+    "availabilityNotSet": "Select availability",
+    "availabilityOnlineOnly": "Online only",
+    "availabilityOutOfStock": "Out of stock",
+    "availabilityPreOrder": "Pre-order",
+    "availabilityPreSale": "Pre-sale",
+    "availabilitySoldOut": "Sold out"
+  },
   "billing": {
     "addButton": "Add billing address",
     "description": "Add a billing address. You will receive the invoice to the email address provided above.",
     "heading": "Billing Address",
     "methodChanged": "The selected payment method is not available anymore."
   },
-  "billingAddressRequired": "Please select a billing address.",
-  "breadcrumbsDropdownText": "Show more breadcrumbs",
-  "buy": "Buy",
-  "cancellationRights": "Cancellation rights",
-  "cart": "Cart",
-  "categories": {
-    "about": {
-      "label": "About",
-      "subcategories": {
-        "aboutUs": "About us",
-        "affiliateProgram": "Affiliate program",
-        "jobs": "Jobs",
-        "pressCenter": "Press Center",
-        "suppliers": "Suppliers"
-      }
-    },
-    "services": {
-      "label": "Services",
-      "subcategories": {
-        "contact": "Contact",
-        "register": "Register"
-      }
-    },
-    "help": {
-      "label": "Help",
-      "subcategories": {
-        "contact": "Contact",
-        "feedback": "Feedback",
-        "helpCenter": "Help center",
-        "securityFraud": "Security & fraud"
-      }
-    },
-    "legal": {
-      "label": "Legal",
-      "subcategories": {
-        "cancellationForm": "Cancellation form",
-        "cancellationRights": "Cancellation rights",
-        "legalDisclosure": "Legal disclosure",
-        "privacyPolicy": "Privacy policy",
-        "termsAndConditions": "Terms and conditions",
-        "declarationOfAccessibility": "Declaration of accessibility"
+  "cart": {
+    "empty": "Your cart is empty",
+    "emptyImageAlt": "Image of an empty cart",
+    "emptyNotification": "You don't have any items in your cart",
+    "emptyWishlist": "Your wishlist is empty",
+    "itemAdded": "Item added to Cart",
+    "itemCount": "(Items: {count})",
+    "itemRemoved": "Item removed from shopping cart",
+    "myCart": "My Cart",
+    "numberInCart": "{count} item in cart",
+    "numberInWishlist": "{count} items in wishlist"
+  },
+  "category": {
+    "sorting": {
+      "default": {
+        "recommended_sorting": "Recommended"
+      },
+      "item": {
+        "feedbackDecimal_asc": "Item reviews ⬆",
+        "feedbackDecimal_desc": "Item reviews ⬇",
+        "manufacturer": {
+          "externalName_asc": "Manufacturer A-Z",
+          "externalName_desc": "Manufacturer Z-A"
+        },
+        "score": "Relevance"
+      },
+      "sorting": {
+        "price": {
+          "avg_asc": "Price ⬆",
+          "avg_desc": "Price ⬇"
+        }
+      },
+      "texts": {
+        "name1_asc": "Name A-Z",
+        "name1_desc": "Name Z-A"
+      },
+      "variation": {
+        "availability": {
+          "averageDays_asc": "Availability ⬆",
+          "averageDays_desc": "Availability ⬇"
+        },
+        "createdAt_asc": "Oldest items",
+        "createdAt_desc": "Newest items",
+        "number_asc": "Variation number ⬆",
+        "number_desc": "Variation number ⬇",
+        "position_asc": "Top seller ⬆",
+        "position_desc": "Top seller ⬇",
+        "updatedAt_asc": "Last update",
+        "updatedAt_desc": "First update"
       }
     }
   },
-  "category": "Category",
-  "checkout": "Checkout",
-  "checkoutPayment": {
-    "comingSoon": "Coming soon",
-    "creditCard": "Credit Card",
-    "payUponInvoice": "Pay upon invoice",
-    "birthdateLabel": "Date of Birth",
-    "birthdateError": "Enter a valid date of birth.",
-    "countrySearch": "Search for a country",
-    "phoneLabel": "Phone number",
-    "phoneError": "Enter a valid phone number.",
-    "heading": "Payment method",
-    "noMethodsAvailable": "There are no payment methods available. Please contact the webshop provider."
+  "checkout": {
+    "backToCheckout": "Back to Checkout",
+    "continueAsGuest": "Continue as guest",
+    "exportDeliveryNotice": "By placing the order I recognise that my order is shipped from {shopCountry} to {deliveryCountry}. The local VAT, costs of customs clearance and customs duties are not included in the total amount of the order and have to be settled with third parties. I bear the costs.",
+    "fields": {
+      "customerReference": "Your reference",
+      "customerReferencePlaceholder": "Enter your reference here.",
+      "customerWish": "Notes and requests",
+      "customerWishMessage": "Enter your message to us here."
+    },
+    "guestCheckout": "Guest checkout",
+    "loginFastCheckout": "Login to checkout faster",
+    "payment": {
+      "birthdateError": "Enter a valid date of birth.",
+      "birthdateLabel": "Date of Birth",
+      "comingSoon": "Coming soon",
+      "countrySearch": "Search for a country",
+      "creditCard": "Credit Card",
+      "heading": "Payment method",
+      "noMethodsAvailable": "There are no payment methods available. Please contact the webshop provider.",
+      "payUponInvoice": "Pay upon invoice",
+      "phoneError": "Enter a valid phone number.",
+      "phoneLabel": "Phone number"
+    },
+    "googlePay": {
+      "paymentInProgress": "Payment in progress..."
+    }
   },
-  "checkoutExportDelivery": "By placing the order I recognise that my order is shipped from {shopCountry} to {deliveryCountry}. The local VAT, costs of customs clearance and customs duties are not included in the total amount of the order and have to be settled with third parties. I bear the costs.",
-  "clear": "Clear",
-  "clearFilters": "Clear all filters",
-  "closeDialog": "Close Dialog",
-  "closeDrawer": "Close Drawer",
-  "closeListSettings": "Close list settings",
-  "closeMenu": "Close Menu",
-  "browseProducts": "Browse Products",
-  "coming-soon": "Coming Soon",
+  "customAssets": {
+    "assetDeletedSuccessfully": "Asset deleted successfully",
+    "failedToDeleteAsset": "Failed to delete asset",
+    "duplicateAssetError": "An asset with this type and name already exists. Please use a unique combination."
+  },
+  "common": {
+    "actions": {
+      "add": "Add",
+      "addProductToWishlist": "Add {label} to wishlist",
+      "addToCart": "Add to cart",
+      "addToWishlist": "Add to wishlist",
+      "apply": "Apply",
+      "back": "Back",
+      "browseProducts": "Browse Products",
+      "buy": "Buy",
+      "cancelOrder": "Cancel order",
+      "clear": "Clear",
+      "clearAll": "Clear all",
+      "cancel": "Cancel",
+      "continueShopping": "Continue shopping",
+      "edit": "Edit",
+      "goToCheckout": "Go to checkout",
+      "goToHomepage": "Go to Homepage",
+      "next": "Next",
+      "placeOrder": "Place order and pay",
+      "previous": "Previous",
+      "readLess": "Read less",
+      "readMore": "Read more",
+      "reloadPage": "Reload page",
+      "removeFromWishlist": "Remove from wishlist",
+      "removeItemFromBasket": "Remove item from basket",
+      "removeProductFromWishlist": "Remove {label} from wishlist",
+      "resetSearch": "Reset Search",
+      "save": "Save",
+      "saveAddress": "Save address",
+      "scrollTop": "Scroll to top",
+      "search": "Search",
+      "showLess": "Show less",
+      "showMore": "Show more",
+      "showOptions": "Show options",
+      "showProducts": "Show items",
+      "viewCart": "View Cart"
+    },
+    "labels": {
+      "address": "Addresses",
+      "asterisk": "*",
+      "basePrice": "Base price",
+      "cart": "Cart",
+      "category": "Category",
+      "checkout": "Checkout",
+      "content": "Content",
+      "delivery": "Shipping",
+      "email": "Email",
+      "estimatedTax": "VAT",
+      "excludedTax": "plus VAT",
+      "filters": "Filters",
+      "grossPrice": "Gross",
+      "home": "Home",
+      "includedTax": "included VAT",
+      "itemsSubtotal": "Items subtotal",
+      "listSettings": "List settings",
+      "max": "Max",
+      "min": "Min",
+      "mostPopular": "Most popular",
+      "netPrice": "Net",
+      "or": "or",
+      "orderNumber": "Order ID",
+      "orderSummary": "Order Summary",
+      "pagination": "Paginated Navigation",
+      "perPage": "Per page",
+      "phone": "Phone",
+      "products": "Items",
+      "quantitySelector": "Quantity selector",
+      "returnNumber": "Return ID",
+      "sale": "Sale",
+      "sortBy": "Sort by",
+      "technicalData": "Technical data",
+      "tomorrow": "Tomorrow",
+      "total": "Total",
+      "wishlist": "Wishlist"
+    },
+    "messages": {
+      "offline": "It seems you are currently offline, check your internet connection"
+    },
+    "reloadPWA": {
+      "ariaLabel": "A new version of the shop is available. Press to refresh the page.",
+      "newVersionAvailable": "A new version of the shop is available.",
+      "refresh": "Refresh"
+    },
+    "navigation": {
+      "breadcrumbsDropdown": "Show more breadcrumbs",
+      "closeAddressForm": "End address editing",
+      "closeAuthentication": "Close authentication",
+      "closeDialog": "Close Dialog",
+      "closeDrawer": "Close Drawer",
+      "closeListSettings": "Close list settings",
+      "closeMenu": "Close Menu",
+      "openMenu": "Open Menu",
+      "showSubcategories": "Show subcategories",
+      "closeNeutralAlert": "Close neutral alert",
+      "closePickSavedAddress": "Close addresses picker",
+      "currentPage": "Current Page is {page}",
+      "goToPage": "Navigate to Page {page}",
+      "languageSelector": "Open language select",
+      "nextAriaLabel": "Navigate to next page",
+      "openConfigurationDrawer": "Open configuration drawer",
+      "openSearchModal": "Open item search",
+      "previousAriaLabel": "Navigate to previous page",
+      "socialLabel": "Go to {label} page"
+    }
+  },
   "contact": {
+    "label": "Contact",
     "clearAll": "Clear all",
     "contact": "Contact",
     "contactSend": "Send request",
@@ -365,27 +455,82 @@
       "order-id": "Order ID",
       "subjectLabel": "Subject"
     },
+    "misConfigured": "Our contact form is temporarily disabled due to a missing configuration. Please check back later or reach out to us via alternative contact methods.",
     "privacyPolicy": "I hereby confirm that I have read the {privacyPolicy}.",
     "success": "Message sent successfully",
-    "misConfigured": "Our contact form is temporarily disabled due to a missing configuration. Please check back later or reach out to us via alternative contact methods."
+    "info": {
+      "heading": "Contact Information",
+      "email": "Email"
+    }
   },
-  "contactInfo": {
-    "add": "Add contact information",
-    "cancel": "Cancel",
-    "clear": "Clear all",
-    "clearAll": "Clear all",
-    "description": "Add your email.",
-    "edit": "Edit",
-    "email": "Email",
-    "heading": "Contact Information",
-    "phone": "Phone number",
-    "phonePlaceholder": "eg. 1234 567890",
-    "save": "Save"
+  "CookieBar": {
+    "about": {
+      "description": "We use cookies and similar technologies on our website and process personal data of visitors to our website (e.g. IP address), e.g. to personalise content, to integrate media from third-party providers or to analyse access to our website. Data processing only takes place when cookies are set. We share this data with third parties that we name in the settings. Data processing may be carried out with consent or on the basis of a legitimate interest. Consent can be given or refused. There is a right not to consent and to change or withdraw consent at a later date. Please note our {legal} and additional information regarding the use of personal data in our {policy}.",
+      "label": "We value your privacy"
+    },
+    "Accept All": "Accept All",
+    "Accept Selection": "Accept Selection",
+    "Back": "Back",
+    "Cookie Settings": "Cookie Settings",
+    "group": {
+      "externalMedia": "External Media",
+      "functional": "Functional",
+      "marketing": "Marketing (recommended)",
+      "necessary": "Necessary"
+    },
+    "essentials": {
+      "cookies": {
+        "cloudflareTurnstile": {
+          "name": "Cloudflare Turnstile",
+          "provider": "Cloudflare",
+          "status": "Necessary for Cloudflare’s Turnstile service."
+        },
+        "consentCookie": {
+          "name": "consent-cookie",
+          "provider": "PlentyONE GmbH",
+          "status": "Stores consent selection."
+        },
+        "payPal": {
+          "name": "paypal",
+          "provider": "PayPal (Europe) S.à r.l. et Cie, S.C.A.",
+          "status": "Required for PayPal payments."
+        },
+        "plentyId": {
+          "name": "plentyID",
+          "provider": "PlentyONE GmbH",
+          "status": "Stores information about the current session, for example if the user is logged in."
+        }
+      },
+      "description": "Essential cookies enable basic functions and are necessary for the proper functioning of the website.",
+      "label": "Essentials"
+    },
+    "externalMedia": {
+      "description": "Content by video platforms and social media platforms are blocked by default. If you accept cookies by external media, access to these contents requires no further consent.",
+      "label": "External media"
+    },
+    "functional": {
+      "description": "These cookies are used to store preferred settings and certain options selected by the user.",
+      "label": "Functional"
+    },
+    "Further Settings": "Further Settings",
+    "keys": {
+      "Lifespan": "Lifespan",
+      "PrivacyPolicy": "Privacy Policy",
+      "Provider": "Provider",
+      "script": "Script",
+      "Status": "Status"
+    },
+    "marketing": {
+      "description": "Marketing cookies are used by third parties and publishers to display personalised advertisements by following users across websites.",
+      "label": "Marketing"
+    },
+    "More information": "More information",
+    "Privacy Settings": "Privacy Settings",
+    "legalDisclosure": "Legal disclosure",
+    "privacyPolicy": "Privacy policy",
+    "Reject All": "Reject All",
+    "Show less": "Show less"
   },
-  "content": "Content",
-  "continueAsGuest": "Continue as guest",
-  "continueShopping": "Continue shopping",
-  "closeAuthentication": "Close authentication",
   "coupon": {
     "apply": "Apply",
     "couponApplied": "The coupon has been added successfully",
@@ -397,15 +542,11 @@
     "remove": "Remove",
     "title": "Have a coupon code?"
   },
-  "createCustomerReview": "Create review",
-  "currentPage": "Current Page is {page}",
-  "customerReviews": "Customer reviews",
-  "customerReviewsNone": "Nobody has submitted a review for this item yet",
-  "deletedFromCart": "Item removed from shopping cart",
-  "delivery": "Shipping",
   "documents": {
+    "correctionDocuments": "Correction Documents",
     "Credit Note": "Credit Note",
     "Delivery Note": "Delivery Note",
+    "downloadFailed": "Downloading the document failed. Please try again later.",
     "Dunning Letter": "Dunning Letter",
     "Invoice": "Invoice",
     "Invoice External": "External invoice",
@@ -416,11 +557,8 @@
     "Receipt": "Receipt",
     "Return Note": "Return Note",
     "Reversal Document": "Reversal Document",
-    "Success Confirmation": "Success Confirmation",
-    "correctionDocuments": "Correction Documents",
-    "downloadFailed": "Downloading the document failed. Please try again later."
+    "Success Confirmation": "Success Confirmation"
   },
-  "editAddress": "Edit address",
   "editMode": {
     "clearJson": "Clear template",
     "edit": "Edit",
@@ -431,18 +569,6 @@
     "save": "Save",
     "stopEdit": "Cancel"
   },
-  "email": "Email",
-  "emailConfirmation": {
-    "newsletterOptInMessage": "Your email address has been confirmed.",
-    "newsletterOptInMessageError": "An error occurred while confirming your email."
-  },
-  "emptyCart": "Your cart is empty",
-  "emptyCartImgAlt": "Image of an empty cart",
-  "emptyCartNotification": "You don't have any items in your cart",
-  "emptyStateAltText": "Image that describes that no items were found",
-  "emptyStateText": "We no longer have items in this category.",
-  "emptyStateText2": "Have not found what you are looking for?",
-  "emptyWishlist": "Your wishlist is empty",
   "error": {
     "accessKeyMailFailed": "Email could not be delivered, please contact the webshop owner.",
     "accessKeyMailSent": "Email sent!",
@@ -459,6 +585,7 @@
     "couponNoCustomerTypeProvided": "The coupon could not be redeemed. Customer type not transferred.",
     "couponNoMatchingItemInBasket": "The coupon code has been removed since no item in the shopping cart has been activated for this coupon.",
     "couponNoOpenAmount": "The coupon has already been redeemed completely.",
+    "couponnotUsableForSpecialOffer": "The coupon could not be redeemed. Coupons cannot be used for bargain offers.",
     "couponOnlyForExistingCustomers": "The coupon can only be redeemed by existing customers.",
     "couponOnlyForNewCustomers": "The coupon can only be redeemed by new customers.",
     "couponOnlySingleUsage": "The coupon cannot be redeemed for subscription items.",
@@ -467,7 +594,6 @@
     "couponRemoveFailure": "The coupon could not be removed.",
     "couponWrongCustomerGroup": "The coupon can only be redeemed by customers with the correct customer class.",
     "couponWrongCustomerType": "The coupon can only be redeemed by customers with the correct customer type.",
-    "couponnotUsableForSpecialOffer": "The coupon could not be redeemed. Coupons cannot be used for bargain offers.",
     "csrfTokenMismatch": "You have been logged out for security reasons. You will be redirected to the login page.",
     "errorActionIsNotExecuted": "This action could not be executed.",
     "errorBasketItemMaximumQuantityReachedForItem": "Your order exceeds the maximum order quantity of this item.",
@@ -477,6 +603,8 @@
     "errorBasketItemVariationNotFound": "This variation is not available.",
     "errorCreateOrderRetryTimeNotReached": "An error occurred while placing the order. Please try again in 30 seconds.",
     "errorGiftCardReturnQuantity": "The return could not be created. You need to return all gift cards included in the order.",
+    "errorOccured": "Oops! An error occured!",
+    "errorPlain": "Error",
     "errorVatNumberValidation": "Your VAT number is invalid. Please remove any spaces and special characters.",
     "errorVatService": "Your VAT number could not be validated. Please contact the online store operator.",
     "errorVatServiceFallback": "Your VAT number could not be validated. The order will be reviewed again.",
@@ -497,13 +625,10 @@
     "notificationsNoEmailEntered": "Please enter a valid email address.",
     "notificationsNotEnoughStockItem": "There is not enough stock available for the selected item quantity.",
     "notificationsWarningOverselling": "The selected quantity exceeds the available stock. :stock are currently in stock; :oversellingAmount will be supplied later.",
-    "errorOccured": "Oops! An error occured!",
     "pageNotFound": "Page not found",
-    "pageNotFoundTitle": "We couldn't find that page.",
     "pageNotFoundSubtitle": "We are sorry! Use search or categories to find what you are looking for.",
-    "errorPlain": "Error"
-  },
-  "errorMessages": {
+    "pageNotFoundTitle": "We couldn't find that page.",
+    "somethingWentWrongImageAlt": "Image that describes that something went wrong",
     "checkout": {
       "missingAddress": "Please provide your address to continue with the checkout.",
       "missingBillingAddress": "Please provide a billing address to continue with the checkout."
@@ -516,12 +641,27 @@
       "turnstileRequired": "Please check the box to verify that you are human."
     },
     "decimalNumber": "Enter a decimal number.",
+    "editor": {
+      "add": {
+        "disabledNotCompatibleWithLayouts": "This block can't be placed inside a layout.",
+        "disabledOneInstancePerPage": "You can only have 1 instance of this block type on a page.",
+        "disabledTooDeeplyNested": "Layouts support a maximum of two levels. Select a content block instead."
+      },
+      "categories": {
+        "deleteError": "The page {pageName} (category ID: {id}) couldn't be deleted. {errorMessage}",
+        "deleteSuccess": "The page {pageName} (category ID: {id}) has been deleted.",
+        "error": "Error saving categories.",
+        "success": "Categories saved successfully."
+      },
+      "save": {
+        "error": "The changes couldn't be saved. Your session may have expired. Re-enter the editor to start a new session.",
+        "settings": "For settings changes to take effect, update your shop.",
+        "success": "Your changes have been saved."
+      }
+    },
     "email": {
       "required": "Email is required.",
       "valid": "This field needs to be a valid email."
-    },
-    "orderId": {
-      "required": "Order ID is required."
     },
     "maxCharacters": "Enter a maximum of {max} characters.",
     "missingOrWrongProperties": "The following fields are required or have been filled in incorrectly:",
@@ -531,44 +671,37 @@
       "termsRequired": "You must accept the terms and conditions.",
       "turnstileRequired": "Please check the box to verify that you are human."
     },
+    "orderId": {
+      "required": "Order ID is required."
+    },
     "password": {
       "match": "Passwords do not match.",
-      "required": "Password is required.",
-      "minLength": "Password must be at least {min} characters long.",
       "maxLength": "Password must not exceed {max} characters.",
+      "minLength": "Password must be at least {min} characters long.",
+      "required": "Password is required.",
       "valid": "Password must include at least one letter and one number."
     },
-    "editor": {
-      "add": {
-        "disabledTooDeeplyNested": "Layouts support a maximum of two levels. Select a content block instead.",
-        "disabledNotCompatibleWithLayouts": "This block can't be placed inside a layout.",
-        "disabledOneInstancePerPage": "You can only have 1 instance of this block type on a page."
-      },
-      "save": {
-        "success": "Your changes have been saved.",
-        "settings": "For settings changes to take effect, update your shop.",
-        "error": "The changes couldn't be saved. Your session may have expired. Re-enter the editor to start a new session."
-      },
-      "categories": {
-        "success": "Categories saved successfully.",
-        "error": "Error saving categories.",
-        "deleteError": "The page {pageName} (category ID: {id}) couldn't be deleted. {errorMessage}",
-        "deleteSuccess": "The page {pageName} (category ID: {id}) has been deleted."
-      }
-    },
-    "paymentFailed": "The payment has failed. Please try again.",
     "paymentCancelled": "The payment has been cancelled. Please try again.",
+    "paymentFailed": "The payment has failed. Please try again.",
     "pleaseFillOutAllFields": "Please fill out all these fields.",
     "requiredField": "This is a mandatory field.",
     "turnstileRequired": "Please check the box to verify that you are human.",
     "wholeNumber": "Enter a whole number."
   },
-  "estimatedTax": "VAT",
-  "etaDelivery": "Estimated delivery time",
-  "excludedShipping": "excl. {shipping}",
-  "failedInfoHeader": "We are really sorry.",
-  "failedInfoMessage": "Your order has not been completed.",
-  "filters": "Filters",
+  "footer": {
+    "legal": {
+      "label": "Legal"
+    },
+    "services": {
+      "label": "Services"
+    },
+    "contact": {
+      "label": "Contact"
+    },
+    "register": {
+      "label": "Register"
+    }
+  },
   "form": {
     "addCompany": "+ Add company data",
     "asterixHint": "* marked consents are required",
@@ -580,6 +713,7 @@
     "lastNameLabel": "Last Name",
     "optional": "optional",
     "passwordLabel": "Password",
+    "passwordVisibility": "Password visibility",
     "phoneLabel": "Phone",
     "postalCodeLabel": "Zip Code",
     "privacyPolicyLabel": "Please accept the {privacyPolicy}.",
@@ -601,38 +735,20 @@
     "prev": "Previous",
     "thumb": "Go to slide {index}"
   },
-  "goToCheckout": "Go to checkout",
-  "goToHomepage": "Go to Homepage",
-  "goToPage": "Navigate to Page {page}",
-  "googlePay": {
-    "paymentInProgress": "Payment in progress..."
-  },
-  "graduatedPrices": {
-    "discount": "DISCOUNT",
-    "price": "PRICE",
-    "quantity": "QUANTITY",
-    "title": "Buy more, pay less"
-  },
-  "guestCheckout": "Guest checkout",
-  "home": "Home",
   "homepage": {
-    "title": "Homepage",
     "background": "New Wireless Pro headphones with sleek design and modern features",
-    "emptyBlock": {
-      "headline": "Add the first block here."
-    },
     "banner": {
+      "ariaLabelNextSlide": "Next slide",
+      "ariaLabelPreviousSlide": "Previous slide",
+      "ariaLabelSlideControls": "Slide controls",
+      "ariaLabelSlidePosition": "Slide {current} of {total}",
+      "ariaRoleDescriptionCarousel": "Carousel",
+      "ariaRoleDescriptionSlide": "Slide",
       "moto1": "Feel the music",
       "moto2": "New Wireless Pro",
       "moto3": "Spatial audio. Adjustable ear cups. On-device controls. All-day battery.",
       "orderNow": "Order now",
-      "showMore": "Show more",
-      "ariaLabelSlideControls": "Slide controls",
-      "ariaLabelNextSlide": "Next slide",
-      "ariaLabelPreviousSlide": "Previous slide",
-      "ariaLabelSlidePosition": "Slide {current} of {total}",
-      "ariaRoleDescriptionCarousel": "Carousel",
-      "ariaRoleDescriptionSlide": "Slide"
+      "showMore": "Show more"
     },
     "displayDetails": {
       "detail1": {
@@ -657,36 +773,33 @@
         "title": "Fresh and Bold"
       }
     },
+    "emptyBlock": {
+      "headline": "Add the first block here."
+    },
     "headPhones": "New Wireless Pro headphones with spatial audio and all-day battery",
     "kid": "Kid",
     "kidHomepageCategory": "Kid Category on Homepage",
     "men": "Men",
     "menHomepageCategory": "Men Category on Homepage",
+    "title": "Homepage",
     "women": "Women",
     "womenHomepageCategory": "Women Category on Homepage"
   },
-  "imageOfSth": "Image of {name}",
-  "invalidPassword": "At least 8 characters long and must contain at least one letter and one number.",
-  "itemExclVAT": "Excl. VAT",
-  "itemInclVAT": "Incl. VAT",
-  "includedTax": "included VAT",
-  "excludedTax": "plus VAT",
-  "netPrice": "Net",
-  "grossPrice": "Gross",
-  "itemNotAvailable": "This item is not available.",
-  "itemsInCart": "(Items: {count})",
-  "itemsSubtotal": "Items subtotal",
   "lang": {
     "bg": "Bulgarian",
     "cn": "Chinese",
+    "cs": "Czech",
     "cz": "Czech",
+    "da": "Danish",
     "de": "German",
     "dk": "Danish",
     "ee": "Estonian",
     "en": "English",
     "es": "Spanish",
+    "et": "Estonian",
     "fi": "Finnish",
     "fr": "French",
+    "ga": "Irish",
     "hr": "Croatian",
     "hu": "Hungarian",
     "ie": "Irish",
@@ -694,44 +807,46 @@
     "lt": "Lithuanian",
     "lv": "Latvian",
     "nl": "Dutch",
-    "no": "Norwegian",
+    "nn": "Norwegian",
     "pl": "Polish",
     "pt": "Portuguese",
     "ro": "Romanian",
     "ru": "Russian",
     "se": "Swedish",
     "sk": "Slovak",
+    "sv": "Swedish",
     "tr": "Turkish",
-    "vn": "Vietnamese"
+    "vi": "Vietnamese",
+    "vn": "Vietnamese",
+    "zh": "Chinese"
   },
-  "languageSelector": "Open language select",
-  "legalDetails": "Legal information - click for details",
-  "listSettings": "List settings",
-  "loading": "Loading...",
-  "loadingReviews": "Loading Reviews...",
-  "loginFastCheckout": "Login to checkout faster",
-  "lowestPrice": "Lowest price of the last 30 days: {price}",
-  "manageAddresses": "Manage your addresses",
+  "legal": {
+    "cancellationRights": "Cancellation rights",
+    "details": "Legal information - click for details",
+    "privacyPolicy": "Privacy Policy",
+    "privacyPolicyRequired": "Please select the checkbox for the privacy policy.",
+    "termsAndConditions": "Terms and Conditions",
+    "termsInfo": "Our {terms}, {cancellationRights} and {privacyPolicy} apply. *",
+    "termsRequired": "You have to agree with the terms and conditions.",
+    "cancellationForm": "Cancellation form",
+    "declarationOfAccessibility": "Declaration of accessibility",
+    "legalDisclosure": "Legal disclosure"
+  },
   "manufacturer": {
+    "contactUrl": "Contact form",
     "euResponsibleTabName": "EU Responsible Person",
+    "fax": "Fax",
     "header": "Manufacturer details",
+    "homepage": "Homepage",
     "logoAlt": "Manufacturer logo",
     "manufacturerTabName": "Manufacturer",
     "noInformation": "No information available for manufacturer",
     "noResponsibleInformation": "No information available for Responsible Person",
+    "responsibleContactUrl": "EU-Responsible contact form",
     "responsibleHeader": "Responsible Person in the EU",
     "responsibleSubtitle": "An economic operator based within the EU who ensures that the item complies with all necessary regulations.",
-    "subtitle": "Manufacturer information includes the address and additional details about the producer of the item.",
-    "contactUrl": "Contact form",
-    "responsibleContactUrl": "EU-Responsible contact form"
+    "subtitle": "Manufacturer information includes the address and additional details about the producer of the item."
   },
-  "max": "Max",
-  "min": "Min",
-  "minimumOrderQuantity": "Minimum order quantity: {count}",
-  "moreItemsOfThisCategory": "More items of this category",
-  "myCart": "My Cart",
-  "newBillingAddress": "New billing address",
-  "newShippingAddress": "New shipping address",
   "newsletter": {
     "email": "Email",
     "firstName": "First Name",
@@ -740,16 +855,13 @@
     "lastName": "Last Name",
     "policy": "I hereby confirm that I have read the {privacyPolicy}. I can revoke my consent at any time.",
     "subscribe": "Subscribe To Newsletter",
-    "success": "Thank you for signing up! Please check your email inbox and click on the confirmation link in our message to complete your newsletter subscription."
+    "success": "Thank you for signing up! Please check your email inbox and click on the confirmation link in our message to complete your newsletter subscription.",
+    "confirmation": {
+      "newsletterOptInMessage": "Your email address has been confirmed.",
+      "newsletterOptInMessageError": "An error occurred while confirming your email."
+    }
   },
-  "next": "Next",
-  "nextAriaLabel": "Navigate to next page",
-  "noReviews": "No reviews",
-  "noneExisting": "None",
-  "numberInCart": "{count} item in cart",
-  "numberInWishlist": "{count} items in wishlist",
-  "numberOfProducts": "{count} items out of {total} items",
-  "offerForm": {
+  "offers": {
     "acceptOffer": "Accept offer",
     "cancel": "Cancel",
     "declineDialogSubline": "Help us improve by sharing why you declined the offer.",
@@ -759,11 +871,18 @@
     "offer": "Offer",
     "offerValidUntil": "Offer valid until: {date}"
   },
-  "openConfigurationDrawer": "Open configuration drawer",
-  "openSearchModalButtonLabel": "Open item search",
-  "or": "or",
+  "order": {
+    "errorMessage": "Something went wrong. Try again later.",
+    "errorProvider": "Unknown response from payment provider: {paymentType}",
+    "failedHeader": "We are really sorry.",
+    "failedMessage": "Your order has not been completed.",
+    "searchResults": "Results for \"{phrase}\"",
+    "successHeader": "Thank you for your order!",
+    "successImageAlt": "order successful image",
+    "successMessage": "Your order was completed successfully.",
+    "successReturnHeader": "Thank you for your return!"
+  },
   "orderConfirmation": {
-    "trackingOrder": "Track your order",
     "confirmationSendTo": "A confirmation with all details has been sent to {email}",
     "createAccountForBenefits": "Create an account to enjoy all benefits!",
     "sameAsShippingAddress": "Same as shipping address",
@@ -772,7 +891,15 @@
     "signUp": "Sign up!",
     "subTotal": "Subtotal",
     "total": "Total",
-    "vat": "VAT"
+    "trackingOrder": "Track your order",
+    "vat": "VAT",
+    "softLogin": {
+      "check": "Check",
+      "fullName": "Last name or company name",
+      "titleFullName": "Please enter the last name or company name attached to the order to view the order details.",
+      "titleLogin": "Log in to your account to access your order",
+      "titlePostcode": "Please enter the postcode of an address stored for the order to view the order details."
+    }
   },
   "orderConfirmationPaymentStatus": {
     "fullyPaid": "Paid",
@@ -782,9 +909,6 @@
     "unknown": "Error retrieving payment status",
     "unpaid": "Not paid"
   },
-  "orderErrorMessage": "Something went wrong. Try again later.",
-  "orderErrorProvider": "Unknown response from payment provider: {paymentType}",
-  "orderNumber": "Order ID",
   "orderProperties": {
     "additionalCostsPerItem": "Additional costs (price per item)",
     "hasRequiredFields": "This is a mandatory field.",
@@ -796,74 +920,149 @@
       "maximumFileSize": "Maximum filesize",
       "orderPropertyTypeFile": "Type: File",
       "unSupportedFileType": "Uploaded file is not supported",
+      "uploaded": "uploaded",
       "uploadError": "The file could not be uploaded. Check the maximum allowed file size and file format.",
       "uploadFile": "Upload File",
-      "uploaded": "uploaded",
       "uploading": "uploading"
     },
     "vat": {
-      "incl": "incl.",
       "excl": "excl.",
+      "incl": "incl.",
       "plus": "plus"
     }
   },
-  "orderSuccessfulImageAlt": "order successful image",
-  "orderSummary": "Order Summary",
-  "outOfStock": "Out of stock",
-  "pagination": "Paginated Navigation",
-  "passwordVisibilty": "Password visibility",
-  "paypal": {
+  "paypalPayment": {
     "errorMessageCreditCard": "The input data is invalid. Check the fields Card number, CVV, Expiration date.",
+    "expressNotAvailable": "PayPal is not available for this delivery country. Please adjust your address accordingly or proceed to checkout to complete your order with another payment provider.",
+    "invalidOrder": "The order cannot be processed. Please try again.",
+    "puiBankDataAvailable": "Transfer the amount to the bank details provided. You can also find the bank details on your invoice.",
+    "puiBankDataNotAvailable": "The bank data for the transfer are retrieved and will be available shortly. The data will then be available here or can be found on your invoice.",
+    "puiDesignedUse": "Reason for payment",
     "unbrandedCancel": "Cancel",
     "unbrandedCardNumber": "Card number",
     "unbrandedCvv": "CVV",
     "unbrandedExpirationDate": "Expiration date",
     "unbrandedNameOnCard": "Name on card",
-    "unbrandedPay": "Pay",
-    "invalidOrder": "The order cannot be processed. Please try again.",
-    "puiBankDataAvailable": "Transfer the amount to the bank details provided. You can also find the bank details on your invoice.",
-    "puiBankDataNotAvailable": "The bank data for the transfer are retrieved and will be available shortly. The data will then be available here or can be found on your invoice.",
-    "puiDesignedUse": "Reason for payment",
-    "expressNotAvailable": "PayPal is not available for this delivery country. Please adjust your address accordingly or proceed to checkout to complete your order with another payment provider."
+    "unbrandedPay": "Pay"
   },
-  "perPage": "Per page",
-  "phone": "Phone",
-  "pickSavedAddress": "Saved addresses",
-  "closePickSavedAddress": "Close addresses picker",
-  "pickSavedAddressSubtitle": "Select one of your saved addresses or create a new one",
-  "placeOrder": "Place order and pay",
-  "pleaseSelect": "Please Select",
-  "prev": "Previous",
-  "prevAriaLabel": "Navigate to previous page",
-  "privacyPolicy": "Privacy Policy",
-  "privacyPolicyRequired": "Please select the checkbox for the privacy policy.",
-  "procentageSavings": "You save {percent} % on this bundle",
-  "productAttributes": {
-    "notValidVariation": "Please select a valid variation.",
-    "productNameMissing": "Item name missing",
-    "seeAvailableOptions": "See available options"
+  "PreferredDelivery": {
+    "general": {
+      "additionalCharge": "Additional charge",
+      "apply": "Apply",
+      "assistantName": "DHL Preferred Delivery",
+      "invalidPostalCodeMessage": "Please check the postcode. The postcode is not valid. A 5-digit value is expected.",
+      "preferredDropOffLocation": "Enter your preferred dropoff location",
+      "preferredLocationAlertMessage": "Enter the preferred location.",
+      "preferredNeigbourMaxCharViolation": "Maximum number of characters (100) exceeded.",
+      "preferredNeighbourAddress": "Enter your preferred neighbor's full address",
+      "preferredNeighbourAddressMessage": "Preferred neighbour: Enter street, house number, postcode and town.",
+      "preferredNeighbourFullName": "Enter your preferred neighbor's full name",
+      "preferredNeighbourNameAlertMessage": "Preferred neighbour: Enter last name and first name.",
+      "submitWunschpaketServices": "Settings for preferred services submitted.",
+      "wunschnachbarExampleAddress": "Street, house number, postcode, town",
+      "wunschnachbarExampleName": "Last name, first name",
+      "wunschnachbarTitle": "Preferred neighbour: Delivery to the required neighbour",
+      "wunschnachbarTooltip": "Determine a person in the immediate vicinity to whom we will deliver your parcel. This person should live in the same house, directly on the opposite side or next door.",
+      "wunschortExample": "e.g. garage, terrace",
+      "wunschortTitle": "Preferred location: Delivery to the required location",
+      "wunschortTooltip": "Determine a weatherproof location on your premises that is not obviously visible to third parties. We will deposit your parcel while you are absent.",
+      "wunschpaketAdditionalCharge": "When using this service, a surcharge of {additionalCharge} {currency} applies.*",
+      "wunschpaketIntroduction": "Use the DHL preferred services and decide when and where you would like to receive your parcels.",
+      "wunschpaketOptions": "Select your favourite delivery option:",
+      "wunschpaketTitle": "DHL preferred services",
+      "wunschtagNone": "None",
+      "wunschtagTitle": "Preferred day: Delivery on the required day",
+      "wunschtagTooltip": "You can select one of the displayed days as preferred day for the delivery of your parcels. Due to the delivery processes, it is not possible to select other days at the moment."
+    },
+    "packstation": {
+      "cityLabel": "Enter your city",
+      "cityPlaceholder": "City",
+      "containerTextInfo": "Enter an address and select a filter for the pick-up location. Afterwards, click on one of the search results to select this pick-up location.",
+      "days": {
+        "Friday": "Friday",
+        "Monday": "Monday",
+        "Saturday": "Saturday",
+        "Sunday": "Sunday",
+        "Thursday": "Thursday",
+        "Tuesday": "Tuesday",
+        "Wednesday": "Wednesday"
+      },
+      "dropDownValues": {
+        "packstation": "Packstation",
+        "postfilial": "Postal outlet"
+      },
+      "nameInfo": "The name is taken from the billing address. The post number and the address of the packing station/post office will be used as the shipping address.",
+      "noResult2": "Please enter at least the postcode or the town.",
+      "packstationAddedSuccessMessage": "The Packstation/post office was taken as shipping address.",
+      "postNumberLabel": "Enter your post number",
+      "postNumberPlaceholder": "Post number",
+      "postnumberRequired": "The post number is mandatory. Please enter your DHL post number.",
+      "search": "Search",
+      "setPackstation": "Apply",
+      "streetLabel": "Enter your street",
+      "streetPlaceholder": "Street",
+      "title": "DHL Packstation / Postal outlet",
+      "zipcodeInvalid": "Enter a valid postcode.",
+      "zipcodeLabel": "Enter your zip code",
+      "zipcodePlaceholder": "Postcode"
+    }
   },
-  "productDetails": "Item details",
-  "productLegalDetailsHeader": "Item legal details",
-  "products": "Items",
-  "quantitySelector": "Quantity selector",
-  "quantitySelectorDecrease": "Decrease value",
-  "quantitySelectorIncrease": "Increase value",
+  "previewModeBar": {
+    "exitEditor": "Exit editor and visit live shop",
+    "exitWithoutSaving": "Exit without saving",
+    "label": "Editor controls",
+    "saveAndExit": "Save changes and exit",
+    "title": "Exit editor and visit live shop?",
+    "unsavedChangesWarning": "You have unsaved changes."
+  },
+  "product": {
+    "allFromCategory": "All {name}",
+    "allProducts": "All items",
+    "allProductsLink": "Browse items",
+    "averageRating": "Average rating",
+    "basedOnRatings": "Based on {count} review(s)",
+    "bundleSavings": "You save {percent} % on this bundle",
+    "createReview": "Create review",
+    "customerReviews": "Customer reviews",
+    "decreaseQuantity": "Decrease value",
+    "details": "Item details",
+    "doubleTapZoom": "Double-tap to zoom",
+    "estimatedDelivery": "Estimated delivery time",
+    "imageOf": "Image of {name}",
+    "increaseQuantity": "Increase value",
+    "legalDetails": "Item legal details",
+    "lowestPrice": "Lowest price of the last 30 days: {price}",
+    "minimumQuantity": "Minimum order quantity: {count}",
+    "moreFromCategory": "More items of this category",
+    "noReviews": "Nobody has submitted a review for this item yet",
+    "noReviewsShort": "No reviews",
+    "notAvailable": "This item is not available.",
+    "outOfStock": "Out of stock",
+    "priceExclVAT": "Excl. VAT",
+    "priceInclVAT": "Incl. VAT",
+    "reviewsCount": "{count} reviews",
+    "showAllReviews": "Show all reviews",
+    "showAll": "Show all",
+    "graduatedPrices": {
+      "discount": "DISCOUNT",
+      "price": "PRICE",
+      "quantity": "QUANTITY",
+      "title": "Buy more, pay less"
+    },
+    "attributes": {
+      "notValidVariation": "Please select a valid variation.",
+      "productNameMissing": "Item name missing",
+      "seeAvailableOptions": "See available options"
+    }
+  },
   "quickCheckout": {
     "cartContains": "Your cart contains {count} item | Your cart contains {count} items",
     "checkYourCart": "Check your cart",
+    "close": "Close quick checkout",
     "heading": "Added to shopping cart",
-    "subTotal": "Items subtotal",
     "quantity": "Quantity",
-    "close": "Close quick checkout"
+    "subTotal": "Items subtotal"
   },
-  "readLess": "Read less",
-  "readMore": "Read more",
-  "removeFromWishlist": "Remove from wishlist",
-  "removeItemFromBasket": "Remove item from basket",
-  "removeProductFromWishlist": "Remove {label} from wishlist",
-  "resultsFor": "Results for \"{phrase}\"",
-  "returnNumber": "Return ID",
   "returns": {
     "areYouSure": "Are you sure you what to return these items?",
     "cancel": "Cancel",
@@ -922,156 +1121,82 @@
     "yourAnswer": "Your answer",
     "yourRating": "Your rating:"
   },
-  "reviewsCount": "{count} reviews",
-  "sale": "Sale",
-  "closeNeutralAlert": "Close neutral alert",
-  "saveAddress": "Save address",
-  "savedBillingAddress": "Saved billing adresses",
-  "savedShippingAddress": "Saved shipping adresses",
-  "scrollTop": "Scroll to top",
-  "search": "Search",
-  "resetSearch": "Reset Search",
+  "search": {
+    "clearFilters": "Clear all filters",
+    "emptyStateImageAlt": "Image that describes that no items were found",
+    "emptyStateText": "We no longer have items in this category.",
+    "emptyStateText2": "Have not found what you are looking for?",
+    "numberOfProducts": "{count} items out of {total} items",
+    "searchResults": "Search results for \"{phrase}\""
+  },
+  "searchBar": {
+    "searchSuggestions": "Search Suggestions",
+    "productSuggestions": "Product Suggestions",
+    "matchingCategories": "Matched Categories",
+    "showAllResults": "See all results for \"{searchTerm}\" ({hitsCount})",
+    "noResultsFound": "No results found."
+  },
+  "sessionLifetime": {
+    "oneDay": "One day, even if the browser is closed",
+    "oneHour": "One hour, even if the browser is closed",
+    "oneHundredDays": "One hundred days, even if the browser is closed",
+    "untilBrowserClosed": "Until the browser is closed"
+  },
   "shipping": {
     "addButton": "Add shipping address",
     "description": "Add a shipping address to view shipping details.",
+    "excludedLabel": "excl. {shipping}",
     "heading": "Shipping address",
     "methodChanged": "The selected shipping method is not available anymore.",
     "noShippingMessage": "No shipping information available",
-    "noShippingMethodsNoAddress": "Enter your shipping address to see the available shipping methods."
+    "noShippingMethodsNoAddress": "Enter your shipping address to see the available shipping methods.",
+    "method": {
+      "description": "Not available until a shipping address is provided.",
+      "free": "Free",
+      "heading": "Shipping method",
+      "maxDeliveryDays": "Delivery within {days} days",
+      "noMethodsAvailable": "There are no shipping methods available. Please contact the webshop provider.",
+      "showDataPrivacyAgreementHint": "I agree that my email address and my phone number will be transmitted to {parcelServiceInformation}, so that they can contact me via email or phone in order to determine a delivery date or to communicate status information about the delivery of the shipment. I can revoke this agreement at any time."
+    }
   },
-  "shippingAddress": "Shipping address",
-  "shippingAddressRequired": "Please select a shipping address.",
-  "shippingMethod": {
-    "description": "Not available until a shipping address is provided.",
-    "free": "Free",
-    "heading": "Shipping method",
-    "noMethodsAvailable": "There are no shipping methods available. Please contact the webshop provider.",
-    "showDataPrivacyAgreementHint": "I agree that my email address and my phone number will be transmitted to {parcelServiceInformation}, so that they can contact me via email or phone in order to determine a delivery date or to communicate status information about the delivery of the shipment. I can revoke this agreement at any time.",
-    "maxDeliveryDays": "Delivery within {days} days"
-  },
-  "showAllReviews": "Show all reviews",
-  "showLess": "Show less",
-  "showMore": "Show more",
-  "showOptions": "Show options",
-  "showProducts": "Show items",
-  "mostPopular": "Most popular",
-  "socialLabel": "Go to {label} page",
-  "softLogin": {
-    "check": "Check",
-    "fullName": "Last name or company name",
-    "titleFullName": "Please enter the last name or company name attached to the order to view the order details.",
-    "titleLogin": "Log in to your account to access your order",
-    "titlePostcode": "Please enter the postcode of an address stored for the order to view the order details."
-  },
-  "somethingWentWrongImageAlt": "Image that describes that something went wrong",
   "sortingAndPagination": {
     "recommendedSorting": {
-      "title": "Recommended sorting",
       "description": "You can decide how the \"Recommended\" option is composed. Select three sorting options. The first sorting option takes the highest priority, the second option the second highest, etc.",
       "firstSortingOptionLabel": "First sorting option",
-      "secondSortingOptionLabel": "Second sorting option",
-      "thirdSortingOptionLabel": "Third sorting option",
       "options": {
-        "sortingPriorityCategoryItemIdAsc": "Item ID ⬆",
-        "sortingPriorityCategoryItemIdDesc": "Item ID ⬇",
-        "sortingPriorityCategoryNameAsc": "Item name A-Z",
-        "sortingPriorityCategoryNameDesc": "Item name Z-A",
-        "sortingPriorityCategoryPriceAsc": "Price ⬆",
-        "sortingPriorityCategoryPriceDesc": "Price ⬇",
-        "sortingPriorityCategoryVariationCreatedAtDesc": "Newest variation",
-        "sortingPriorityCategoryVariationCreatedAtAsc": "Oldest variation",
-        "sortingPriorityCategoryVariationIdAsc": "Variation ID ⬆",
-        "sortingPriorityCategoryVariationIdDesc": "Variation ID ⬇",
-        "sortingPriorityCategoryVariationNumberAsc": "Variation number ⬆",
-        "sortingPriorityCategoryVariationNumberDesc": "Variation number ⬇",
+        "sortDataRandom": "Random",
         "sortingPriorityCategoryAvailabilityAsc": "Availability ⬆",
         "sortingPriorityCategoryAvailabilityDesc": "Availability ⬇",
-        "sortingPriorityCategoryVariationUpdatedAtAsc": "Last update",
-        "sortingPriorityCategoryVariationUpdatedAtDesc": "First update",
-        "sortingPriorityCategoryVariationPositionAsc": "Variation position ⬆",
-        "sortingPriorityCategoryVariationPositionDesc": "Variation position ⬇",
+        "sortingPriorityCategoryItemIdAsc": "Item ID ⬆",
+        "sortingPriorityCategoryItemIdDesc": "Item ID ⬇",
         "sortingPriorityCategoryManufacturerAsc": "Manufacturer A-Z",
         "sortingPriorityCategoryManufacturerDesc": "Manufacturer Z-A",
         "sortingPriorityCategoryManufacturerPositionAsc": "Manufacturer position ⬆",
         "sortingPriorityCategoryManufacturerPositionDesc": "Manufacturer position ⬇",
+        "sortingPriorityCategoryNameAsc": "Item name A-Z",
+        "sortingPriorityCategoryNameDesc": "Item name Z-A",
+        "sortingPriorityCategoryNotSelected": "Not selected",
+        "sortingPriorityCategoryPriceAsc": "Price ⬆",
+        "sortingPriorityCategoryPriceDesc": "Price ⬇",
         "sortingPriorityCategoryStockAsc": "Stock ⬆",
         "sortingPriorityCategoryStockDesc": "Stock ⬇",
-        "sortDataRandom": "Random",
-        "sortingPriorityCategoryNotSelected": "Not selected"
-      }
-    }
-  },
-  "sortBy": "Sort by",
-  "sortType": {
-    "default": {
-      "recommended_sorting": "Recommended"
-    },
-    "texts": {
-      "name1_asc": "Name A-Z",
-      "name1_desc": "Name Z-A"
-    },
-    "sorting": {
-      "price": {
-        "avg_asc": "Price ⬆",
-        "avg_desc": "Price ⬇"
-      }
-    },
-    "variation": {
-      "createdAt_desc": "Newest items",
-      "createdAt_asc": "Oldest items",
-      "availability": {
-        "averageDays_asc": "Availability ⬆",
-        "averageDays_desc": "Availability ⬇"
+        "sortingPriorityCategoryVariationCreatedAtAsc": "Oldest variation",
+        "sortingPriorityCategoryVariationCreatedAtDesc": "Newest variation",
+        "sortingPriorityCategoryVariationIdAsc": "Variation ID ⬆",
+        "sortingPriorityCategoryVariationIdDesc": "Variation ID ⬇",
+        "sortingPriorityCategoryVariationNumberAsc": "Variation number ⬆",
+        "sortingPriorityCategoryVariationNumberDesc": "Variation number ⬇",
+        "sortingPriorityCategoryVariationPositionAsc": "Variation position ⬆",
+        "sortingPriorityCategoryVariationPositionDesc": "Variation position ⬇",
+        "sortingPriorityCategoryVariationUpdatedAtAsc": "Last update",
+        "sortingPriorityCategoryVariationUpdatedAtDesc": "First update"
       },
-      "number_asc": "Variation number ⬆",
-      "number_desc": "Variation number ⬇",
-      "updatedAt_asc": "Last update",
-      "updatedAt_desc": "First update",
-      "position_asc": "Top seller ⬆",
-      "position_desc": "Top seller ⬇"
-    },
-    "item": {
-      "manufacturer": {
-        "externalName_asc": "Manufacturer A-Z",
-        "externalName_desc": "Manufacturer Z-A"
-      },
-      "feedbackDecimal_asc": "Item reviews ⬆",
-      "feedbackDecimal_desc": "Item reviews ⬇",
-      "score": "Relevance"
+      "secondSortingOptionLabel": "Second sorting option",
+      "thirdSortingOptionLabel": "Third sorting option",
+      "title": "Recommended sorting"
     }
-  },
-  "availabilitiesOptions": {
-    "availabilityNotSet": "Select availability",
-    "availabilityInStock": "In stock",
-    "availabilityOutOfStock": "Out of stock",
-    "availabilityPreOrder": "Pre-order",
-    "availabilityDiscontinued": "Discontinued",
-    "availabilityInStoreOnly": "In store only",
-    "availabilityLimitedAvailability": "Limited availability",
-    "availabilityOnlineOnly": "Online only",
-    "availabilityPreSale": "Pre-sale",
-    "availabilitySoldOut": "Sold out",
-    "availabilityBackOrder": "Back order"
-  },
-  "cookieGroup": {
-    "functional": "Functional",
-    "externalMedia": "External Media",
-    "necessary": "Necessary",
-    "marketing": "Marketing (recommended)"
-  },
-  "sessionLifetime": {
-    "untilBrowserClosed": "Until the browser is closed",
-    "oneHour": "One hour, even if the browser is closed",
-    "oneDay": "One day, even if the browser is closed",
-    "oneHundredDays": "One hundred days, even if the browser is closed"
   },
   "storefrontError": {
-    "offer": {
-      "expired": "This offer has expired",
-      "openUnauthorized": "You are not authorised to open this offer.",
-      "itemOutOfStock": "At least one item in the offer is no longer in stock.",
-      "alreadyTaken": "This offer has already been used and cannot be used again."
-    },
     "address": {
       "createFailed": "Saving the address has failed.",
       "deleteFailed": "The deletion of the address failed.",
@@ -1079,6 +1204,9 @@
       "vatInvalid": "The VAT number is invalid.",
       "vatServerBusy": "Your VAT number could not be validated. Please contact the online store operator.",
       "vatServerFallback": "Your VAT number could not be validated. The order will be reviewed again."
+    },
+    "blocks": {
+      "base64NotAllowed": "The image was not uploaded correctly. Try uploading it again."
     },
     "cart": {
       "addToBasket": {
@@ -1096,13 +1224,13 @@
     "contact": {
       "emailAlreadyExists": "The email address already exists.",
       "missingContactOrUnexpectedFormat": "Missing contact data or unexpected format.",
-      "unexpectedAddressFormat": "Unexpected address format.",
       "passwordInvalid": "The password does not meet the required security standards.",
-      "unauthorizedPasswordReset": "Unable to reset password. The link may have expired or already been used."
+      "unauthorizedPasswordReset": "Unable to reset password. The link may have expired or already been used.",
+      "unexpectedAddressFormat": "Unexpected address format."
     },
     "contactMail": {
-      "failed": "Message could not be sent.",
       "emailInvalid": "The email address is not valid.",
+      "failed": "Message could not be sent.",
       "messageInvalid": "The message is not valid.",
       "nameInvalid": "The name is not valid.",
       "orderIdInvalid": "The Order ID is not valid.",
@@ -1111,6 +1239,12 @@
     "coupon": {
       "applyFailed": "The coupon could not be redeemed."
     },
+    "editor": {
+      "invalidEditorHash": "The editor session is invalid."
+    },
+    "feedback": {
+      "notAllowedWithoutPurchase": "You must purchase this item before leaving a review."
+    },
     "login": {
       "loginFailed": "Invalid login data",
       "userIsBlocked": "User is blocked"
@@ -1118,125 +1252,214 @@
     "newsletter": {
       "createFailed": "The newsletter could not be subscribed to."
     },
+    "offer": {
+      "alreadyTaken": "This offer has already been used and cannot be used again.",
+      "expired": "This offer has expired",
+      "itemOutOfStock": "At least one item in the offer is no longer in stock.",
+      "openUnauthorized": "You are not authorised to open this offer."
+    },
     "order": {
-      "additionalAuthRequiredName": "Confirmation of the last name is required to access this order.",
       "additionalAuthenticationRequired": "Additional authentication is required for this order.",
       "additionalAuthenticationRequiredLogin": "For this order it is necessary to log in again.",
       "additionalAuthenticationRequiredPostcode": "Confirmation of the zip code used is required for this order.",
+      "additionalAuthRequiredName": "Confirmation of the last name is required to access this order.",
+      "assignPaymentFailed": "The payment could not be assigned to the order.",
       "createFailed": "The order could not be created.",
       "loadOrdersFailed": "The orders could not be loaded.",
       "migrateUnauthorized": "The order could not be added to your account.",
       "notFound": "The order does not exist.",
-      "softLoginFailed": "The provided data is invalid.",
-      "assignPaymentFailed": "The payment could not be assigned to the order."
-    },
-    "turnstile": {
-      "invalid": "Verification failed. Please try again in a few moments.",
-      "misConfigured": "Verification service is currently unavailable. Please contact the site administrator."
+      "softLoginFailed": "The provided data is invalid."
     },
     "security": {
       "invalidCsrfToken": "For your security, this action was forbidden. Please try to refresh the page.",
       "tooManyRequests": "Too many actions have been made in a short period of time. Please try again later."
     },
+    "turnstile": {
+      "invalid": "Verification failed. Please try again in a few moments.",
+      "misConfigured": "Verification service is currently unavailable. Please contact the site administrator."
+    },
+    "notifyMe": {
+      "alreadySubscribed": "You have already subscribed to this product"
+    },
     "unknownError": "An unknown error has occurred."
   },
-  "reloadPage": "Reload page",
-  "successInfoMessage": "Your order was completed successfully.",
-  "successInfoOrderHeader": "Thank you for your order!",
-  "successInfoReturnHeader": "Thank you for your return!",
-  "technicalData": "Technical data",
-  "termsAndConditions": "Terms and Conditions",
-  "termsInfo": "Our {terms}, {cancellationRights} and {privacyPolicy} apply. *",
-  "termsRequired": "You have to agree with the terms and conditions.",
-  "tomorrow": "Tomorrow",
-  "total": "Total",
-  "unsavedAddress": "The address you entered has not yet been saved. Click Save address to proceed with the checkout.",
-  "validation": {
-    "heading": "To complete order:",
-    "missingBillingAddress": "add billing address",
-    "missingEmail": "add email",
-    "missingPaymentMethod": "choose payment method",
-    "missingShippingAddress": "add shipping address",
-    "missingShippingDetails": "choose shipping method"
-  },
-  "viewCart": "View Cart",
-  "wishlist": "Wishlist",
-  "wishlistInteraction": {
-    "add": "The item was added to your wish list.",
-    "delete": "The item was removed from your wish list."
-  },
-  "youAreOfflineText": "It seems you are currently offline, check your internet connection",
-  "reloadPWA": {
-    "newVersionAvailable": "A new version of the shop is available.",
-    "refresh": "Refresh",
-    "ariaLabel": "A new version of the shop is available. Press to refresh the page."
-  },
-  "double-tap-zoom": "Double-tap to zoom",
-  "PreferredDelivery": {
-    "general": {
-      "assistantName": "DHL Preferred Delivery",
-      "wunschpaketIntroduction": "Use the DHL preferred services and decide when and where you would like to receive your parcels.",
-      "wunschpaketOptions": "Select your favourite delivery option:",
-      "wunschpaketTitle": "DHL preferred services",
-      "wunschtagTitle": "Preferred day: Delivery on the required day",
-      "wunschortTitle": "Preferred location: Delivery to the required location",
-      "wunschnachbarTitle": "Preferred neighbour: Delivery to the required neighbour",
-      "wunschtagTooltip": "You can select one of the displayed days as preferred day for the delivery of your parcels. Due to the delivery processes, it is not possible to select other days at the moment.",
-      "wunschortTooltip": "Determine a weatherproof location on your premises that is not obviously visible to third parties. We will deposit your parcel while you are absent.",
-      "wunschnachbarTooltip": "Determine a person in the immediate vicinity to whom we will deliver your parcel. This person should live in the same house, directly on the opposite side or next door.",
-      "wunschortExample": "e.g. garage, terrace",
-      "wunschnachbarExampleName": "Last name, first name",
-      "wunschnachbarExampleAddress": "Street, house number, postcode, town",
-      "wunschpaketAdditionalCharge": "When using this service, a surcharge of {additionalCharge} {currency} applies.*",
-      "wunschtagNone": "None",
-      "preferredLocationAlertMessage": "Enter the preferred location.",
-      "preferredNeighbourNameAlertMessage": "Preferred neighbour: Enter last name and first name.",
-      "preferredNeighbourAddressMessage": "Preferred neighbour: Enter street, house number, postcode and town.",
-      "preferredNeigbourMaxCharViolation": "Maximum number of characters (100) exceeded.",
-      "preferredNeighbourFullName": "Enter your preferred neighbor's full name",
-      "preferredNeighbourAddress": "Enter your preferred neighbor's full address",
-      "preferredDropOffLocation": "Enter your preferred dropoff location",
-      "submitWunschpaketServices": "Settings for preferred services submitted.",
-      "apply": "Apply",
-      "invalidPostalCodeMessage": "Please check the postcode. The postcode is not valid. A 5-digit value is expected.",
-      "additionalCharge": "Additional charge"
+  "defaultTemplate": {
+    "category": {
+      "categoryData": {
+        "name": "Category name"
+      }
     },
-    "packstation": {
-      "title": "DHL Packstation / Postal outlet",
-      "zipcodeLabel": "Enter your zip code",
-      "zipcodeInvalid": "Enter a valid postcode.",
-      "zipcodePlaceholder": "Postcode",
-      "cityLabel": "Enter your city",
-      "cityPlaceholder": "City",
-      "streetLabel": "Enter your street",
-      "streetPlaceholder": "Street",
-      "dropDownValues": {
-        "postfilial": "Postal outlet",
-        "packstation": "Packstation"
+    "product": {
+      "itemText": {
+        "title": "Item details"
       },
-      "nameInfo": "The name is taken from the billing address. The post number and the address of the packing station/post office will be used as the shipping address.",
-      "search": "Search",
-      "noResult2": "Please enter at least the postcode or the town.",
-      "setPackstation": "Apply",
-      "postNumberLabel": "Enter your post number",
-      "postNumberPlaceholder": "Post number",
-      "packstationAddedSuccessMessage": "The Packstation/post office was taken as shipping address.",
-      "containerTextInfo": "Enter an address and select a filter for the pick-up location. Afterwards, click on one of the search results to select this pick-up location.",
-      "postnumberRequired": "The post number is mandatory. Please enter your DHL post number.",
-      "days": {
-        "Monday": "Monday",
-        "Tuesday": "Tuesday",
-        "Wednesday": "Wednesday",
-        "Thursday": "Thursday",
-        "Friday": "Friday",
-        "Saturday": "Saturday",
-        "Sunday": "Sunday"
+      "technicalData": {
+        "title": "Technical Data"
+      },
+      "customerReview": {
+        "title": "Customer Reviews"
+      },
+      "productLegalInformation": {
+        "title": "Item legal details",
+        "linkText": "EU Responsible Person - click for details"
+      }
+    },
+    "homepage": {
+      "carousel": {
+        "banner1": {
+          "pretitle": "Feel the music",
+          "title": "Your Sound, Elevated",
+          "description": "Immerse yourself in rich, crystal-clear audio with our cutting-edge headphones. Designed for the ultimate listening experience, whether you're a casual listener or an audiophile. Discover the perfect blend of style, comfort, and sound quality that elevates your music to new heights.",
+          "buttonLabel": "Discover Capybara"
+        },
+        "banner2": {
+          "pretitle": "The Future of Aerial Photography",
+          "title": "Drone Omega",
+          "description": "A lightweight drone designed for stunning aerial footage. With a high-resolution camera on a 3-axis gimbal and up to 45 minutes of flight time, it's perfect for capturing smooth, stable video. Featuring GPS-assisted hover, obstacle avoidance, and easy portability, the Drone brings innovation and simplicity to your aerial shots.",
+          "buttonLabel": "Discover Omega"
+        }
+      },
+      "textcard": {
+        "welcome": {
+          "pretitle": "Welcome to your new favorite shop",
+          "title": "Discover Tech & Style",
+          "subtitle": "Innovative technology meets modern fashion",
+          "paragraph1": "Welcome to our shop, where tech enthusiasts and fashion lovers alike will find exactly what they're looking for! From premium headphones and high-performance drones to stylish clothing, we offer everything to make your life smarter and your style unique.",
+          "paragraph2": "Our mission is to provide you with a carefully curated selection of products that combine quality, innovation, and design. Whether you're in search of a new speaker for perfect sound or a casual hoodie to complete your look – we've got you covered.",
+          "buttonLabel": "Get shopping"
+        }
+      },
+      "multigrid": {
+        "textcard": {
+          "title": "A New Listening Experience",
+          "subtitle": "Innovative technology meets modern fashion",
+          "paragraph": "Our headphone collection sets new standards in audio precision. With deep bass, crystal-clear highs, and an impressive soundstage, these headphones deliver a unique listening experience for every music genre. Combining modern design, maximum comfort, and cutting-edge technology, they are the perfect choice for anyone who refuses to compromise on sound quality.",
+          "feature1": "Premium, studio-quality sound",
+          "feature2": "Comfortable fit for extended listening",
+          "feature3": "Long-lasting battery life",
+          "feature4": "Seamless wireless connectivity",
+          "buttonLabel": "To our headphones"
+        },
+        "image": {
+          "alt": "Headphones"
+        }
+      },
+      "productRecommended": {
+        "fashion": {
+          "pretitle": "More than just technology",
+          "title": "Discover our fashion collection",
+          "subtitle": "Sporty fashion and accessories for everyone.",
+          "linkText": "To our full collection.",
+          "linkUrl": "https://plentyshop.plentymarkets.com/wear"
+        }
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Be aware of upcoming sales and events. Receive gifts and special offers!",
+        "buttonLabel": "Subscribe"
+      }
+    },
+    "footer": {
+      "column1": {
+        "title": "Legal"
+      },
+      "column2": {
+        "title": "Services"
       }
     }
   },
   "cancelOrder": "Cancel order",
   "videoCta": "Find your Ezyroller",
   "textWidgetTitle": "Curve your way",
+  "textWidgetDesc": "With their multiple award-winning, proven design, EzyRoller are true pioneers in terms of riding fun and quality! Thanks to high-quality materials and technology, they are extremely durable and quiet. If you have any questions or are interested in distributing our products, please contact us via our ",
+  "textWidgetLink": "contact form",
+  "textWidgetCopy": "All rights reserved",
+  "textWidgetL1": "Our Story",
+  "textWidgetL2": "Right of Withdrawal",
+  "textWidgetL3": "Imprint",
+  "textWidgetL4": "Privacy Policy",
+  "textWidgetL5": "Terms & Conditions",
+  "textWidgetL6": "FAQ",
+  "textWidgetL7": "Contact",
+  "textWidgetL8": "EzyRoller Care",
+  "textWidgetL9": "Warranty",
+  "textWidgetL10": "Models",
+  "textWidgetL11": "Accessories",
+  "textWidgetL12": "Spare Parts",
+  "textWidgetL13": "Sale & Bundle Offers",
+  "textWidgetL14": "Become a Dealer",
+  "textWidgetL15": "About Us",
+  "textWidgetL16": "Shop & Contact",
+  "textWidgetLI1": "/ezyroller-models",
+  "textWidgetLI2": "/ezyroller-models/originals",
+  "textWidgetLI3": "/ezyroller-models/x-series",
+  "textWidgetLI4": "/komplettset",
+  "textWidgetLI5": "/spare-parts",
+  "textWidgetLI6": "/spare-parts/accessories",
+  "os1": "About Us",
+  "os2": "How it all began",
+  "os3": "The Ezyroller story",
+  "os4": "Our Ezyroller journey began 20 years ago when our 2-year-old son hopped on a little ride-on toy that had us instantly captivated. Without any chains or batteries, he was cruising along in a continuous curving motion created by his little hands pushing side to side on a hand bar. The movement was genius - and the fun he was having was huge.",
+  "os5": "Digging a bit deeper, we discovered it was just one of many toys using the same ‘rider-generated’ forward motion, known as cambering. The ride-on toys were all clearly designed for youngsters – but we could already see the potential for something new and different with much wider appeal. The seats, frames, look and overall stability of the existing ride-ons revealed an opportunity to redesign and recreate!",
+  "os6": "And so began our mission to come up with a superior ride-on experience using the same ingenious cambering motion but topping it with something totally new. We wanted improved strength, stability, smoothness of motion, and a racier, cleaner look that would appeal to kids of all ages.",
+  "os7": "What followed was a solid year of testing and tinkering, with each change being put through its paces by the toughest toy critics around – the kids in our neighbourhood. Every new tweak to this ride-on toy was tested along our driveway by our three boys, the neighbours’ kids, their friends, and their friends’ friends.",
+  "os8": "Eventually we arrived at what would become our flagship product, the Ezyroller Classic. The kids immediately loved it – it was tough and sturdy, it was racy, and it glided along beautifully. It was also extendable, meaning the kids could keep rolling with it as they grew. But best of all, we noticed all the cool, inventive play going on - the kids would be racing, chasing or towing each other, chalking the pavement, throwing each other balls, even jousting with their plastic swords!",
+  "os9": "Since the launch of the Ezyroller Classic our team has continued to add to the range, with each new version fulfilling our mission to improve, diversify and add new levels of fun to the Ezyroller experience. Every show, every test, every factory visit, every discussion is an opportunity to find new ways to be better. We’ve since developed the Ezyroller Drifter (for our more adventurous riders), the Mini (to better suit our littlest riders) the Pro (to get big kids in on the action) and our X series (with a new twist on the original look). We’ve also introduced a range of game accessories for those riders with a more competitive streak!",
+  "os10": "Today, Ezyroller boasts an award-winning range of models and accessories suitable for every age, size, personality and skill level. Whether you’re a racer or a cruiser at heart, want to shoot a few hoops, hit hockey shots or just invent games of your own, there’s no limit to the fun!",
+  "os11": "We won our first awards in 2007 when we presented our Classic model in the US and we just won our 27th one in July 2024 for our Spinner X!",
+  "os12": "Awards",
+  "ostitle": "About Us – The EzyRoller Story",
+  "osdesc": "For more than 20 years, EzyRoller has created ride‑on vehicles that grow with your child and deliver smooth, playful motion. Discover our story and what inspires us.",
+  "faq1": "Frequently Asked Questions",
+  "faq2": "Information about EzyRoller products",
+  "faq3": "Child safety is our top priority. That’s why we ask all children and their parents to carefully read and follow our safety instructions. Parental supervision is always required when children ride their EzyRoller to ensure all safety rules are observed. Always wear a helmet and appropriate protective gear when using your EzyRoller.",
+  "faq4": "Adult assistance is required during assembly: the packaging contains small parts that pose a choking hazard for children under 3 years of age.",
+  "faq5": "Ensure all parts and packaging are kept out of reach of children. Keep fingers and body parts away when folding, unfolding, or adjusting the size. Also, make sure fingers, hands, hair, and clothing do not come into contact with the wheels while using the EzyRoller.",
+  "faq6": "Never use your EzyRoller near cars, traffic, pools, or in areas with limited visibility. Slopes, stairs, hills, and swimming pools are off-limits.",
+  "faq7": "The EzyRoller is designed for use on flat, clean, dry surfaces where the movement mechanism works optimally. The brake is not intended to stop the EzyRoller at high speed. Doing so may cause excessive wheel wear that would require replacement and could compromise the EzyRoller’s stability.",
+  "faq8": "Here you’ll find a list of frequently asked questions. If you don’t find the answer to your question, you can always email us at info{'@'}ezyroller.de. Always remember: child safety comes first, and children should never use the EzyRoller unsupervised near vehicles.",
+  "faq9": "Technical Information",
+  "faq10": "What are our privacy policies?",
+  "faq11": "We handle your data with care. You can find more details in our Privacy Policy.",
+  "faq12": "How does it move?",
+  "faq13": "Like other comparable fun vehicles, the EzyRoller is powered by a side-to-side “wiggle” motion. A simple left-right movement, performed with the feet on the footrest, propels the vehicle forward, mimicking the slithering of a snake. If you look at the tracks left by an EzyRoller, you’ll notice the resemblance to snake trails.",
+  "faq14": "Which surfaces does it work on?",
+  "faq15": "The EzyRoller works on most surfaces except grass, sand, gravel, or uneven terrain. Thanks to its highly durable polyurethane wheels, it can also be used on thick carpets.",
+  "faq16": "Does it need a slope to move?",
+  "faq17": "No. The EzyRoller is designed for flat surfaces. We do not recommend using it on sloped terrain, as it is not intended for that purpose. Riding downhill may also cause premature wheel wear due to frequent braking.",
+  "faq18": "From what age can my child ride an EzyRoller?",
+  "faq19": "Children can start riding the EzyRoller Mini as early as 2 to 3 years old. For all other models, please read the description carefully. Each model has been safety-tested up to 210 kg. For normal use, we recommend a maximum rider weight of 70 kg.",
+  "faq20": "Where is the EzyRoller made?",
+  "faq21": "Initially, the EzyRoller was assembled in a garage in New Zealand, but production soon moved to Asia. While manufacturing there is more cost-effective, the main reason was that no New Zealand manufacturer had the technical capacity to produce the EzyRoller. Workers at our partner factories may be young, but we ensure no child labor is involved and conduct monthly checks. No matter where it’s produced, you receive the quality you pay for—this is non-negotiable. The factory in China produces to ISO9001 standards and has over 20 years of experience in making comparable products. In China, we can achieve higher product quality than in New Zealand, where production costs are much higher and capabilities more limited, which would otherwise result in a lower-quality product.",
+  "faq22": "Do you have game suggestions for the EzyRoller?",
+  "faq23": "Children’s imagination has no limits. With the EzyRoller, kids can unleash their creativity, playing alone or with friends. Our game suggestions are divided into activities for one EzyRoller and games that require multiple EzyRollers.",
+  "faq24": "Is there a warranty on the product?",
+  "faq25": "Yes. All EzyRollers come with a two-year warranty from the date of purchase. This does not cover wear parts such as wheels or grips, nor does it cover damage caused by a car. The EzyRoller is not suitable for sloped terrain. Premature wear caused by riding on uneven surfaces and excessive braking is not covered under the warranty.",
+  "faq26": "Can I buy spare parts?",
+  "faq27": "Yes. We offer all necessary spare parts for every EzyRoller in our shop. If you can’t find something, please contact us at info{'@'}ezyroller.de",
+  "faq28": "Games With One EzyRoller",
+  "faq29": "The simplest and still super exciting: EzySlalom",
+  "faq30": "What you need: A large flat area (tennis court, sports ground), some plots (sports cones, balls...) for the course, a chronometer to time your mates.",
+  "faq31": "What to do:",
+  "faq32": "Place the cones on the ground and set a start/finish line",
+  "faq33": "Place yourself behind the start line",
+  "faq34": "Slalom between the obstacles without touching them",
+  "faq35": "The winner is the one that is fastest at crossing the line without touching the obstacles. Depending on the difficulty of the course you can incur penalties for touching the obstacles. How to improve: Find the best trajectory first before focusing on speed. Variants: You can have a team against another one, trying to make a relay and see who is fastest. When you touch, you go around the obstacle. You can go around the block as fast as possible and time yourself!",
+  "faq36": "Games With Multiple EzyRollers: EzyHockey game",
+  "faq37": "What you need: a large flat area (tennis court, sports ground...), 2 teams of 3 kids at least. More if you have a big court, some goal posts, a ball.",
+  "faq38": "Make 2 even teams. Like at hockey or soccer, you can pass the ball directly. Score in the post. How to improve: Try to have a defense and attack team with more a specialized striker. Variants: If you have a small hockey set then use a smaller ball. You can throw the ball backwards. Use American football rules with a quarterback!",
+  "faqtitle": "FAQ",
+  "faqdesc": "Find answers to the most common questions about EzyRoller. Clear information about our products, sizes, features and models.",
+  "ercaretitle": "Care Instructions & Warranty",
+  "ercaredesc": "EzyRollers require minimal maintenance: simply protect them from rain and direct sunlight to keep them smooth and durable. Our uncompromising quality standards include a 2‑year frame warranty from the date of purchase.",
+  "ercare1": "2‑Year Warranty",
+  "ercare2": "How to Maintain Your EzyRoller",
+  "ercare3": "Care Instructions",
+  "ercare4": "At EzyRoller, we aim to keep maintenance as low as possible. Complicated care? Forget it! Just remember to protect your EzyRoller trike scooter from rain and direct sunlight – this will keep it smooth, stylish, and ready to ride for years. Our high-quality standards ensure effortless fun and long-lasting elegance.",
+  "ercare5": "Warranty",
+  "ercare6": "The frame of your EzyRoller comes with a 2-year warranty from the date of purchase. This does not cover wear-and-tear parts such as seats, wheels, or grips, improper care, or damage caused by accidents, e.g., if the trike is run over by a car.",
+  "ercare7": "Most EzyRollers are made primarily from steel. Despite a strong powder coating, rust can develop if scratches are not protected and the vehicle is exposed to rain or high humidity outdoors.",
+  "ercare8": "The EzyRoller is designed for flat, smooth surfaces, not slopes. Using the brake on inclines can wear down the wheels quickly – this is not covered by the warranty.",
   "textWidgetP1": "At EzyRoller, we don’t just create trikes – we craft riding experiences. Our award-winning range is designed to make every ride smooth, exciting, and unforgettable. Imagine gliding effortlessly, powered solely by the rhythm of your own movements.",
   "textWidgetP2": "From the Mini for little explorers to the Drifter Pro X for thrill-seeking teens and adults, there’s a ride for every age and energy level. Looking for adventure? The Drift Trike turns your ride into a 360° spin of fun, while the Drifter X tackles corners like it was built for the racetrack. And when it’s time to take things up a notch, our awesome accessory kits – from hockey sets to snow gear – keep the action going.",
   "textWidgetP3": "Durable, stylish, and endlessly fun – EzyRoller is more than just a kids’ vehicle. It’s movement perfected. Ready to roll?",
@@ -1252,15 +1475,114 @@
   "prodWidgetT7": "Extendable bar / telescopic bar",
   "brakesValue": "Lever brake",
   "prodWidgetButton": "Browse products",
-  "findEzyrollerTitle": "1",
-  "findEzyrollerDescription": "1",
-  "sgC1": "Size Guide",
-  "sgC2": "Which Ezyroller is right for your kids (and you!)",
-  "sgC3": "Our EzyRollers are designed to grow with your child. Thanks to our innovative extension systems, there are multiple sizes and adjustable features. From Classic and Classic X to Mini, Drifter, Pro, and their X variants, there’s a perfect trike, trike scooter, or kids’ vehicle for every size, age, and skill level.",
+  "findEzyrollerTitle": "EzyRoller Size Guide",
+"findEzyrollerDescription": "Which EzyRoller model is the best fit for your child (or for you!)",
+"sgC1": "Size Guide",
+"sgC2": "Which size fits your child best (or you!)",
+"sgC3": "Our EzyRollers are designed to grow with your child. Thanks to our innovative extension systems, each model offers multiple sizes and adjustable features. From Classic and Classic X to Mini, Drifter, Pro and their X‑Series versions, there is a perfect ride‑on for every size, age and skill level.",
+"sgT11": "Small and lightweight",
+"sgT12": "Every rider is different, but the Mini is our smallest seat and frame. It is ideal for children around 13–20 kg (30–45 lbs) and a height of approx. 78–83 cm up to 93–100 cm. Beyond that, the Classic model will likely be a better fit. We generally recommend the Mini for children aged around 2 to 4 years.",
+"sgT13": "Discover the EzyRoller Mini",
+"sgT21": "The original",
+"sgT22": "Every rider is different. We usually recommend the Classic model for children from around 100 cm (about 4 years old). The Classic comes with 2 extensions so it can grow with the child up to around 14 years and beyond.",
+"sgT23": "The Classic X is a new version of the original Classic: same size, but with new features – a sleeker shape, reinforced seat and new hand and foot grips.",
+"sgT24": "Discover the EzyRoller Classic",
+"sgT25": "Discover the EzyRoller Classic X",
+"sgT31": "360° fun",
+"sgT32": "We recommend the Spinner for children from around 100 cm (about 4 years old). It comes with 2 extensions so it can grow with them up to around 14 years and beyond.",
+"sgT33": "The Spinner X is our brand‑new model. Imagine a ride‑on that glides like a snake and spins like a dancer – pure 360° fun!",
+"sgT34": "Discover the EzyRoller Spinner",
+"sgT41": "Master the curves",
+"sgT42": "The Drifter is generally suitable for children from around 120 cm (about 6 years old). It includes 2 extensions so it can grow with them up to around 14 years.",
+"sgT43": "The Drifter X is the same size but offers new features: more comfort thanks to the ergonomic seat, and a sportier feel with new grips and seat cover.",
+"sgT44": "Discover the EzyRoller Drifter X",
+"sgT51": "For bigger kids",
+"sgT52": "The Pro X is usually recommended for children from around 135–140 cm (9–10 years). One extension ensures the vehicle grows with them up to around 16–17 years.",
+"sgT53": "Discover the EzyRoller Pro X",
+"sgT61": "Drifting for bigger kids",
+"sgT62": "The Drifter Pro X is also suitable for children from around 135–140 cm (9–10 years) and grows with one extension up to around 16–17 years.",
+"sgT63": "With its new X‑Series seat, accessories and drift mechanism, the Drifter Pro X is fast, comfortable and perfect for bigger kids who love curvy rides.",
+"sgT64": "Discover the EzyRoller Drifter Pro X",
   "menu1": "EzyRoller Modelle",
   "menu2": "Parts & accessories",
   "menu3": "Sale & Bundles",
   "menu4": "About us",
   "menu5": "Become a partner",
-  "menu2d": "We offer a wide range of spare parts for EzyRoller drift trikes."
+  "menu2d": "We offer a wide range of spare parts for EzyRoller drift trikes.",
+"businesstitle": "Become a Dealer",
+"businesssuccess1": "Your request has been sent",
+"businesssuccess2": "Thank you! We will get back to you soon.",
+"business1": "Company name",
+"business1error": "Please enter the company name.",
+"business2": "Email",
+"business2error": "Please enter a valid email address.",
+"business3": "Phone number",
+"business3error": "Please enter a phone number.",
+"business4": "Last name",
+"business4error": "Please enter the last name.",
+"business5": "First name",
+"business5error": "Please enter the first name.",
+"business6": "Postal code, City",
+"business6error": "Please enter postal code and city.",
+"business7": "Street and house number",
+"business7error": "Please enter street and house number.",
+"business8": "Message",
+"business8error": "Please enter a message.",
+"business9": "I agree to the processing of my data in accordance with the privacy policy.",
+"business9error": "Please give your consent.",
+"businesssubmit": "Submit",
+"businesstop1": "Create a Dealer account now",
+"businesstop2": "Attractive conditions for retail, rental and institutions",
+"businesstop3": "Create Dealer account",
+"biz1": "Your benefits at a glance",
+"biz2": "Attractive",
+"biz3": "Dealer discounts",
+"biz4": "Orders",
+"biz5": "from 4 units",
+"biz6": "Fast",
+"biz7": "Shipping",
+"biz8": "Why EzyRoller?",
+"biz9": "Unique steering through snake‑like motion",
+"biz10": "Promotes motor skills, coordination and movement",
+"biz11": "Grows with your child – all models are extendable",
+"biz12": "Indoor & outdoor",
+"biz13": "Our models at a glance",
+"biz14": "For children from",
+"biz15": "years",
+"biz16": "up to",
+"biz17": "For children and teens from",
+"biz18": "Already successfully in use",
+"biz19": "Specialist retail",
+"biz20": "Attractive add‑on product in the kids’ segment",
+"biz21": "High impulse‑buy factor thanks to easy demonstration",
+"biz22": "Robust construction: minimal service effort",
+"biz23": "Good margin for your sales",
+"biz24": "Campsites",
+"biz25": "Combination of rental and sales: extra revenue with minimal effort",
+"biz26": "Attractive leisure activity for families and children",
+"biz27": "High utilization with low supervision effort",
+"biz28": "Robust product, ideal for daily rental use",
+"biz29": "Schools & institutions",
+"biz30": "Age‑appropriate, growing models for different child groups",
+"biz31": "Promotes coordination, balance and joy of movement",
+"biz32": "Safe and durable for repeated use",
+"biz33": "Ideal for breaks, PE classes or leisure activities",
+"biz34": "Create account now",
+"biz35": "Fast shipping",
+"biz36": "For all EzyRoller models",
+"biz37": "2‑year warranty",
+"biz38": "Robust & built to last",
+"biz39": "10,000+ reviews",
+"biz40": "Over 10,000 5‑star reviews on Amazon",
+"bizl1": "/modelle/originals",
+"bizl2": "/modelle/x-series",
+"bizl3": "/modelle/x-series",
+"bizl4": "/modelle/x-series",
+"bizl5": "/modelle/x-series",
+"bizl6": "/modelle/x-series",
+"bizl7": "/modelle/x-series",
+"bizl8": "/modelle/x-series",
+"bizl9": "/modelle/x-series",
+"homeTitle": "EzyRoller Official Online Store",
+"homeDescription": "Explore the full range of EzyRoller ride‑ons and accessories from the official store. Fast delivery, trusted quality and models for every age group."
 }
