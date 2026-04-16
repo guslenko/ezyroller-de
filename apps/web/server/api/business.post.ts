@@ -18,7 +18,6 @@ export default defineEventHandler(async (event) => {
       from: process.env.EMAIL_FROM_BUSINESS,
       to: process.env.EMAIL_TO_BUSINESS,
       cc: process.env.EMAIL_DEBUG_COPY, // ← ТЫ ПОЛУЧАЕШЬ КОПИЮ
-      replyTo: body.email,
       subject: `Neue B2B Anfrage von ${body.firmname}`,
       html: `
         <h1>Neue B2B Anfrage</h1>

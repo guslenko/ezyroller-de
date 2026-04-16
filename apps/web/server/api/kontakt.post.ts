@@ -18,7 +18,6 @@ export default defineEventHandler(async (event) => {
       from: process.env.EMAIL_FROM_CONTACT,
       to: process.env.EMAIL_TO_CONTACT,
       cc: process.env.EMAIL_DEBUG_COPY, // ← ТЫ ПОЛУЧАЕШЬ КОПИЮ
-      replyTo: body.email,
       subject: `Neue Kontaktanfrage von ${body.name}`,
       html: `
         <h1>Kontakt Anfrage</h1>
