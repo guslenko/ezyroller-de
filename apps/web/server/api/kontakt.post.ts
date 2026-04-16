@@ -2,7 +2,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
 
   try {
-    await $fetch(`${process.env.API_ENDPOINT}/rest/contactforms/3`, {
+    await $fetch(`${process.env.API_ENDPOINT}/rest/contactforms`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -13,10 +13,10 @@ export default defineEventHandler(async (event) => {
 
     return { ok: true }
   } catch (err) {
-    console.error("PLENTY KONTAKT FORM ERROR:", err)
+    console.error("CONTACT FORM ERROR:", err)
     throw createError({
       statusCode: 500,
-      statusMessage: "Plenty kontakt form error",
+      statusMessage: "Contact form error",
       data: err
     })
   }
