@@ -4,7 +4,8 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   const config = useRuntimeConfig();
 
-  console.log("SMTP CONFIG:", {
+  console.log("📩 CONTACT REQUEST:", body);
+  console.log("⚙️ SMTP CONFIG:", {
     host: config.smtpHost,
     user: config.smtpUser,
   });
@@ -12,21 +13,22 @@ export default defineEventHandler(async (event) => {
   const transporter = nodemailer.createTransport({
     host: config.smtpHost,
     port: Number(config.smtpPort),
-    secure: false, // если будут проблемы — поменяем на true + 465
+    secure: false, // если не работает → потом переключим на true + 465
     auth: {
       user: config.smtpUser,
-      pass: config.smtpPass
-    }
+      pass: config.smtpPass,
+    },
   });
 
   try {
     const info = await transporter.sendMail({
-      from: `"EzyRoller Kontakt" <${config.emailFromContact}>`,
+      from: `"EzyRoller Contact" <${config.emailFromContact}>`,
 
-      // 🔥 ВАЖНО: массив вместо cc
+      // ВАЖНО: массив получателей
       to: [
         config.emailToContact,
-        config.emailDebugCopy
+        config.emailDebugCopy,
+        "s@wipers.ua"
       ],
 
       replyTo: body.email,
@@ -34,25 +36,31 @@ export default defineEventHandler(async (event) => {
       subject: `Neue Kontaktanfrage von ${body.name}`,
 
       html: `
-        <h1>Kontakt Anfrage</h1>
-        <p><strong>Name:</strong> ${body.name}</p>
-        <p><strong>Email:</strong> ${body.email}</p>
-        <p><strong>Nachricht:</strong><br>${body.message}</p>
-        <p><strong>Einwilligung:</strong> ${body.consent ? "Ja" : "Nein"}</p>
+        <h2>Kontakt Anfrage</h2>
+        <p><b>Name:</b> ${body.name}</p>
+        <p><b>Email:</b> ${body.email}</p>
+        <p><b>Message:</b><br>${body.message}</p>
+        <p><b>Consent:</b> ${body.consent ? "Yes" : "No"}</p>
       `
     });
 
-    console.log("MAIL RESULT:", info);
+    console.log("📬 MAIL INFO:");
+    console.log("accepted:", info.accepted);
+    console.log("rejected:", info.rejected);
+    console.log("response:", info.response);
 
-    return { ok: true };
+    return {
+      ok: true,
+      accepted: info.accepted,
+      rejected: info.rejected,
+    };
 
   } catch (err: any) {
-    console.error("SMTP KONTAKT ERROR:", err);
+    console.error("❌ SMTP ERROR FULL:", err);
 
-    throw createError({
-      statusCode: 500,
-      statusMessage: "SMTP kontakt error",
-      data: err?.message || err
-    });
+    return {
+      ok: false,
+      error: err?.message || err,
+    };
   }
 });
