@@ -1,23 +1,41 @@
+import nodemailer from "nodemailer";
+
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
+  const body = await readBody(event);
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT),
+    secure: false,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS
+    }
+  });
 
   try {
-    await $fetch(`${process.env.API_ENDPOINT}/rest/contactforms`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.API_SECURITY_TOKEN}`
-      },
-      body
-    })
+    await transporter.sendMail({
+      from: process.env.EMAIL_FROM_CONTACT,
+      to: process.env.EMAIL_TO_CONTACT,
+      cc: process.env.EMAIL_DEBUG_COPY, // ← ТЫ ПОЛУЧАЕШЬ КОПИЮ
+      replyTo: body.email,
+      subject: `Neue Kontaktanfrage von ${body.name}`,
+      html: `
+        <h1>Kontakt Anfrage</h1>
+        <p><strong>Name:</strong> ${body.name}</p>
+        <p><strong>Email:</strong> ${body.email}</p>
+        <p><strong>Nachricht:</strong><br>${body.message}</p>
+        <p><strong>Einwilligung:</strong> ${body.consent ? "Ja" : "Nein"}</p>
+      `
+    });
 
-    return { ok: true }
+    return { ok: true };
   } catch (err) {
-    console.error("CONTACT FORM ERROR:", err)
+    console.error("SMTP KONTAKT ERROR:", err);
     throw createError({
       statusCode: 500,
-      statusMessage: "Contact form error",
+      statusMessage: "SMTP kontakt error",
       data: err
-    })
+    });
   }
-})
+});
