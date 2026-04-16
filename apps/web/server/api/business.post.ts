@@ -2,22 +2,25 @@ import nodemailer from "nodemailer";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
+  const config = useRuntimeConfig();
+
+  console.log("SMTP_HOST:", config.smtpHost);
 
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
+    host: config.smtpHost,
+    port: Number(config.smtpPort),
     secure: false,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS
+      user: config.smtpUser,
+      pass: config.smtpPass
     }
   });
-  
+
   try {
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM_BUSINESS,
-      to: process.env.EMAIL_TO_BUSINESS,
-      cc: process.env.EMAIL_DEBUG_COPY, // ← ТЫ ПОЛУЧАЕШЬ КОПИЮ
+      from: `"Website B2B" <${config.emailFromBusiness}>`,
+      to: config.emailToBusiness,
+      cc: config.emailDebugCopy,
       subject: `Neue B2B Anfrage von ${body.firmname}`,
       html: `
         <h1>Neue B2B Anfrage</h1>
@@ -32,12 +35,13 @@ export default defineEventHandler(async (event) => {
     });
 
     return { ok: true };
-  } catch (err) {
+  } catch (err: any) {
     console.error("SMTP BUSINESS ERROR:", err);
+
     throw createError({
       statusCode: 500,
       statusMessage: "SMTP business error",
-      data: err
+      data: err?.message || err
     });
   }
 });

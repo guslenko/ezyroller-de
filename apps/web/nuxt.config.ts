@@ -9,6 +9,22 @@ import featureFlagsConfig from './app/configuration/feature-flags.config';
 import { FailOnLargeChunksPlugin } from './app/configuration/vite.config';
 
 export default defineNuxtConfig({
+    runtimeConfig: {
+    smtpHost: process.env.SMTP_HOST,
+    smtpPort: process.env.SMTP_PORT,
+    smtpUser: process.env.SMTP_USER,
+    smtpPass: process.env.SMTP_PASS,
+
+    emailToContact: process.env.EMAIL_TO_CONTACT,
+    emailFromContact: process.env.EMAIL_FROM_CONTACT,
+
+    emailToBusiness: process.env.EMAIL_TO_BUSINESS,
+    emailFromBusiness: process.env.EMAIL_FROM_BUSINESS,
+
+    emailDebugCopy: process.env.EMAIL_DEBUG_COPY,
+
+    public: {}
+  },
   srcDir: 'app/',
   telemetry: false,
   devtools: { enabled: true },

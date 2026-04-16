@@ -2,21 +2,25 @@ import nodemailer from "nodemailer";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
+  const config = useRuntimeConfig();
+
+  console.log("SMTP_HOST:", config.smtpHost);
 
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
+    host: config.smtpHost,
+    port: Number(config.smtpPort),
     secure: false,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS
+      user: config.smtpUser,
+      pass: config.smtpPass
     }
   });
+
   try {
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM_CONTACT,
-      to: process.env.EMAIL_TO_CONTACT,
-      cc: process.env.EMAIL_DEBUG_COPY, // ← ТЫ ПОЛУЧАЕШЬ КОПИЮ
+      from: `"Website Kontakt" <${config.emailFromContact}>`,
+      to: config.emailToContact,
+      cc: config.emailDebugCopy,
       subject: `Neue Kontaktanfrage von ${body.name}`,
       html: `
         <h1>Kontakt Anfrage</h1>
@@ -28,12 +32,13 @@ export default defineEventHandler(async (event) => {
     });
 
     return { ok: true };
-  } catch (err) {
+  } catch (err: any) {
     console.error("SMTP KONTAKT ERROR:", err);
+
     throw createError({
       statusCode: 500,
       statusMessage: "SMTP kontakt error",
-      data: err
+      data: err?.message || err
     });
   }
 });
