@@ -2,15 +2,13 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
 
   try {
-    await $fetch(`${process.env.PLENTY_API_URL}/rest/forms/business`, {
+    await $fetch(`${process.env.API_ENDPOINT}/rest/contactforms/3`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.PLENTY_API_TOKEN}`
+        "Authorization": `Bearer ${process.env.API_SECURITY_TOKEN}`
       },
-      body: {
-        data: body
-      }
+      body
     })
 
     return { ok: true }
