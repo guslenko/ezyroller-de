@@ -114,17 +114,18 @@ export default defineNuxtConfig({
   pages: true,
   runtimeConfig: {
     smtpHost: "smtp.ionos.de",
-  smtpPort: "587",
-  smtpUser: "mail@ezyroller.de",
-  smtpPass: "Wq123321123Aa!1",
+    smtpPort: "587",
+    smtpUser: "mail@ezyroller.de",
+    smtpPass: "Wq123321123Aa!1",
 
-  emailToContact: "info@ezyroller.de",
-  emailFromContact: "mail@ezyroller.de",
+    emailToContact: "info@ezyroller.de",
+    emailFromContact: "mail@ezyroller.de",
 
-  emailToBusiness: "b2b@ezyroller.de",
-  emailFromBusiness: "mail@ezyroller.de",
+    emailToBusiness: "b2b@ezyroller.de",
+    emailFromBusiness: "mail@ezyroller.de",
 
-  emailDebugCopy: "guslenko@gmail.com",
+    emailDebugCopy: "guslenko@gmail.com",
+
     public: {
       domain: validateApiUrl(process.env.API_URL) ?? process.env.API_ENDPOINT,
       apiEndpoint: process.env.API_ENDPOINT,
