@@ -12,6 +12,7 @@ export default defineEventHandler(async (event) => {
       pass: process.env.SMTP_PASS
     }
   });
+  
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_FROM_BUSINESS,
