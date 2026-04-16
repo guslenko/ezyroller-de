@@ -7,7 +7,7 @@ export default {
   isPreview: false,
   showConfigurationDrawer: process.env.SHOW_CONFIGURATION_DRAWER === '1',
   defaultItemsPerPage: Number(process.env.DEFAULT_FEEDBACK_ITEMS_PER_PAGE ?? 10),
-  favicon: process.env.NUXT_PUBLIC_FAVICON || '/public/images/favicon.webp',
+  favicon: process.env.NUXT_PUBLIC_FAVICON || '/images/favicon.png',
   ogTitle: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'EzyRoller',
   ogImg: process.env.NUXT_PUBLIC_OG_IMG || process.env.OG_IMG || '/_nuxt-plenty/images/logo.svg',
   ogType: process.env.NUXT_PUBLIC_OG_TYPE || process.env.OG_TYPE || 'website',
