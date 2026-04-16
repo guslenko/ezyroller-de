@@ -4,12 +4,15 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   const config = useRuntimeConfig();
 
-  console.log("SMTP_HOST:", config.smtpHost);
+  console.log("SMTP CONFIG:", {
+    host: config.smtpHost,
+    user: config.smtpUser,
+  });
 
   const transporter = nodemailer.createTransport({
     host: config.smtpHost,
     port: Number(config.smtpPort),
-    secure: false,
+    secure: false, // если будут проблемы — поменяем на true + 465
     auth: {
       user: config.smtpUser,
       pass: config.smtpPass
@@ -17,11 +20,19 @@ export default defineEventHandler(async (event) => {
   });
 
   try {
-    await transporter.sendMail({
-      from: `"Website Kontakt" <${config.emailFromContact}>`,
-      to: config.emailToContact,
-      cc: config.emailDebugCopy,
+    const info = await transporter.sendMail({
+      from: `"EzyRoller Kontakt" <${config.emailFromContact}>`,
+
+      // 🔥 ВАЖНО: массив вместо cc
+      to: [
+        config.emailToContact,
+        config.emailDebugCopy
+      ],
+
+      replyTo: body.email,
+
       subject: `Neue Kontaktanfrage von ${body.name}`,
+
       html: `
         <h1>Kontakt Anfrage</h1>
         <p><strong>Name:</strong> ${body.name}</p>
@@ -31,7 +42,10 @@ export default defineEventHandler(async (event) => {
       `
     });
 
+    console.log("MAIL RESULT:", info);
+
     return { ok: true };
+
   } catch (err: any) {
     console.error("SMTP KONTAKT ERROR:", err);
 
