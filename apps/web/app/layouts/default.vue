@@ -14,6 +14,10 @@
     <PreviewMode />
     <UiFooterBlocks />
     <QuickCheckout v-if="isOpen" :product="product" />
+    <noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SZG99B"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
   </div>
 </template>
 
