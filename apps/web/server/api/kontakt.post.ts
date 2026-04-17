@@ -57,7 +57,6 @@ export default defineEventHandler(async (event) => {
 
   } catch (err: any) {
     console.error("❌ SMTP ERROR FULL:", err);
-
     return {
       ok: false,
       error: err?.message || err,
