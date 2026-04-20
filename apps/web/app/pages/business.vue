@@ -149,19 +149,19 @@ definePageMeta({
 const { t } = useI18n()
 
 useHead({
-  title: t("ercaretitle"),
+  title: t("businesstitle"),
   meta: [
     {
       name: "description",
-      content: t("ercaredesc"),
+      content: t("businesstop2"),
     },
     {
       property: "og:title",
-      content: t("ercaretitle"),
+      content: t("businesstitle"),
     },
     {
       property: "og:description",
-      content: t("ercaredesc"),
+      content: t("businesstop2"),
     }
   ]
 })

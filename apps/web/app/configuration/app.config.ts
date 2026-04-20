@@ -16,7 +16,7 @@ export const openGraph = {
 };
 
 export const favicon = {
-  appleTouchIcon: process.env.NUXT_PUBLIC_FAVICON || process.env.FAVICON || '/images/favicon.png',
+  appleTouchIcon: process.env.NUXT_PUBLIC_FAVICON || process.env.FAVICON || '/images/erf.webp',
 };
 
 export const appConfiguration = {

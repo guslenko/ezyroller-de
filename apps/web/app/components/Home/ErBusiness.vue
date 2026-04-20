@@ -487,7 +487,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <div class="order-2 md:order-1 text-gray-800">
             <div class="flex items-center gap-4">
   <img
-    src="/images/icon5.webp"
+    src="/images/icon6.webp"
     alt="Icon"
     class="h-14 w-14 flex-shrink-0"
   />
