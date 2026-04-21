@@ -12,10 +12,10 @@
 
   <!-- ТЕКСТ -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1 z-20">
-    <div class="-rotate-3 text-white text-4xl uppercase font-bold drop-shadow-md pb-2">
+    <div class="text-white text-4xl uppercase font-bold drop-shadow-md pb-2">
       {{ $t("sgC1") }}
     </div>
-    <div class="-rotate-3 text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
+    <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
       {{ $t("sgC2") }}
     </div>
   </div>

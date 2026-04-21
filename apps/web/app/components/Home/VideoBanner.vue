@@ -20,7 +20,7 @@
              inline-block whitespace-nowrap text-center
              px-8 py-3 border border-white text-white text-lg font-semibold
              transition-all duration-300
-             hover:scale-125 -rotate-3 hover:bg-white hover:text-black hover:shadow-xl
+             hover:scale-125 hover:bg-white hover:text-black hover:shadow-xl
              bg-white/10 backdrop-blur-md rounded-md"
     >
       {{ $t("videoCta") }}

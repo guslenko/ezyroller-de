@@ -12,13 +12,13 @@
 
   <!-- ТЕКСТ -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1 z-20">
-    <div class="-rotate-3 text-white text-base uppercase font-normal drop-shadow-md pb-0 tracking-[0.5em]">
+    <div class="text-white text-base uppercase font-normal drop-shadow-md pb-0 tracking-[0.5em]">
       {{ $t("os1") }}
     </div>
-    <div class="-rotate-3 text-white text-4xl uppercase font-bold drop-shadow-md pb-0">
+    <div class="text-white text-4xl uppercase font-bold drop-shadow-md pb-0">
       {{ $t("os2") }}
     </div>
-    <div class="-rotate-3 text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
+    <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
       {{ $t("os3") }}
     </div>
   </div>

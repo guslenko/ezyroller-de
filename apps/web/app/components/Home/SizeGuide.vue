@@ -15,7 +15,7 @@
         {{ $t("textWidgetSizeT") }}
       </h2>
       <!-- TEXT -->
-      <div class="-rotate-3 block text-2xl font-bold mt-0 mb-4 text-black">
+      <div class="block text-2xl font-bold mt-0 mb-4 text-black">
         {{ $t("textWidgetSizeD") }}
       </div>
 
@@ -23,7 +23,7 @@
       <div class="space-y-3 text-black font-medium leading-relaxed max-w-6xl mx-auto pb-2">
         <a 
         :href="localePath('/find-ezyroller')"
-        class="inline-block mt-2 px-8 py-3 text-lg border border-white text-white font-bold rounded-md shadow-md -rotate-3 hover:scale-125 mt-2 transition-all duration-300 bg-black">{{ $t("textWidgetSizeB") }}</a>
+        class="inline-block mt-2 px-8 py-3 text-lg border border-white text-white font-bold rounded-md shadow-md hover:scale-125 mt-2 transition-all duration-300 bg-black">{{ $t("textWidgetSizeB") }}</a>
       </div>
     </div>
   </section>
