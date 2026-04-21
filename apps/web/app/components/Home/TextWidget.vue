@@ -32,31 +32,34 @@
     </div>
   </section>
 
-  <section class="w-full py-4 px-4 bg-white">
-    <div class="max-w-screen-3xl px-6 mx-auto text-center relative">
-      <div class="max-w-3xl mx-auto">
-      <!-- ROTATING WRAPPER -->
+  <section class="w-full py-4 px-4 bg-white relative z-0">
+  <div class="max-w-screen-3xl px-6 mx-auto text-center relative">
+
+    <div class="max-w-3xl mx-auto relative">
+
+      <!-- ROTATING WRAPPER (НЕ СОЗДАЁТ stacking context) -->
       <div
         ref="rotator"
-        class="inline-block mt-6 relative transition-transform duration-200 z-20"
+        class="inline-block mt-6 relative z-10"
         @mousemove="onMove"
         @mouseenter="onHover"
         @mouseleave="onLeave"
       >
+        <!-- BUTTON (движение только здесь) -->
         <NuxtLink
           :to="localePath('/find-ezyroller')"
           class="inline-block whitespace-nowrap text-center
                  px-8 py-3 border border-black text-white text-lg font-semibold
-                 transition-colors duration-300
+                 transition-all duration-300
                  hover:bg-black hover:text-white hover:shadow-xl
-                 bg-black backdrop-blur-md rounded-md z-20"
+                 bg-black backdrop-blur-md rounded-md"
           :style="{ transform: `scale(${buttonScale})` }"
         >
           {{ $t("videoCta") }}
         </NuxtLink>
       </div>
 
-      <!-- IMAGE -->
+      <!-- IMAGE (НЕ ПЕРЕКРЫВАЕТ КНОПКУ И МЕНЮ) -->
       <div class="-rotate-6 relative ml-[30px] mt-[-70px] pointer-events-none z-0">
         <img
           src="/images/ezh.webp"
@@ -66,8 +69,9 @@
       </div>
 
     </div>
-    </div>
-  </section>
+  </div>
+</section>
+
 </template>
 
 <script setup lang="ts">

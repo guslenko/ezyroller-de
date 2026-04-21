@@ -1,28 +1,39 @@
 <template>
 
-<section class="relative w-full h-[380px] md:h-[480px]">
-  <!-- ФОН -->
-  <div
-    class="absolute inset-0 bg-cover bg-center"
-    style="background-image: url('/images/erc.webp')"
-  ></div>
+<section class="relative w-full overflow-hidden h-[380px] md:h-[480px]">
 
-  <!-- ЗАТЕМНЕНИЕ -->
-  <div class="absolute inset-0 bg-black/20"></div>
+  <!-- IMAGE WRAPPER -->
+  <div class="relative w-full h-full overflow-hidden">
 
-  <!-- ТЕКСТ -->
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1 z-20">
-    <div class="text-white text-base uppercase font-normal drop-shadow-md pb-0 tracking-[0.5em]">
+    <!-- BACKGROUND IMAGE -->
+    <div
+      class="absolute inset-0 w-full h-full bg-cover bg-center"
+      style="background-image: url('/images/erc.webp')"
+    ></div>
+
+    <!-- DARK OVERLAY (ONLY ON IMAGE) -->
+    <div
+      class="absolute inset-0 bg-black/30 pointer-events-none"
+    ></div>
+  </div>
+
+  <!-- TEXT BLOCK -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
+    <div class="text-white text-base uppercase font-normal drop-shadow-md tracking-[0.5em]">
       {{ $t("ercare1") }}
     </div>
-    <div class="text-white text-4xl uppercase font-bold drop-shadow-md pb-0">
+
+    <div class="text-white text-4xl uppercase font-bold drop-shadow-md">
       {{ $t("ercaretitle") }}
     </div>
+
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
       {{ $t("ercare2") }}
     </div>
   </div>
+
 </section>
+
   
   <!-- TWO-COLUMN SECTION -->
   <section class="w-full py-4 px-4">

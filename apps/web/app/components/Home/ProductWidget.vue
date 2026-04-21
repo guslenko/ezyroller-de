@@ -64,9 +64,9 @@
 
           <!-- COLORS HEADER -->
           <div
-            class="col-span-2 md:col-span-1 left-0 z-10 text-left font-medium text-black text-lg px-4 py-4 border-t border-neutral-200 bg-white"
+            class="col-span-2 md:col-span-1 left-0 text-left font-medium text-black text-lg px-4 py-4 border-t border-neutral-200 bg-white"
           >
-            Farben
+            {{ $t("sgTColors") }}
           </div>
 
           <!-- COLORS LEFT -->
@@ -101,8 +101,8 @@
           >
             <!-- LABEL -->
             <div
-              class="col-span-2 md:col-span-1 left-0 z-10 text-left font-medium text-lg text-black px-4 py-4"
-              :class="idx % 2 === 0 ? 'bg-white sm:bg-neutral-100' : 'bg-white'"
+              class="col-span-2 md:col-span-1 left-0 text-left font-medium text-lg text-black px-4 py-4"
+              :class="idx % 2 === 0 ? 'bg-white md:bg-neutral-100' : 'bg-white'"
             >
               {{ c.label }}
             </div>
@@ -110,7 +110,7 @@
             <!-- LEFT VALUE -->
             <div
               class="text-center text-lg font-medium px-4 py-4"
-              :class="idx % 2 === 0 ? 'bg-neutral-100' : 'bg-neutral-100 sm:bg-white'"
+              :class="idx % 2 === 0 ? 'bg-neutral-100' : 'bg-neutral-100 md:bg-white'"
             >
               {{ translatedValue(productLeft, c.key) }}
             </div>
@@ -118,14 +118,14 @@
             <!-- RIGHT VALUE -->
             <div
               class="text-center text-lg font-medium px-4 py-4"
-              :class="idx % 2 === 0 ? 'bg-neutral-100' : 'bg-neutral-100 sm:bg-white'"
+              :class="idx % 2 === 0 ? 'bg-neutral-100' : 'bg-neutral-100 md:bg-white'"
             >
               {{ translatedValue(productRight, c.key) }}
             </div>
           </div>
 
           <!-- BUTTONS HEADER SPACER -->
-          <div class="sticky left-0 bg-white z-10 px-4 py-4 border-t border-neutral-300"></div>
+          <div class="hidden md:block left-0 bg-white z-10 px-4 py-4 border-t border-neutral-300"></div>
 
           <!-- BUTTON LEFT -->
           <div class="p-4 border-t border-neutral-300 bg-white">
