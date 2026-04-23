@@ -28,17 +28,17 @@
   <!-- TEXT BLOCK (NO Z-INDEX NEEDED) -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-      AWARD WINNING
+      {{ $t("ban11") }}
     </div>
     <div class="text-white text-2xl md:text-3xl uppercase font-bold drop-shadow-md pb-4">
-      Pro moves. Pro attitude.
+      {{ $t("ban12") }}
     </div>
     <div
       class="inline-block mt-2 px-6 py-2 border border-white text-white font-bold rounded-md
              shadow-md group-hover:scale-125 transition-all duration-300
              bg-white/10 group-hover:bg-white group-hover:text-black backdrop-blur-md"
     >
-      DRIFTER PRO X
+      {{ $t("ban13") }}
     </div>
   </div>
 </NuxtLink>
@@ -64,17 +64,17 @@
   <!-- TEXT BLOCK -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-      AWARD WINNING
+      {{ $t("ban21") }}
     </div>
     <div class="text-white text-2xl md:text-3xl uppercase font-bold drop-shadow-md pb-4">
-      Drift harder. Ride smoother.
+      {{ $t("ban22") }}
     </div>
     <div
       class="inline-block mt-2 px-6 py-2 border border-white text-white font-bold rounded-md
              shadow-md group-hover:scale-125 transition-all duration-300
              bg-white/10 group-hover:bg-white group-hover:text-black backdrop-blur-md"
     >
-      DRIFTER X
+      {{ $t("ban23") }}
     </div>
   </div>
 </NuxtLink>
@@ -101,17 +101,17 @@
   <!-- TEXT BLOCK -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-      Ride and shoot!
+      {{ $t("ban31") }}
     </div>
     <div class="text-white text-2xl md:text-3xl uppercase font-bold drop-shadow-md pb-4">
-      Rolling and scoring - the ultimate combo.
+      {{ $t("ban32") }}
     </div>
     <div
       class="inline-block mt-2 px-6 py-2 border border-white text-white font-bold rounded-md
              shadow-md group-hover:scale-125 transition-all duration-300
              bg-white/10 group-hover:bg-white group-hover:text-black backdrop-blur-md"
     >
-      BASKETBALL HOOP
+      {{ $t("ban33") }}
     </div>
   </div>
 </NuxtLink>
@@ -138,10 +138,10 @@
   <!-- TEXT BLOCK -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-      Award Winning Accessories
+      {{ $t("ban41") }}
     </div>
     <div class="text-white text-2xl md:text-3xl uppercase font-bold drop-shadow-md pb-4">
-      Rediscover Fast wheels, quick goals.
+      {{ $t("ban42") }}
     </div>
 
     <div
@@ -149,7 +149,7 @@
              shadow-md group-hover:scale-125 transition-all duration-300
              bg-white/10 group-hover:bg-white group-hover:text-black backdrop-blur-md"
     >
-      HOCKEY SET
+      {{ $t("ban43") }}
     </div>
   </div>
 </NuxtLink>
@@ -174,10 +174,10 @@
   <!-- TEXT BLOCK -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-      Why should the little ones miss out?
+      {{ $t("ban51") }}
     </div>
     <div class="text-white text-2xl md:text-3xl uppercase font-bold drop-shadow-md pb-4">
-      Little legs, mighty moves.
+      {{ $t("ban52") }}
     </div>
 
     <div
@@ -185,7 +185,7 @@
              shadow-md group-hover:scale-125 transition-all duration-300
              bg-white/10 group-hover:bg-white group-hover:text-black backdrop-blur-md"
     >
-      MINI
+      {{ $t("ban53") }}
     </div>
   </div>
 </NuxtLink>
@@ -217,11 +217,11 @@
   <!-- TEXT BLOCK -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center space-y-1">
     <div class="text-white text-base md:text-lg uppercase font-medium drop-shadow-md">
-      introducing the award winning Spinner
+      {{ $t("ban61") }}
     </div>
 
     <div class="text-white text-2xl md:text-3xl uppercase font-bold drop-shadow-md pb-4">
-      You spin. You grin. You spin again!
+      {{ $t("ban62") }}
     </div>
 
     <div
@@ -229,7 +229,7 @@
              shadow-md group-hover:scale-125 transition-all duration-300
              bg-white/10 group-hover:bg-white group-hover:text-black backdrop-blur-md"
     >
-      SPINNER X
+      {{ $t("ban63") }}
     </div>
   </div>
 </NuxtLink>

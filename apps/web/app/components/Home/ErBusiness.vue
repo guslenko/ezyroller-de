@@ -123,7 +123,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 
   <!-- TEXT + ARROW -->
   <div
-    class="text-2xl font-bold inline-flex items-center gap-1
+    class="text-xl md:text-2xl font-medium inline-flex items-center gap-1
            border-b border-slate-400 pb-[2px] text-gray-500
            transition-all duration-300
            group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
@@ -135,7 +135,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
   </div>
 </NuxtLink>
 
-<p class="text-base font-normal text-black pt-2 leading-relaxed">
+<p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
       {{ $t("biz14") }} 2-5 {{ $t("biz15") }}<br />
       80-105 cm<br />
       {{ $t("biz16") }} 30 kg
@@ -157,7 +157,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 
   <!-- TEXT + ARROW -->
   <div
-    class="text-2xl font-bold inline-flex items-center gap-1
+    class="text-xl md:text-2xl font-medium inline-flex items-center gap-1
            border-b border-slate-400 pb-[2px] text-gray-500
            transition-all duration-300
            group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
@@ -169,7 +169,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
   </div>
 </NuxtLink>
 
-<p class="text-base font-normal text-black pt-2 leading-relaxed">
+<p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
       {{ $t("biz14") }} 3-14 {{ $t("biz15") }}<br />
       95-160 cm<br />
       {{ $t("biz16") }} 70 kg
@@ -191,7 +191,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 
   <!-- TEXT + ARROW -->
   <div
-    class="text-2xl font-bold inline-flex items-center gap-1
+    class="text-xl md:text-2xl font-medium inline-flex items-center gap-1
            border-b border-slate-400 pb-[2px] text-gray-500
            transition-all duration-300
            group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
@@ -203,7 +203,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
   </div>
 </NuxtLink>
 
-<p class="text-base font-normal text-black pt-2 leading-relaxed">
+<p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
       {{ $t("biz14") }} 4-14+ {{ $t("biz15") }}<br />
       100-160 cm<br />
       {{ $t("biz16") }} 70 kg
@@ -225,7 +225,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 
   <!-- TEXT + ARROW -->
   <div
-    class="text-2xl font-bold inline-flex items-center gap-1
+    class="text-xl md:text-2xl font-medium inline-flex items-center gap-1
            border-b border-slate-400 pb-[2px] text-gray-500
            transition-all duration-300
            group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
@@ -237,7 +237,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
   </div>
 </NuxtLink>
 
-<p class="text-base font-normal text-black pt-2 leading-relaxed">
+<p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
       {{ $t("biz14") }} 4-14+ {{ $t("biz15") }}<br />
       100-160 cm<br />
       {{ $t("biz16") }} 70 kg
@@ -259,7 +259,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 
   <!-- TEXT + ARROW -->
   <div
-    class="text-2xl font-bold inline-flex items-center gap-1
+    class="text-xl md:text-2xl font-medium inline-flex items-center gap-1
            border-b border-slate-400 pb-[2px] text-gray-500
            transition-all duration-300
            group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
@@ -271,7 +271,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
   </div>
 </NuxtLink>
 
-<p class="text-base font-normal text-black pt-2 leading-relaxed">
+<p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
       {{ $t("biz17") }} 10 {{ $t("biz15") }}<br />
       135-180 cm<br />
       {{ $t("biz16") }} 100 kg
@@ -293,7 +293,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 
   <!-- TEXT + ARROW -->
   <div
-    class="text-2xl font-bold inline-flex items-center gap-1
+    class="text-xl md:text-2xl font-medium inline-flex items-center gap-1
            border-b border-slate-400 pb-[2px] text-gray-500
            transition-all duration-300
            group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
@@ -305,7 +305,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
   </div>
 </NuxtLink>
 
-<p class="text-base font-normal text-black pt-2 leading-relaxed">
+<p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
       {{ $t("biz17") }} 10 {{ $t("biz15") }}<br />
       135-180 cm<br />
       {{ $t("biz16") }} 100 kg
