@@ -1370,7 +1370,7 @@
   },
   "cancelOrder": "Anuluj zamówienie",
 
-  "videoCta": "Trouvez votre Ezyroller",
+  "videoCta": "Tabela rozmiarów",
   "textWidgetTitle": "Przemieszczaj się wężykiem",
   "textWidgetDesc": "Dzięki wielokrotnie nagradzanemu i sprawdzonemu designowi EzyRoller są prawdziwymi pionierami w zakresie radości z jazdy i jakości. Dzięki wysokiej jakości materiałom i technologii są wyjątkowo trwałe i ciche. Jeśli mają Państwo pytania lub są zainteresowani dystrybucją naszych produktów, prosimy o kontakt za pośrednictwem formularza ",
   "textWidgetLink": "kontaktowego",
@@ -1580,5 +1580,15 @@
 "bizl9": "/modelle/x-series",
 "homeTitle": "EzyRoller oficjalny sklep internetowy",
 "homeDescription": "Poznaj pełną ofertę EzyRoller – oryginalne pojazdy, akcesoria i części zamienne. Szybka wysyłka, sprawdzona jakość i modele dla każdego wieku.",
-"sgTColors": "Kolory"
+"sgTColors": "Kolory",
+"contacttitle": "Kontakt",
+"datentitle": "Polityka prywatności",
+"impressumtitle": "Imporessum",
+"widertitle": "Prawo odstąpienia",
+"agbtitle": "Regulamin",
+"contactdesc": "Skontaktuj się z nami w sprawie produktów, zamówień lub pomocy technicznej. Nasz zespół odpowie szybko i profesjonalnie.",
+"datendesc": "Dowiedz się, jak chronimy, przetwarzamy i bezpiecznie zarządzamy Twoimi danymi osobowymi. Jasne i przejrzyste informacje.",
+"impressumdesc": "Informacje prawne o firmie, odpowiedzialności oraz dane kontaktowe zgodne z obowiązującymi przepisami.",
+"widerdesc": "Najważniejsze informacje o prawie odstąpienia od umowy: terminy, warunki i proces zwrotu.",
+"agbdesc": "Nasze warunki handlowe: informacje o zamówieniach, płatnościach, dostawie, gwarancji i zasadach prawnych."
 }

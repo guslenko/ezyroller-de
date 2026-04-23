@@ -10,6 +10,29 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  pageType: "static",
+})
+
+const { t } = useI18n()
+
+useHead({
+  title: t("agbtitle"),
+  meta: [
+    {
+      name: "description",
+      content: t("agbdesc"),
+    },
+    {
+      property: "og:title",
+      content: t("agbtitle"),
+    },
+    {
+      property: "og:description",
+      content: t("agbdesc"),
+    }
+  ]
+})
 import type { Locale } from '#i18n';
 
 defineI18nRoute({
@@ -18,10 +41,6 @@ defineI18nRoute({
 
 const { data, getLegalTexts } = useLegalInformation();
 const { getRobots, setRobotForStaticPage } = useRobots();
-
-definePageMeta({
-  pageType: 'static',
-});
 const { setPageMeta } = usePageMeta();
 
 const icon = 'page';

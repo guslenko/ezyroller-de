@@ -1,10 +1,10 @@
 <template>
   <section class="w-full py-2 px-4 bg-white">
     <div class="max-w-screen-2xl mx-auto relative">
-        <div
-          class="w-full overflow-x-auto no-preflight !text-lg"
-          v-html="getHTMLTexts()"
-        />
+      <div
+        class="w-full overflow-x-auto no-preflight text-lg"
+        v-html="data?.htmlText"
+      ></div>
     </div>
   </section>
 </template>
@@ -16,27 +16,21 @@ defineI18nRoute({
   locales: process.env.LANGUAGELIST?.split(',') as Locale[],
 });
 
+const { t } = useI18n();
 const { data, getLegalTexts } = useLegalInformation();
 const { getRobots, setRobotForStaticPage } = useRobots();
-const { setPageMeta } = usePageMeta();
 
-const icon = 'page';
-setPageMeta(t('legal.legalDisclosure'), icon);
-
-definePageMeta({
-  pageType: 'static',
+useHead({
+  title: t("impressumtitle"),
+  meta: [
+    { name: "description", content: t("impressumdesc") },
+    { property: "og:title", content: t("impressumtitle") },
+    { property: "og:description", content: t("impressumdesc") }
+  ]
 });
 
-await getLegalTexts({
-  type: 'LegalDisclosure',
-});
-
-const pageTitle = t('legal.legalDisclosure');
-
-const getHTMLTexts = () => {
-  return data.value.htmlText ?? '';
-};
+await getLegalTexts({ type: "LegalDisclosure" });
 
 await getRobots();
-setRobotForStaticPage('LegalDisclosure');
+setRobotForStaticPage("LegalDisclosure");
 </script>

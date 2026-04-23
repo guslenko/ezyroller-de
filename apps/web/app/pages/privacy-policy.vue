@@ -20,8 +20,28 @@ const { data, getLegalTexts } = useLegalInformation();
 const { getRobots, setRobotForStaticPage } = useRobots();
 
 definePageMeta({
-  pageType: 'static',
-});
+  pageType: "static",
+})
+
+const { t } = useI18n()
+
+useHead({
+  title: t("datentitle"),
+  meta: [
+    {
+      name: "description",
+      content: t("datendesc"),
+    },
+    {
+      property: "og:title",
+      content: t("datentitle"),
+    },
+    {
+      property: "og:description",
+      content: t("datendesc"),
+    }
+  ]
+})
 
 const { setPageMeta } = usePageMeta();
 

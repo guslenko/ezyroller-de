@@ -1,9 +1,9 @@
 <template>
-  <section class="w-full px-2 py-4">
-    <div class="w-full mx-auto grid gap-4 px-0 md:px-2">
+  <section class="w-full px-0 md:px-2 py-0 md:py-4">
+    <div class="w-full mx-auto grid gap-0 md:gap-4 px-0 md:px-2">
 
       <!-- ROW 1: 2 banners -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4 border-t border-white">
 
         <!-- BANNER 1 -->
        <NuxtLink
@@ -47,7 +47,7 @@
         <!-- BANNER 2 -->
 <NuxtLink
   :to="$localePath($t('bizl4'))"
-  class="relative block overflow-hidden group w-full"
+  class="relative block overflow-hidden group w-full border-t border-white"
 >
   <!-- IMAGE WRAPPER -->
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
@@ -86,7 +86,7 @@
       <!-- BANNER 3 -->
 <NuxtLink
   :to="$localePath($t('bizl9'))"
-  class="relative block overflow-hidden group w-full"
+  class="relative block overflow-hidden group w-full border-t border-white"
 >
   <!-- IMAGE WRAPPER -->
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
@@ -118,12 +118,12 @@
 
 
       <!-- ROW 3: 2 banners -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4">
 
   <!-- BANNER 4 -->
 <NuxtLink
   :to="$localePath($t('bizl8'))"
-  class="relative block overflow-hidden group w-full"
+  class="relative block overflow-hidden group w-full border-t border-white"
 >
   <!-- IMAGE WRAPPER -->
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
@@ -159,7 +159,7 @@
   <!-- BANNER 5 -->
 <NuxtLink
   :to="$localePath($t('bizl1'))"
-  class="relative block overflow-hidden group w-full"
+  class="relative block overflow-hidden group w-full border-t border-white"
 >
   <!-- IMAGE WRAPPER -->
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
@@ -198,7 +198,7 @@
       <!-- BANNER 6 -->
 <NuxtLink
   :to="$localePath($t('bizl3'))"
-  class="relative block overflow-hidden group w-full"
+  class="relative block overflow-hidden group w-full border-t border-white"
 >
   <!-- IMAGE WRAPPER -->
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">

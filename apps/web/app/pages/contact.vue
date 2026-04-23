@@ -169,6 +169,26 @@ definePageMeta({
   pageType: 'static',
 });
 
+const { t } = useI18n()
+
+useHead({
+  title: t("contacttitle"),
+  meta: [
+    {
+      name: "description",
+      content: t("contactdesc"),
+    },
+    {
+      property: "og:title",
+      content: t("contacttitle"),
+    },
+    {
+      property: "og:description",
+      content: t("contactdesc"),
+    }
+  ]
+})
+
 const { loading: isContactLoading, doCustomerContactMail } = useCustomerContact();
 const localePath = useLocalePath();
 const { getSetting } = useSiteSettings('cloudflareTurnstileApiSiteKey');

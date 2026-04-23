@@ -85,6 +85,31 @@
 </template>
 
 <script setup>
+
+definePageMeta({
+  pageType: "static",
+})
+
+const { t } = useI18n()
+
+useHead({
+  title: t("contacttitle"),
+  meta: [
+    {
+      name: "description",
+      content: t("contactdesc"),
+    },
+    {
+      property: "og:title",
+      content: t("contacttitle"),
+    },
+    {
+      property: "og:description",
+      content: t("contactdesc"),
+    }
+  ]
+})
+
 import { ref, computed } from 'vue'
 import { SfInput, SfTextarea, SfButton, SfLoaderCircular } from '@storefront-ui/vue'
 

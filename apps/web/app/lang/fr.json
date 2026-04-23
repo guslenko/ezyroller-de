@@ -1586,5 +1586,15 @@
 "bizl9": "/modelle/x-series",
 "homeTitle": "Boutique officielle EzyRoller",
 "homeDescription": "Découvrez la gamme complète EzyRoller – véhicules, accessoires et pièces d’origine. Livraison rapide, qualité certifiée et modèles adaptés à tous les âges.",
-"sgTColors": "Couleurs"
+"sgTColors": "Couleurs",
+"contacttitle": "Contact",
+"datentitle": "Politique de confidentialité",
+"impressumtitle": "Mentions légales",
+"widertitle": "Conditions générales",
+"agbtitle": "Conditions générales",
+"contactdesc": "Contactez‑nous pour toute question concernant les produits, les commandes ou l’assistance. Notre équipe vous répond rapidement et efficacement.",
+"datendesc": "Découvrez comment nous protégeons, traitons et gérons vos données personnelles en toute sécurité. Informations claires et transparentes.",
+"impressumdesc": "Informations légales sur l’entreprise, responsabilités et coordonnées conformément aux exigences légales.",
+"widerdesc": "Toutes les informations sur votre droit de rétractation : délais, conditions et procédure de retour.",
+"agbdesc": "Nos conditions générales : informations sur la commande, le paiement, la livraison, la garantie et les règles légales."
 }

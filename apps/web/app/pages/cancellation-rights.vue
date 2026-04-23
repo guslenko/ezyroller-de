@@ -21,8 +21,28 @@ const { getRobots, setRobotForStaticPage } = useRobots();
 const { setPageMeta } = usePageMeta();
 
 definePageMeta({
-  pageType: 'static',
-});
+  pageType: "static",
+})
+
+const { t } = useI18n()
+
+useHead({
+  title: t("widertitle"),
+  meta: [
+    {
+      name: "description",
+      content: t("widerdesc"),
+    },
+    {
+      property: "og:title",
+      content: t("widertitle"),
+    },
+    {
+      property: "og:description",
+      content: t("widerdesc"),
+    }
+  ]
+})
 
 await getLegalTexts({
   type: 'CancellationRights',
