@@ -11,7 +11,7 @@
       size="sm"
       :tag="link ? NuxtLink : undefined"
       :to="link || undefined"
-      @click="open()"
+      @click="label === t('common.labels.products') && open()"
     >
       <template #prefix>
         <div class="relative">
@@ -45,7 +45,7 @@ const route = useRoute();
 const { wishlistItemIds } = useWishlist();
 const { data: cart } = useCart();
 const { isAuthorized } = useCustomer();
-const { open } = useStaticMenu();
+const { open } = useMegaMenu();
 
 const items = computed(() => [
   {
@@ -54,7 +54,7 @@ const items = computed(() => [
     link: localePath(paths.home),
   },
   {
-    label: 'Menu',
+    label: t('common.labels.products'),
     icon: SfIconMenu,
     link: '',
   },

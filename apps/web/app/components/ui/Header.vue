@@ -18,23 +18,13 @@
         <SfIconLanguage class="w-5 h-5" />
       </UiButton>
 
-      <!-- ACCOUNT -->
+      <!-- ACCOUNT (AUTH → /my-account, GUEST → /login) -->
       <UiButton
-        v-if="isAuthorized"
         class="group hover:bg-neutral-200 rounded-md p-0"
         variant="tertiary"
         square
-        @click="accountDropdownToggle()"
-      >
-        <SfIconPerson class="w-5 h-5" />
-      </UiButton>
-
-      <UiButton
-        v-else
-        class="group hover:bg-neutral-200 rounded-md p-0"
-        variant="tertiary"
-        square
-        @click="navigateToLogin"
+        :tag="NuxtLink"
+        :to="isAuthorized ? localePath('/my-account') : localePath('/login')"
       >
         <SfIconPerson class="w-5 h-5" />
       </UiButton>
@@ -75,7 +65,7 @@
       </UiButton>
     </template>
 
-    <!-- MOBILE ICONS (LANG + SEARCH) -->
+    <!-- MOBILE ICONS -->
     <template #mobile-actions>
       <UiButton
         variant="tertiary"
@@ -98,42 +88,8 @@
 
   </MegaMenu>
 
-  <!-- LANGUAGE SELECTOR MODAL -->
+  <!-- LANGUAGE SELECTOR -->
   <LanguageSelector />
-
-  <!-- AUTH MODAL -->
-  <UiModal
-    v-if="viewport.isGreaterOrEquals('md') && isAuthenticationOpen"
-    v-model="isAuthenticationOpen"
-    tag="section"
-    class="h-full md:w-[500px] md:h-fit m-0 p-0 overflow-y-auto"
-  >
-    <header>
-      <UiButton
-        :aria-label="t('common.navigation.closeDialog')"
-        square
-        variant="tertiary"
-        class="absolute right-2 top-2"
-        @click="closeAuthentication"
-      >
-        <SfIconClose />
-      </UiButton>
-    </header>
-
-    <LoginComponent
-      v-if="isLogin"
-      :is-modal="true"
-      @change-view="isLogin = false"
-      @logged-in="navigateAfterAuth(true)"
-    />
-
-    <Register
-      v-else
-      :is-modal="true"
-      @change-view="isLogin = true"
-      @registered="closeAuthentication"
-    />
-  </UiModal>
 
   <!-- MOBILE SEARCH MODAL -->
   <NuxtLazyHydrate v-if="viewport.isLessThan('lg')" when-idle>
@@ -179,25 +135,20 @@ import {
 
 import LanguageSelector from '~/components/LanguageSelector/LanguageSelector.vue';
 import { paths } from '~/utils/paths';
-import { handleLogout } from '~/utils/logout';
-
-const isLogin = ref(true);
-const { data: cart } = useCart();
-const { wishlistItemIds } = useWishlist();
-const cartItemsCount = ref(0);
 
 const NuxtLink = resolveComponent('NuxtLink');
-const route = useRoute();
 const localePath = useLocalePath();
+const viewport = useViewport();
 
-const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
-const { isOpen: isAuthenticationOpen, open: openAuthentication, close: closeAuthentication } = useDisclosure();
-const { open: searchModalOpen, isOpen: isSearchModalOpen, close: searchModalClose } = useDisclosure();
-const { toggle: toggleLanguageSelect } = useLocalization();
-
+const { data: cart } = useCart();
+const { wishlistItemIds } = useWishlist();
 const { data: categoryTree, getCategoryTree } = useCategoryTree();
 const { isAuthorized } = useCustomer();
-const viewport = useViewport();
+
+const cartItemsCount = ref(0);
+
+const { toggle: toggleLanguageSelect } = useLocalization();
+const { open: searchModalOpen, isOpen: isSearchModalOpen, close: searchModalClose } = useDisclosure();
 
 onNuxtReady(async () => {
   if (categoryTree.value.length === 0) await getCategoryTree();
@@ -206,20 +157,10 @@ onNuxtReady(async () => {
 
 watch(
   () => cart.value?.items,
-  (cartItems) => {
-    cartItemsCount.value = cartItems?.reduce((p, { quantity }) => p + quantity, 0) ?? 0;
+  (items) => {
+    cartItemsCount.value = items?.reduce((p, { quantity }) => p + quantity, 0) ?? 0;
   },
 );
-
-watch(
-  () => isAuthenticationOpen.value,
-  () => (isLogin.value = true),
-);
-
-const navigateAfterAuth = (reload: boolean) => {
-  if (reload) window.location.reload();
-  else closeAuthentication();
-};
 </script>
 
 <style scoped>

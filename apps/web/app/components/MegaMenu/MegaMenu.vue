@@ -1,5 +1,5 @@
 <template>
-  <header class="relative w-full md:sticky md:shadow-md z-10 bg-white">
+  <header class="relative w-full md:sticky shadow-md z-10 bg-white">
 
     <!-- TOP BAR -->
     <div class="flex items-center justify-between px-4 md:px-0 py-1 md:py-5 w-full max-w-screen-2xl mx-auto">

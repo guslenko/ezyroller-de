@@ -146,7 +146,7 @@
               :to="$localePath(productRight.link)"
               class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
             >
-              {{ productRight.name }} entdecken
+              {{ productRight.name }}
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
             </NuxtLink>
           </div>

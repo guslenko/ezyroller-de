@@ -15,7 +15,7 @@
 >
 
   <!-- BLOCK 1 -->
-  <div class="flex items-center gap-3 py-4 border-b md:border-none border-neutral-200">
+  <div class="flex items-center gap-3 py-4 border-y md:border-none border-zinc-300">
     <img src="/images/icon1.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz2") }}</span>
@@ -24,7 +24,7 @@
   </div>
 
   <!-- BLOCK 2 -->
-  <div class="flex items-center gap-3 py-4 border-b md:border-none border-neutral-200">
+  <div class="flex items-center gap-3 py-4 border-b md:border-none border-zinc-300">
     <img src="/images/icon2.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz4") }}</span>
@@ -33,7 +33,7 @@
   </div>
 
   <!-- BLOCK 3 -->
-  <div class="flex items-center gap-3 py-4 border-b md:border-none border-neutral-200">
+  <div class="flex items-center gap-3 py-4 border-b md:border-none border-zinc-300">
     <img src="/images/icon3.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz6") }}</span>

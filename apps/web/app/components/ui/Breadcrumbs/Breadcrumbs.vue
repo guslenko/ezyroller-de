@@ -1,7 +1,14 @@
 <template>
-  <nav data-testid="breadcrumbs" class="inline-flex items-center text-sm font-normal">
+
+  <section class="w-full bg-white">
+  <nav
+    data-testid="breadcrumbs"
+    class="relative z-[5] py-2 
+           box-border flex items-center text-sm font-normal"
+  >
+
     <ol class="flex w-auto leading-none group md:flex-wrap">
-      <li class="flex items-center sm:hidden text-neutral-500 z-9">
+      <li class="flex items-center sm:hidden text-neutral-500 z-10">
         <NuxtLazyHydrate :on-interaction="['click', 'touchstart']">
           <SfDropdown v-model="dropdownOpened" strategy="absolute" placement="bottom-start" @update:model-value="close">
             <template #trigger>
@@ -56,6 +63,7 @@
       </li>
     </ol>
   </nav>
+  </section>
 </template>
 
 <script setup lang="ts">
