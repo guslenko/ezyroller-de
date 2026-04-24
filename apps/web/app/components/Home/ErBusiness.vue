@@ -8,11 +8,14 @@
     <h3 class="text-3xl uppercase font-bold mb-4 px-0 py-2 text-center">{{ $t("biz1") }}</h3>
 
     <div
-  class="max-w-screen-2xl mx-auto grid grid-cols-3 gap-6 sm:gap-8 px-4 pb-4"
+  class="max-w-screen-2xl mx-auto 
+         grid grid-cols-1 md:grid-cols-3 
+         gap-0 md:gap-6 sm:gap-8 
+         px-4 pb-4"
 >
 
   <!-- BLOCK 1 -->
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-3 py-4 border-b md:border-none border-neutral-200">
     <img src="/images/icon1.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz2") }}</span>
@@ -21,7 +24,7 @@
   </div>
 
   <!-- BLOCK 2 -->
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-3 py-4 border-b md:border-none border-neutral-200">
     <img src="/images/icon2.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz4") }}</span>
@@ -30,7 +33,7 @@
   </div>
 
   <!-- BLOCK 3 -->
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-3 py-4 border-b md:border-none border-neutral-200">
     <img src="/images/icon3.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz6") }}</span>
@@ -39,6 +42,7 @@
   </div>
 
 </div>
+
 
 
 

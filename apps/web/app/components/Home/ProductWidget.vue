@@ -2,9 +2,11 @@
   <section class="w-full py-4 px-4 bg-white">
     <div class="max-w-6xl mx-auto text-center relative mt-4">
 
-      <h2 class="text-3xl uppercase font-bold text-center mb-2">
-        Vergleich der EzyRoller Modelle
-      </h2>
+
+      <h3 class="text-3xl uppercase font-bold mb-4 px-0 py-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-teal-600 via-purple-500 to-pink-500 bg-[length:100%_100%] bg-[position:0%_0]">
+        {{ $t("pwtitle") }}
+      </h3>
+
 
       <!-- MOBILE SCROLL WRAPPER -->
       <div class="overflow-x-auto pb-4">
@@ -133,7 +135,7 @@
               :to="$localePath(productLeft.link)"
               class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
             >
-              {{ productLeft.name }} entdecken
+              {{ productLeft.name }}
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
             </NuxtLink>
           </div>

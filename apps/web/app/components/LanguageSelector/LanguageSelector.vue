@@ -1,55 +1,58 @@
 <template>
-  <div
-    v-if="viewport.isGreaterOrEquals('md') && isOpen"
-    data-testid="languageSelectList"
-    class="absolute w-full bg-white py-10 flex flex-row items-center justify-center z-10 drop-shadow-md"
+  <UiModal
+    v-model="isOpen"
+    tag="section"
+    class="w-[90%] max-w-[420px] mx-auto p-5 rounded-xl bg-white shadow-xl"
   >
-    <UiModal v-model="isOpen" tag="section" class="w-full bg-white !max-h-fit relative !rounded-none">
-      <div class="flex justify-center flex-wrap">
-        <div v-for="locale in filteredLocaleCodes" :key="locale">
-          <LanguageButton :locale="locale" :variant="locale === currentLocale ? 'primary' : 'tertiary'">
-            <div class="w-6 lg:w-8" v-html="flagList[locale]" />
-            <div>{{ t(`lang.${locale}`) }}</div>
-          </LanguageButton>
-        </div>
-      </div>
-    </UiModal>
-  </div>
+    <h2 class="text-center text-xl font-semibold mb-6">
+      {{ t('common.navigation.languageSelector') }}
+    </h2>
 
-  <div v-else data-testid="languageSelectList">
-    <UiModal v-model="isOpen" tag="section" class="!p-0 !pt-2.5 flex flex-col !w-11/12" aria-labelledby="login-modal">
-      <template v-for="locale in filteredLocaleCodes" :key="locale">
-        <LanguageButton
-          :locale="locale"
-          variant="tertiary"
-          class="mx-3 mb-2 flex items-center justify-between !text-black"
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <button
+        v-for="locale in filteredLocaleCodes"
+        :key="locale"
+        class="flex flex-col items-center justify-center p-4 border rounded-lg hover:bg-neutral-100 transition"
+        @click="select(locale)"
+      >
+        <div class="w-8 h-8 mb-2" v-html="flagList[locale as string]" />
+        <span
+          class="text-sm font-medium"
+          :class="locale === currentLocale ? 'text-primary-600' : 'text-neutral-700'"
         >
-          <div class="flex">
-            <div class="mr-2 w-8" :data-testid="`flagIcon-${locale}`" v-html="flagList[locale]" />
-            <div class="!text-black-500">{{ t(`lang.${locale}`) }}</div>
-          </div>
-          <SfIconCheck v-if="locale === currentLocale" class="text-green-500" />
-        </LanguageButton>
-      </template>
-    </UiModal>
-  </div>
+          {{ t(`lang.${locale}`) }}
+        </span>
+
+        <SfIconCheck
+          v-if="locale === currentLocale"
+          class="text-green-500 mt-1"
+        />
+      </button>
+    </div>
+  </UiModal>
 </template>
 
 <script setup lang="ts">
 import { SfIconCheck } from '@storefront-ui/vue';
 import { flagImports } from './flags';
 
-const { isOpen } = useLocalization();
-const viewport = useViewport();
+const { isOpen, switchLocale } = useLocalization();
 const { getCategoryTree } = useCategoryTree();
 const { getAvailableLocales } = useLocalization();
-const { locale: currentLocale } = useI18n();
-const flagList: { [key: string]: string } = {};
-const filteredLocaleCodes = ref(getAvailableLocales());
+const { locale: currentLocale, t } = useI18n();
 
-filteredLocaleCodes.value.forEach((localeCode) => {
+const flagList: Record<string, string> = {};
+const filteredLocaleCodes = ref<string[]>(getAvailableLocales());
+
+filteredLocaleCodes.value.forEach((localeCode: string) => {
   if (flagImports[localeCode]) flagList[localeCode] = flagImports[localeCode];
 });
+
+async function select(localeCode: string) {
+  await switchLocale(localeCode);
+  isOpen.value = false;
+  await getCategoryTree();
+}
 
 watch(
   () => currentLocale.value,

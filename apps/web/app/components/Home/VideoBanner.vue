@@ -4,7 +4,7 @@
     class="relative block overflow-hidden group w-full"
   >
     <!-- VIDEO WRAPPER -->
-    <div class="relative w-full overflow-hidden h-[380px] md:h-[380px] lg:h-[480px]">
+    <div class="relative w-full overflow-hidden h-[580px] md:h-[580px] lg:h-[640px]">
       
       <!-- VIDEO -->
       <video
