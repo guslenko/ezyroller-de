@@ -1,10 +1,10 @@
 <template>
   <div
     v-if="parent || (categoryTreeItem && categoryTreeGetters.getItems(categoryTreeItem)?.length)"
-    class="category-tree"
+    class="category-tree border border-neutral-200 mb-6 !rounded-none"
   >
     <div
-      class="py-2 px-4 mb-4 bg-primary-50/50 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest rounded-none select-none"
+      class="py-2 px-4 mb-4 bg-neutral-100 font-medium text-sm !rounded-none select-none"
       data-testid="category-tree"
     >
       {{ t('common.labels.category') }}

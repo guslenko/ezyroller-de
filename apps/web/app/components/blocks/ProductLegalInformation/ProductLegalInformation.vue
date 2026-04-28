@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 flex" :style="productLegalInlineStyle" data-testid="legal-information">
+  <div class="p-4 flex" style="display:none;" :style="productLegalInlineStyle" data-testid="legal-information">
     <p class="font-bold leading-6 cursor-pointer" data-testid="open-manufacturer-drawer" @click="openDrawer(meta.uuid)">
       <span data-testid="link-text">{{ props.content.text.linkText }}</span>
       <SfIconChevronRight />

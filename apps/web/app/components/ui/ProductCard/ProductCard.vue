@@ -1,8 +1,7 @@
 <template>
   <div
-    class="rounded-md hover:shadow-lg flex flex-col"
+    class="rounded-none border border-neutral-200 hover:border-neutral-300 shadow-md hover:shadow-lg flex flex-col"
     data-testid="product-card"
-    :class="{ 'border border-neutral-200': configuration?.cardBorders }"
   >
     <div class="relative overflow-hidden">
       <UiBadges
@@ -13,62 +12,66 @@
       />
 
       <div ref="imageContainerRef" :class="[{ 'size-48': isFromSlider }, 'relative']">
-        <SfLink
-          :tag="NuxtLink"
-          :to="productPath"
-          class="relative group/image flex items-center justify-center"
-          data-testid="product-card-link"
-        >
-          <div class="relative w-full aspect-square">
-            <div
-              v-if="!mainImageLoaded"
-              class="absolute inset-0 rounded-md bg-neutral-100 animate-pulse"
-              aria-hidden="true"
-            />
+  <SfLink
+    :tag="NuxtLink"
+    :to="productPath"
+    class="relative group/image flex items-center justify-center"
+    data-testid="product-card-link"
+  >
+    <div
+      class="relative w-full px-3 py-0 rounded-md"
+      style="background: rgba(0,0,0,0.04); filter: brightness(96%);"
+    >
+      <div
+        v-if="!mainImageLoaded"
+        class="absolute inset-0 rounded-md bg-neutral-100 animate-pulse"
+        aria-hidden="true"
+      />
 
-            <NuxtImg
-              v-if="shouldLoadMainImage"
-              ref="mainImageRef"
-              :src="imageUrl"
-              :alt="imageAlt"
-              :title="imageTitle || null"
-              :loading="priority || lazy === false ? 'eager' : 'lazy'"
-              :fetchpriority="priority ? 'high' : 'auto'"
-              :preload="priority"
-              :width="getWidth()"
-              :height="getHeight()"
-              :class="[
-                'object-contain rounded-md aspect-square w-full h-full transition-opacity duration-300',
-                mainImageLoaded ? 'opacity-100' : 'opacity-0',
-                effectiveHoverImageUrl && hoverImageLoaded ? 'group-hover/image:opacity-0' : '',
-              ]"
-              data-testid="image-slot"
-              @load="onMainImageLoad"
-              @error="onMainImageError"
-            />
+      <NuxtImg
+        v-if="shouldLoadMainImage"
+        ref="mainImageRef"
+        :src="imageUrl"
+        :alt="imageAlt"
+        :title="imageTitle || null"
+        :loading="priority || lazy === false ? 'eager' : 'lazy'"
+        :fetchpriority="priority ? 'high' : 'auto'"
+        :preload="priority"
+        :width="getWidth()"
+        :height="getHeight()"
+        class="object-contain w-full h-40 transition-opacity duration-300"
+        :class="[
+          mainImageLoaded ? 'opacity-100' : 'opacity-0',
+          effectiveHoverImageUrl && hoverImageLoaded ? 'group-hover/image:opacity-0' : '',
+        ]"
+        data-testid="image-slot"
+        @load="onMainImageLoad"
+        @error="onMainImageError"
+      />
 
-            <NuxtImg
-              v-if="shouldLoadHoverImage && effectiveHoverImageUrl"
-              ref="hoverImageRef"
-              :src="effectiveHoverImageUrl"
-              :alt="imageAlt"
-              :title="imageTitle || null"
-              :loading="lazy === false ? 'eager' : 'lazy'"
-              fetchpriority="auto"
-              :preload="false"
-              :width="getWidth()"
-              :height="getHeight()"
-              :class="[
-                'absolute inset-0 object-contain rounded-md w-full h-full opacity-0 transition-opacity duration-300',
-                hoverImageLoaded ? 'group-hover/image:opacity-100' : '',
-              ]"
-              data-testid="hover-image-slot"
-              @load="onHoverImageLoad"
-              @error="onHoverImageError"
-            />
-          </div>
-        </SfLink>
-      </div>
+      <NuxtImg
+        v-if="shouldLoadHoverImage && effectiveHoverImageUrl"
+        ref="hoverImageRef"
+        :src="effectiveHoverImageUrl"
+        :alt="imageAlt"
+        :title="imageTitle || null"
+        :loading="lazy === false ? 'eager' : 'lazy'"
+        fetchpriority="auto"
+        :preload="false"
+        :width="getWidth()"
+        :height="getHeight()"
+        class="absolute inset-0 object-contain w-full h-40 opacity-0 transition-opacity duration-300"
+        :class="[
+          hoverImageLoaded ? 'group-hover/image:opacity-100' : '',
+        ]"
+        data-testid="hover-image-slot"
+        @load="onHoverImageLoad"
+        @error="onHoverImageError"
+      />
+    </div>
+  </SfLink>
+</div>
+
 
       <template v-if="configuration?.showWishlistButton">
         <slot name="wishlistButton">
@@ -82,7 +85,7 @@
     </div>
 
     <div
-      class="p-2 border-t border-neutral-200 typography-text-sm flex flex-col flex-auto"
+      class="p-2 border-t border-neutral-200 text-base font-normal flex flex-col flex-auto"
       :class="{
         'items-center': configuration?.contentAlignment === 'center',
         'items-end': configuration?.contentAlignment === 'right',
@@ -91,53 +94,31 @@
     >
       <template v-for="key in configuration?.fieldsOrder" :key="key">
         <template v-if="key === 'title' && configuration?.fields?.title">
-          <SfLink
-            :tag="NuxtLink"
-            :to="productPath"
-            class="no-underline"
-            variant="secondary"
-            data-testid="productcard-name"
-          >
-            {{ name }}
-          </SfLink>
-        </template>
-        <template v-if="key === 'manufacturer' && configuration?.fields?.manufacturer">
-          <div
-            v-if="manufacturer"
-            class="mb-1 typography-text-xs text-neutral-500"
-            data-testid="productcard-manufacturer"
-          >
-            {{ manufacturer.externalName }}
-          </div>
-        </template>
-        <template v-if="key === 'rating' && configuration?.fields?.rating">
-          <div class="flex items-center pt-1 gap-1 mb-2">
-            <SfRating size="xs" :half-increment="true" :value="rating ?? 0" :max="5" />
-            <SfCounter size="xs">{{ ratingCount }}</SfCounter>
-          </div>
-        </template>
-        <template v-if="key === 'previewText' && configuration?.fields?.previewText">
-          <div
-            v-if="shortDescription"
-            class="block py-2 font-normal typography-text-xs text-neutral-700 text-justify whitespace-pre-line break-words"
-          >
-            <div class="line-clamp-3 no-preflight" v-html="shortDescription" />
-          </div>
-        </template>
+  <SfLink
+    :tag="NuxtLink"
+    :to="productPath"
+    class="no-underline"
+    variant="secondary"
+    data-testid="productcard-name"
+  >
+    {{ titleName }}
+  </SfLink>
+</template>
+
         <template v-if="key === 'price' && configuration?.fields?.price">
           <LowestPrice :product="product" />
-          <div v-if="showBasePrice" class="mb-2">
+          <div v-if="showBasePrice" class="mb-2 mt-2">
             <BasePriceInLine :base-price="basePrice" :unit-content="unitContent" :unit-name="unitName" />
           </div>
-          <div class="flex flex-col-reverse items-start md:flex-row md:items-center mt-auto">
-            <span class="block pb-2 font-bold typography-text-sm" data-testid="product-card-vertical-price">
+          <div class="flex flex-col-reverse items-start md:flex-row md:items-center mt-auto ">
+            <span class="block pb-2 font-meium typography-text-lg ml-1 md:ml-0 md:mt-2" data-testid="product-card-vertical-price">
               <span v-if="showFromText" class="mr-1">{{ t('account.ordersAndReturns.orderDetails.priceFrom') }}</span>
               <span>{{ format(price) }}</span>
               <span>{{ t('common.labels.asterisk') }}</span>
             </span>
             <span
               v-if="crossedPrice && differentPrices(price, crossedPrice)"
-              class="typography-text-sm text-neutral-500 line-through md:ml-3 md:pb-2"
+              class="typography-text-sm text-neutral-500 line-through mt-2 md:mt-0 md:ml-2 px-2 py-0 bg-amber-300 rounded-md"
             >
               {{ format(crossedPrice) }}
             </span>
@@ -377,4 +358,15 @@ const differentPrices = (price: number, crossedPrice: number) => {
 };
 
 const NuxtLink = resolveComponent('NuxtLink');
+
+const titleName = computed(() => {
+  const p = product.value
+
+  const baseName = p?.texts?.name3 || p?.texts?.name1 || p?.name
+
+  const attrs = productGetters.getGroupedAttributesString(p)
+
+  return baseName + attrs
+})
+
 </script>

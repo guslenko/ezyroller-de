@@ -1,7 +1,7 @@
 <template>
   <form
-    class="md:rounded-md"
-    :class="{ 'md:shadow-lg': configuration?.dropShadow, 'md:border md:border-neutral-100': configuration?.borders }"
+    class=""
+    :class="{ 'md:shadow-md': configuration?.dropShadow, 'md:border md:border-neutral-200': configuration?.borders }"
     :style="inlineStyle"
     data-testid="purchase-card"
     @submit.prevent="handleAddToCart()"
@@ -11,7 +11,7 @@
         <section class="p-4 xl:p-6">
           <template v-for="key in configuration?.fieldsOrder" :key="key">
             <template v-if="key === 'itemName' && configuration?.fields.itemName">
-              <h1 class="font-bold typography-headline-4 break-word" data-testid="product-name">
+              <h1 class="font-medium text-2xl break-word mb-3" data-testid="product-name">
                 {{ productGetters.getName(product) }}
               </h1>
             </template>
@@ -76,7 +76,7 @@
 
             <template v-if="key === 'addToWishlist' && configuration?.fields.addToWishlist">
               <div
-                class="flex items-center mt-2"
+                class="flex items-center mt-5"
                 :class="{ 'justify-center': configuration?.wishlistSize === 'large' }"
               >
                 <WishlistButton

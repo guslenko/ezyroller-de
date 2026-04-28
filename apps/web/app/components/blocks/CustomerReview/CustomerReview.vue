@@ -1,7 +1,7 @@
 <template>
   <div
     ref="reviewArea"
-    class="relative col-span-5 h-fit"
+    class="relative col-span-5 h-fit max-w-screen-2xl mx-auto"
     :class="{ 'pointer-events-none opacity-50': loadingReviews }"
     :style="customerReviewInlineStyle"
     data-testid="review-area"

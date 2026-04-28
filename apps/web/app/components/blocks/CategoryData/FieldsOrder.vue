@@ -6,7 +6,7 @@
   <NarrowContainer class="px-4 md:px-0 ">
     <h1
       id="category-headline"
-      class="font-bold text-2xl typography-headline-3 md:typography-headline-2"
+      class="font-bold text-3xl mb-2"
       data-testid="category-name"
     >
       {{ texts.name }}

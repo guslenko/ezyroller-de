@@ -9,7 +9,7 @@
         >: <b>{{ selectedAttributeValueName }}</b></span
       >
     </label>
-    <div :id="'attribute-' + productAttributeGetters.getAttributeId(attribute)" class="w-full flex gap-4 flex-wrap">
+    <div :id="'attribute-' + productAttributeGetters.getAttributeId(attribute)" class="w-full flex gap-3 flex-wrap my-2">
       <SfTooltip
         v-for="item in productAttributeGetters.getAttributeValues(attribute)"
         :key="productAttributeGetters.getAttributeValueId(item)"
@@ -19,19 +19,21 @@
         placement="top"
       >
         <div
-          class="p-2 border border-zinc-300 rounded-md cursor-pointer hover:bg-[#3C3C4226]"
+          class="border border-neutral-200 cursor-pointer shadow-md hover:border-neutral-400 hover:shadow-lg"
           :class="{
             'text-zinc-300 border-dashed': productAttributeGetters.isAttributeValueDisabled(item),
-            '!border-primary-500 bg-zinc-100': value === productAttributeGetters.getAttributeValueId(item),
+            '!border-neutral-400 bg-zinc-100': value === productAttributeGetters.getAttributeValueId(item),
             '!ring-negative-700 !border-negative-700 ring-1': Boolean(errors['selectedValue']),
           }"
           @click="doUpdateValue(item)"
         >
           <NuxtImg
-            :src="getImagePath(item)"
-            :alt="productAttributeGetters.getAttributeValueName(item)"
-            loading="lazy"
-          />
+  :src="getImagePath(item)"
+  :alt="productAttributeGetters.getAttributeValueName(item)"
+  loading="lazy"
+  class="w-[96px] h-[96px] object-cover"
+/>
+
         </div>
       </SfTooltip>
     </div>

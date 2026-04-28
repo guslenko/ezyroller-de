@@ -1,5 +1,5 @@
 <template>
-  <div :style="inlineStyle" data-testid="item-text-block">
+  <div :style="inlineStyle" class="max-w-screen-2xl mx-auto" data-testid="item-text-block">
     <div v-if="displayAsCollapsable">
       <UiAccordionItem
         v-if="text"

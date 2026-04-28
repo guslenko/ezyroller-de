@@ -1,19 +1,20 @@
 <template>
   <SfScrollable
-    buttons-placement="floating"
-    class="pb-4 scrollbar-hidden"
-    :wrapper-class="wrapperClass"
-    data-testid="product-slider"
-  >
-    <UiProductCard
-      v-for="product in items"
-      :key="productGetters.getId(product)"
-      :product="product"
-      is-from-slider
-      class="max-w-48"
-    />
-  </SfScrollable>
-  <div class="mt-4 typography-text-xs flex gap-1">
+  buttons-placement="floating"
+  class="pb-4 scrollbar-hidden"
+  :wrapper-class="wrapperClass"
+  data-testid="product-slider"
+>
+  <UiProductCard
+    v-for="product in items"
+    :key="productGetters.getId(product)"
+    :product="product"
+    is-from-slider
+    class="max-w-48"
+  />
+</SfScrollable>
+
+  <div class="mt-0 mb-4 typography-text-xs flex gap-1 max-w-screen-2xl mx-auto">
     <span>{{ t('common.labels.asterisk') }}</span>
     <span v-if="showNetPrices">{{ t('product.priceExclVAT') }}</span>
     <span v-else>{{ t('product.priceInclVAT') }}</span>
@@ -39,6 +40,8 @@ import { paths } from '~/utils/paths';
 
 const { showNetPrices } = useCart();
 const localePath = useLocalePath();
+const wrapperClass = "max-w-screen-2xl mx-auto"
+
 
 defineProps<ProductSliderProps>();
 </script>

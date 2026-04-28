@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full" data-testid="category-items-per-page">
+  <div class="w-full pb-4 border border-neutral-200" data-testid="category-items-per-page">
     <div
       v-if="!selectionModeCompact"
-      class="bg-primary-50/50 mb-4 px-4 py-2 rounded-none uppercase typography-headline-6 font-bold tracking-widest select-none"
+      class="bg-neutral-100 mb-4 px-4 py-2 rounded-none font-medium text-sm"
     >
       {{ t('common.labels.perPage') }}
     </div>

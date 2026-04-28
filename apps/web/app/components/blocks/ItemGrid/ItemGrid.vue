@@ -2,7 +2,7 @@
   <div class="flex-1">
     <template v-if="content?.showItemCount">
       <div
-        class="flex items-center mb-6"
+        class="flex items-center mb-4"
         :class="{
           'justify-end': content?.itemCountPosition === 'right',
           'justify-center': content?.itemCountPosition === 'center',
@@ -10,7 +10,7 @@
         }"
         data-testid="item-count"
       >
-        <span class="font-bold md:text-lg">
+        <span class="font-medium text-sm">
           {{
             t('search.numberOfProducts', {
               count: products?.length ?? 0,
