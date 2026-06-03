@@ -209,7 +209,7 @@
            font-medium text-base transition-all duration-300
            group-hover:border-black group-hover:text-black"
   >
-    DRIFTER X PRO
+    DRIFTER PRO X
   </div>
 </SfLink>
 
