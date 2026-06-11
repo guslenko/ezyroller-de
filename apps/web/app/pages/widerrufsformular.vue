@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="page">
     <div class="max-w-[700px] mx-auto p-6" id="widerruf">
-      <h1 class="text-2xl font-bold mb-6">Widerrufsformular</h1>
+      <h1 class="text-2xl font-bold mb-6">{{ $t("textWidgetL0") }}</h1>
 
       <!-- SUCCESS -->
       <div
@@ -18,7 +18,7 @@
         <!-- ORDER NUMBER -->
         <div>
           <label class="block mb-1 font-medium">
-            Auftragsnummer <span class="text-red-600">*</span>
+            {{ $t("textWidgetL01") }} <span class="text-red-600">*</span>
           </label>
           <SfInput v-model="orderId" :invalid="submitted && orderIdError" />
           <p v-if="submitted && orderIdError" class="text-red-600 text-sm mt-1">
@@ -29,7 +29,7 @@
         <!-- FULL NAME -->
         <div>
           <label class="block mb-1 font-medium">
-            Vollständiger Name <span class="text-red-600">*</span>
+            {{ $t("textWidgetL02") }} <span class="text-red-600">*</span>
           </label>
           <SfInput v-model="fullname" :invalid="submitted && fullnameError" />
           <p v-if="submitted && fullnameError" class="text-red-600 text-sm mt-1">
@@ -40,7 +40,7 @@
         <!-- EMAIL -->
         <div>
           <label class="block mb-1 font-medium">
-            Kontakt-E-Mail <span class="text-red-600">*</span>
+            {{ $t("textWidgetL03") }} <span class="text-red-600">*</span>
           </label>
           <SfInput v-model="email" type="email" :invalid="submitted && emailError" />
           <p v-if="submitted && emailError" class="text-red-600 text-sm mt-1">
@@ -51,7 +51,7 @@
         <!-- OPTIONAL MESSAGE -->
         <div>
           <label class="block mb-1 font-medium">
-            Grund für den Widerruf (optional)
+            {{ $t("textWidgetL04") }}
           </label>
           <SfTextarea
             v-model="reason"
@@ -61,13 +61,13 @@
 
         <!-- REQUIRED FIELDS NOTE -->
         <p class="text-sm text-neutral-600">
-          * markierte Felder sind Pflichtfelder
+          {{ $t("textWidgetL05") }}
         </p>
 
         <!-- SUBMIT -->
         <SfButton type="submit" :disabled="loading">
           <SfLoaderCircular v-if="loading" size="sm" />
-          <span v-else>Widerruf bestätigen</span>
+          <span v-else>{{ $t("textWidgetL06") }}</span>
         </SfButton>
       </form>
     </div>

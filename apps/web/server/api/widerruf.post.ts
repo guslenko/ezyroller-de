@@ -18,9 +18,9 @@ export default defineEventHandler(async (event) => {
 
   try {
     await transporter.sendMail({
-      from: `"Website B2B" <${config.emailFromWider}>`,
+      from: `"Website Widerrufsform" <${config.emailFromWider}>`,
       to: config.emailToWider,
-      subject: `Widerrufsformular von ${body.fullname}| id: ${body.orderId}`,
+      subject: `Widerrufsformular von ${body.fullname} | id: ${body.orderId}`,
       html: `
         <h1>Neue Widerrufsformular</h1>
         <p><strong>Auftragsnummer:</strong> ${body.orderId}</p>
