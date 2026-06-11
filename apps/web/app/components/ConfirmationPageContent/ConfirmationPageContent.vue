@@ -31,6 +31,11 @@
         <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
           <OrderTotals :order="order" />
         </div>
+        <div>
+          <SfLink :tag="NuxtLink" :to="localePath('/widerrufsformular')" class="inline-flex items-center justify-center font-medium text-base focus-visible:outline focus-visible:outline-offset rounded-md disabled:text-disabled-500 disabled:bg-disabled-300 disabled:shadow-none disabled:ring-0 disabled:cursor-not-allowed py-2 leading-6 px-4 gap-2 text-white shadow hover:shadow-md active:shadow bg-primary-500 hover:bg-primary-600 active:bg-primary-700 disabled:bg-disabled-300 mt-2">
+                {{ $t("textWidgetL0") }}
+              </SfLink>
+        </div>
       </div>
       <div class="flex-1">
         <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
