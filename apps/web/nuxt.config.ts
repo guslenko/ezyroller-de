@@ -124,7 +124,7 @@ export default defineNuxtConfig({
     emailToBusiness: "b2b@ezyroller.de",
     emailFromBusiness: "mail@ezyroller.de",
 
-    emailToWider: "guslenko@gmail.com",
+    emailToWider: "a.huslenko@pentagonsports.de",
     emailFromWider: "mail@ezyroller.de",
 
     emailDebugCopy: "guslenko@gmail.com",
