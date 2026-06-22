@@ -197,7 +197,7 @@
             </li>
             <li>
               <SfLink :tag="NuxtLink" :to="localePath('/widerrufsformular')" class="text-neutral-700 hover:text-black hover:underline">
-                {{ $t("textWidgetL0") }}
+                {{ $t("textWidgetL001") }}
               </SfLink>
             </li>
             <li>
