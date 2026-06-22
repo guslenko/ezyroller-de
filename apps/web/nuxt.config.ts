@@ -101,20 +101,13 @@ export default defineNuxtConfig({
   },
 
   // 🔥 FIX: Nitro ломал mp4/webp → отключено
-  nitro: {
-    prerender: {
-      crawlLinks: false,
-
-      // 🔥 FIX: Гарантируем попадание файлов в билд
-      routes: [
-        '/videos/banner.mp4',
-        '/images/mer3.webp',
-      ],
-    },
-
-    // 🔥 FIX: Отключено — ломало статику
-    compressPublicAssets: false,
+nitro: {
+  prerender: {
+    crawlLinks: false,
   },
+  compressPublicAssets: false,
+},
+
 
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
