@@ -10,23 +10,27 @@ import { FailOnLargeChunksPlugin } from './app/configuration/vite.config';
 
 export default defineNuxtConfig({
   app: appConfiguration,
+
   experimental: {
     asyncContext: true,
   },
+
   appConfig: {
     titleSuffix: process.env.NAME || 'EzyRoller',
     fallbackCurrency: 'GBP',
   },
+
   imports: {
     dirs: ['~/composables', '~/composables/**', '~/utils/**'],
   },
+
   vite: {
     server: {
       fs: {
-        allow: ['../../..'], // relative to the current nuxt.config.ts
+        allow: ['../../..'],
       },
       watch: {
-        usePolling: process.env.NODE_ENV === 'development', // see apps/web/app/plugins/02.pwa-cookie.ts
+        usePolling: process.env.NODE_ENV === 'development',
       },
     },
     plugins: [FailOnLargeChunksPlugin],
@@ -95,23 +99,40 @@ export default defineNuxtConfig({
       },
     },
   },
-  // TODO: build is consistently failing because of this. check whether we need pre-render check.
+
+  // 🔥 FIX: Nitro ломал mp4/webp → отключено
   nitro: {
     prerender: {
       crawlLinks: false,
+
+      // 🔥 FIX: Гарантируем попадание файлов в билд
+      routes: [
+        '/videos/banner.mp4',
+        '/images/mer3.webp',
+      ],
     },
-    compressPublicAssets: true,
+
+    // 🔥 FIX: Отключено — ломало статику
+    compressPublicAssets: false,
   },
+
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/_nuxt-plenty/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/_nuxt-plenty/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/_nuxt-plenty/images/**': { headers: { 'cache-control': `max-age=604800` } },
+
+    // 🔥 FIX: Добавляем кеширование статики
+    '/videos/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
+    '/images/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
   },
+
   image: {
     provider: 'none',
   },
+
   pages: true,
+
   runtimeConfig: {
     smtpHost: "smtp.ionos.de",
     smtpPort: "587",
@@ -142,6 +163,7 @@ export default defineNuxtConfig({
       ...featureFlagsConfig,
     },
   },
+
   modules: [
     '@plentymarkets/shop-core',
     '@plentymarkets/shop-module-mollie',
@@ -160,6 +182,7 @@ export default defineNuxtConfig({
     'vuetify-nuxt-module',
     'nuxt-color-picker',
   ],
+
   vuetify: {
     moduleOptions: {
       disableVuetifyStyles: true,
@@ -173,6 +196,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   plentySitemap: {
     locales: (process.env.LANGUAGELIST || 'en,de').split(','),
     defaultLocale: nuxtI18nOptions.defaultLocale,
@@ -192,17 +216,20 @@ export default defineNuxtConfig({
       '/reset-password',
     ],
   },
+
   shopCore: {
     apiUrl: validateApiUrl(process.env.API_URL) ?? 'http://localhost:8181',
     apiEndpoint: process.env.API_ENDPOINT,
     configId: Number(process.env.CONFIG_ID) || 1,
     middlewareSSRUrl: 'http://localhost:8181',
   },
+
   shopModuleMollie: {
     checkoutUrl: paths.checkout,
     liveMode: !process.env.MOLLIE_TEST_MODE,
     confirmationUrl: paths.confirmation,
   },
+
   fonts: {
     defaults: {
       weights: [300, 400, 500, 700],
@@ -212,11 +239,14 @@ export default defineNuxtConfig({
       prefix: '/_nuxt-plenty/fonts/',
     },
   },
+
   i18n: nuxtI18nOptions,
+
   tailwindcss: {
     configPath: '~/configuration/tailwind.config.ts',
     exposeConfig: true,
   },
+
   viewport: {
     breakpoints: {
       xs: 380,
@@ -240,6 +270,7 @@ export default defineNuxtConfig({
       secure: true,
     },
   },
+
   veeValidate: {
     autoImports: false,
     componentNames: {
@@ -249,11 +280,16 @@ export default defineNuxtConfig({
       ErrorMessage: 'VeeErrorMessage',
     },
   },
+
+  // 🔥 FIX: Workbox теперь кеширует mp4/webp
   pwa: {
     registerType: 'prompt',
     workbox: {
       navigateFallback: null,
-      globPatterns: ['**/*.{js,json,css,html,ico,svg,png,webp,ico,woff,woff2,ttf,eit,otf}', '_nuxt-plenty/icons/*'],
+      globPatterns: [
+        '**/*.{js,json,css,html,ico,svg,png,webp,mp4,woff,woff2,ttf,otf}',
+        '_nuxt-plenty/icons/*'
+      ],
       globIgnores: ['manifest**.webmanifest'],
       additionalManifestEntries: [
         {
@@ -273,13 +309,13 @@ export default defineNuxtConfig({
           },
         },
         {
-          urlPattern: ({ request }) => request.destination === 'image',
+          urlPattern: ({ request }) => request.destination === 'image' || request.destination === 'video',
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'plenty-image-cache',
+            cacheName: 'plenty-media-cache',
             expiration: {
-              maxEntries: 300,
-              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              maxEntries: 500,
+              maxAgeSeconds: 60 * 60 * 24 * 30,
             },
             cacheableResponse: {
               statuses: [0, 200],
@@ -289,6 +325,7 @@ export default defineNuxtConfig({
       ],
       cleanupOutdatedCaches: true,
     },
+
     manifest: {
       name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'EzyRoller Shop',
       short_name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'EzyRoller Shop',
@@ -317,6 +354,7 @@ export default defineNuxtConfig({
         },
       ],
     },
+
     registerWebManifestInRouteRules: true,
   },
 });
