@@ -169,7 +169,7 @@ const products = [
   {
     id: "classic",
     name: "CLASSIC",
-    img: "/images/ERCLASSIC.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERCLASSIC.webp",
     colors: ["black", "lime-500", "sky-500", "red-600", "purple-700"],
     link: t("bizl7"),
     specs: { age:"3-14+", height:"95-160 cm", weight:"70 kg", minmax:"65/116", seatsize:"29 cm", brakes:"brakesValue", stange:"2" }
@@ -177,7 +177,7 @@ const products = [
   {
     id: "classicx",
     name: "CLASSIC X",
-    img: "/images/ERCLASSICX.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERCLASSICX.webp",
     colors: ["black", "lime-500", "sky-500", "red-600", "purple-700", "pink-600"],
     link: t("bizl2"),
     specs: { age:"3-14+", height:"95-160 cm", weight:"70 kg", minmax:"65/116", seatsize:"29 cm", brakes:"brakesValue", stange:"2" }
@@ -185,7 +185,7 @@ const products = [
   {
     id: "drifterx",
     name: "DRIFTER X",
-    img: "/images/ERDRIFTERX.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERX.webp",
     colors: ["black", "lime-500", "sky-500", "red-600", "pink-600"],
     link: t("bizl4"),
     specs: { age:"4-14+", height:"100-160 cm", weight:"70 kg", minmax:"78/112", seatsize:"29 cm", brakes:"brakesValue", stange:"2" }
@@ -193,7 +193,7 @@ const products = [
   {
     id: "drifterprox",
     name: "DRIFTER PRO X",
-    img: "/images/ERDRIFTERPROX.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERPROX.webp",
     colors: ["black", "lime-500", "sky-500", "red-600", "purple-700", "pink-600", "amber-500"],
     link: t("bizl6"),
     specs: { age:"10+", height:"135-180 cm", weight:"100 kg", minmax:"93/118", seatsize:"38 cm", brakes:"brakesValue", stange:"1" }
@@ -201,7 +201,7 @@ const products = [
   {
     id: "mini",
     name: "MINI",
-    img: "/images/ERMINI.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERMINI.webp",
     colors: ["lime-500", "sky-500", "red-600", "purple-700", "pink-600"],
     link: t("bizl1"),
     specs: { age:"2-5", height:"80-105 cm", weight:"30 kg", minmax:"48/58", seatsize:"24 cm", brakes:"brakesValue", stange:"1" }
@@ -209,7 +209,7 @@ const products = [
   {
     id: "prox",
     name: "PRO X",
-    img: "/images/ERPROX.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERPROX.webp",
     colors: ["black", "lime-500", "sky-500", "red-600", "pink-600", "amber-500"],
     link: t("bizl5"),
     specs: { age:"10+", height:"135-180 cm", weight:"100 kg", minmax:"88/112", seatsize:"38 cm", brakes:"brakesValue", stange:"1" }
@@ -217,7 +217,7 @@ const products = [
   {
     id: "spinnerx",
     name: "SPINNER X",
-    img: "/images/ERSPINNERX.webp",
+    img: "https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERSPINNERX.webp",
     colors: ["lime-500", "sky-500", "red-600", "pink-600"],
     link: t("bizl3"),
     specs: { age:"4-14+", height:"100-160 cm", weight:"70 kg", minmax:"75/108", seatsize:"29 cm", brakes:"brakesValue", stange:"2" }

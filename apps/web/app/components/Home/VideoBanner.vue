@@ -14,7 +14,7 @@
         loop
         playsinline
       >
-        <source src="/videos/banner.mp4" type="video/mp4" />
+        <source src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/banner.mp4" type="video/mp4" />
       </video>
 
       <!-- DARK OVERLAY (ONLY ON VIDEO) -->

@@ -22,7 +22,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/sg1.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sg1.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -65,7 +65,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/sg2.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sg2.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -122,7 +122,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/sg3.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sg3.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -168,7 +168,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/sg4.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sg4.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -214,7 +214,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/sg5.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sg5.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -257,7 +257,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/sg6.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sg6.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />

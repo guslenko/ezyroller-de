@@ -123,7 +123,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer1.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer1.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -149,7 +149,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer2.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer2.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -174,7 +174,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer3.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer3.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -199,7 +199,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer4.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer4.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -224,7 +224,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer5.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer5.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -249,7 +249,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer6.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer6.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -274,7 +274,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer7.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer7.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -332,7 +332,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer8.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer8.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -358,7 +358,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer9.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer9.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -383,7 +383,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer10.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer10.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -408,7 +408,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer11.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer11.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -433,7 +433,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer12.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer12.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -458,7 +458,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer13.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer13.webp"
       class="w-full h-full object-cover"
     />
   </div>
@@ -483,7 +483,7 @@
            group-hover:scale-105"
   >
     <img
-      src="/images/mer14.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer14.webp"
       class="w-full h-full object-cover"
     />
   </div>

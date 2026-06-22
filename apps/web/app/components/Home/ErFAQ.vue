@@ -8,7 +8,7 @@
     <!-- BACKGROUND IMAGE -->
     <div
       class="absolute inset-0 w-full h-full bg-cover bg-center"
-      style="background-image: url('/images/faq.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/faq.webp')"
     ></div>
 
     <!-- DARK OVERLAY (ONLY ON IMAGE) -->
@@ -44,7 +44,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/erfaq1.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/erfaq1.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -75,7 +75,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/erfaq2.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/erfaq2.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />

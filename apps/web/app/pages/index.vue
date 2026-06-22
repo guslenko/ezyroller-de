@@ -22,7 +22,7 @@
       <div class="flex flex-col items-center">
         <NuxtLink :to="$localePath($t('bizl1'))" class="block text-center group">
           <img
-            src="/images/ERMINI.webp"
+            src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERMINI.webp"
             alt="EzyRoller Mini"
             class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
           />
@@ -49,7 +49,7 @@
       <div class="flex flex-col items-center">
         <NuxtLink :to="$localePath($t('bizl2'))" class="block text-center group">
           <img
-            src="/images/ERCLASSICX.webp"
+            src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERCLASSICX.webp"
             alt="EzyRoller Classic X"
             class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
           />
@@ -76,7 +76,7 @@
       <div class="flex flex-col items-center">
         <NuxtLink :to="$localePath($t('bizl3'))" class="block text-center group">
           <img
-            src="/images/ERSPINNERX.webp"
+            src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERSPINNERX.webp"
             alt="EzyRoller Spinner X"
             class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
           />
@@ -103,7 +103,7 @@
       <div class="flex flex-col items-center">
         <NuxtLink :to="$localePath($t('bizl4'))" class="block text-center group">
           <img
-            src="/images/ERDRIFTERX.webp"
+            src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERX.webp"
             alt="EzyRoller Drifter X"
             class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
           />
@@ -130,7 +130,7 @@
       <div class="flex flex-col items-center">
         <NuxtLink :to="$localePath($t('bizl5'))" class="block text-center group">
           <img
-            src="/images/ERPROX.webp"
+            src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERPROX.webp"
             alt="EzyRoller Pro X"
             class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
           />
@@ -157,7 +157,7 @@
       <div class="flex flex-col items-center">
         <NuxtLink :to="$localePath($t('bizl6'))" class="block text-center group">
           <img
-            src="/images/ERDRIFTERPROX.webp"
+            src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERPROX.webp"
             alt="EzyRoller Drifter Pro X"
             class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
           />
@@ -196,30 +196,30 @@
     <div
   class="max-w-screen-2xl mx-auto grid grid-cols-4 sm:grid-cols-8 gap-6 sm:gap-8 px-4 pb-4"
 >
-  <img src="/images/ert1.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert2.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert3.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert4.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert5.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert6.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert7.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert8.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert9.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert10.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert11.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert12.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert13.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert14.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert15.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert16.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert17.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert18.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert19.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert20.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert21.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert22.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert23.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
-  <img src="/images/ert24.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert1.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert2.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert3.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert4.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert5.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert6.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert7.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert8.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert9.webp"  alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert10.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert11.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert12.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert13.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert14.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert15.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert16.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert17.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert18.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert19.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert20.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert21.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert22.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert23.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
+  <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ert24.webp" alt="EzyRoller Award" class="w-full object-contain" width="110" height="110">
 </div>
 
 

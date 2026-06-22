@@ -8,7 +8,7 @@
         <!-- BACKGROUND IMAGE -->
         <div
           class="absolute inset-0 w-full h-full bg-cover bg-center"
-          style="background-image: url('/images/sgbg.webp')"
+          style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sgbg.webp')"
         ></div>
 
         <!-- DARK OVERLAY (ONLY ON IMAGE) -->

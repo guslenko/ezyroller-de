@@ -4,11 +4,11 @@
       <!-- Бесконечная лента -->
       <div class="train-strip h-[150px] flex">
         <!-- Один цикл (2 картинки) -->
-        <img src="/images/train.webp" class="h-[150px] w-auto" />
-        <img src="/images/train.webp" class="h-[150px] w-auto" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/train.webp" class="h-[150px] w-auto" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/train.webp" class="h-[150px] w-auto" />
         <!-- Дублируем цикл -->
-        <img src="/images/train.webp" class="h-[150px] w-auto" />
-        <img src="/images/train.webp" class="h-[150px] w-auto" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/train.webp" class="h-[150px] w-auto" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/train.webp" class="h-[150px] w-auto" />
       </div>
     </div>
   </section>

@@ -8,7 +8,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/ezrp.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ezrp.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg"
         />
@@ -62,7 +62,7 @@
       <!-- IMAGE (НЕ ПЕРЕКРЫВАЕТ КНОПКУ И МЕНЮ) -->
       <div class="-rotate-6 relative ml-[30px] mt-[-70px] pointer-events-none z-0">
         <img
-          src="/images/ezh.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ezh.webp"
           alt=""
           class="mx-auto"
         />

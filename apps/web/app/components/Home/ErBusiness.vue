@@ -16,7 +16,7 @@
 
   <!-- BLOCK 1 -->
   <div class="flex items-center gap-3 py-4 border-y md:border-none border-zinc-300">
-    <img src="/images/icon1.webp" alt="" class="h-14 w-14 mr-4" />
+    <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon1.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz2") }}</span>
       <span>{{ $t("biz3") }}</span>
@@ -25,7 +25,7 @@
 
   <!-- BLOCK 2 -->
   <div class="flex items-center gap-3 py-4 border-b md:border-none border-zinc-300">
-    <img src="/images/icon2.webp" alt="" class="h-14 w-14 mr-4" />
+    <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon2.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz4") }}</span>
       <span>{{ $t("biz5") }}</span>
@@ -34,7 +34,7 @@
 
   <!-- BLOCK 3 -->
   <div class="flex items-center gap-3 py-4 border-b md:border-none border-zinc-300">
-    <img src="/images/icon3.webp" alt="" class="h-14 w-14 mr-4" />
+    <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon3.webp" alt="" class="h-14 w-14 mr-4" />
     <div class="flex flex-col leading-tight text-left font-normal text-xl">
       <span>{{ $t("biz6") }}</span>
       <span>{{ $t("biz7") }}</span>
@@ -58,7 +58,7 @@
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/biz1.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/biz1.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -120,7 +120,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 >
   <!-- IMAGE -->
   <img
-    src="/images/ERMINI.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERMINI.webp"
     alt="EzyRoller Mini"
     class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
   />
@@ -154,7 +154,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 >
   <!-- IMAGE -->
   <img
-    src="/images/ERCLASSICX.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERCLASSICX.webp"
     alt="EzyRoller Classic X"
     class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
   />
@@ -188,7 +188,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 >
   <!-- IMAGE -->
   <img
-    src="/images/ERSPINNERX.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERSPINNERX.webp"
     alt="EzyRoller Spinner X"
     class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
   />
@@ -222,7 +222,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 >
   <!-- IMAGE -->
   <img
-    src="/images/ERDRIFTERX.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERX.webp"
     alt="EzyRoller Drifter X"
     class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
   />
@@ -256,7 +256,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 >
   <!-- IMAGE -->
   <img
-    src="/images/ERPROX.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERPROX.webp"
     alt="EzyRoller Pro X"
     class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
   />
@@ -290,7 +290,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
 >
   <!-- IMAGE -->
   <img
-    src="/images/ERDRIFTERPROX.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERPROX.webp"
     alt="EzyRoller Drifter Pro X"
     class="w-full h-auto mb-3 transition-all duration-300 group-hover:opacity-90"
   />
@@ -348,7 +348,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/biz3.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/biz3.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -358,7 +358,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <div class="order-2 md:order-1 text-gray-800">
             <div class="flex items-center gap-4">
   <img
-    src="/images/icon4.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon4.webp"
     alt="Icon"
     class="h-14 w-14 flex-shrink-0"
   />
@@ -415,7 +415,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-2 md:order-1">
         <img
-          src="/images/biz4.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/biz4.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -425,7 +425,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <div class="order-1 md:order-2 text-gray-800">
             <div class="flex items-center gap-4">
   <img
-    src="/images/icon5.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon5.webp"
     alt="Icon"
     class="h-14 w-14 flex-shrink-0"
   />
@@ -481,7 +481,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <!-- IMAGE FIRST ON MOBILE -->
       <div class="order-1 md:order-2">
         <img
-          src="/images/biz5.webp"
+          src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/biz5.webp"
           alt="Banner"
           class="w-full h-auto object-cover rounded-lg shadow-md"
         />
@@ -491,7 +491,7 @@ class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gr
       <div class="order-2 md:order-1 text-gray-800">
             <div class="flex items-center gap-4">
   <img
-    src="/images/icon6.webp"
+    src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon6.webp"
     alt="Icon"
     class="h-14 w-14 flex-shrink-0"
   />

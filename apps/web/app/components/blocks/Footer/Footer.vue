@@ -11,7 +11,7 @@
         class="flex items-center gap-3 py-4
                border-b border-zinc-300 md:border-none"
       >
-        <img src="/images/icon9.webp" alt="" class="h-14 w-14 mr-4" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon9.webp" alt="" class="h-14 w-14 mr-4" />
         <div class="flex flex-col leading-tight text-left font-normal text-xl">
           <span class="font-bold">{{ $t("biz35") }}</span>
           <span class="font-light text-base">{{ $t("biz36") }}</span>
@@ -23,7 +23,7 @@
         class="flex items-center gap-3 py-2
                border-b border-zinc-300 md:border-none"
       >
-        <img src="/images/icon7.webp" alt="" class="h-14 w-14 mr-4" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon7.webp" alt="" class="h-14 w-14 mr-4" />
         <div class="flex flex-col leading-tight text-left font-normal text-xl">
           <span class="font-bold">{{ $t("biz37") }}</span>
           <span class="font-light text-base">{{ $t("biz38") }}</span>
@@ -35,7 +35,7 @@
         class="flex items-center gap-3 py-2
                "
       >
-        <img src="/images/icon8.webp" alt="" class="h-14 w-14 mr-4" />
+        <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon8.webp" alt="" class="h-14 w-14 mr-4" />
         <div class="flex flex-col leading-tight text-left font-normal text-xl">
           <span class="font-bold">{{ $t("biz39") }}</span>
           <span class="font-light text-base">{{ $t("biz40") }}</span>
@@ -238,7 +238,7 @@
   >
 
     <img
-      src="/images/dhl.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/dhl.webp"
       alt="DHL"
       class="h-5 sm:h-8 w-auto object-contain"
       width="183"
@@ -246,7 +246,7 @@
     />
 
     <img
-      src="/images/paypal.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/paypal.webp"
       alt="PayPal"
       class="h-5 sm:h-8 w-auto object-contain"
       width="114"
@@ -254,7 +254,7 @@
     />
 
     <img
-      src="/images/apay.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/apay.webp"
       alt="Apple Pay"
       class="h-5 sm:h-8 w-auto object-contain"
       width="91"
@@ -262,7 +262,7 @@
     />
 
     <img
-      src="/images/gpay.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/gpay.webp"
       alt="Google Pay"
       class="h-5 sm:h-8 w-auto object-contain"
       width="94"
@@ -270,7 +270,7 @@
     />
 
     <img
-      src="/images/visa.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/visa.webp"
       alt="Visa"
       class="h-5 sm:h-8 w-auto object-contain"
       width="105"
@@ -278,7 +278,7 @@
     />
 
     <img
-      src="/images/mastercard.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mastercard.webp"
       alt="Mastercard"
       class="h-5 sm:h-8 w-auto object-contain"
       width="50"
@@ -286,7 +286,7 @@
     />
 
     <img
-      src="/images/sepa.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/sepa.webp"
       alt="SEPA"
       class="h-5 sm:h-8 w-auto object-contain"
       width="94"
@@ -294,7 +294,7 @@
     />
 
     <img
-      src="/images/klarna.webp"
+      src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/klarna.webp"
       alt="Klarna"
       class="h-5 sm:h-8 w-auto object-contain"
       width="58"

@@ -16,7 +16,7 @@
     <!-- IMAGE -->
     <div
       class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-      style="background-image: url('/images/b1.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/b1.webp')"
     ></div>
 
     <!-- DARK OVERLAY (ONLY ON IMAGE) -->
@@ -54,7 +54,7 @@
     <!-- IMAGE -->
     <div
       class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-      style="background-image: url('/images/b2.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/b2.webp')"
     ></div>
 
     <!-- DARK OVERLAY -->
@@ -92,7 +92,7 @@
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
     <div
       class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-      style="background-image: url('/images/b3.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/b3.webp')"
     ></div>
 
     <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/10 pointer-events-none"></div>
@@ -129,7 +129,7 @@
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
     <div
       class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-      style="background-image: url('/images/b4.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/b4.webp')"
     ></div>
 
     <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/10 pointer-events-none"></div>
@@ -165,7 +165,7 @@
   <div class="relative w-full h-[290px] md:h-[380px] lg:h-[480px] overflow-hidden">
     <div
       class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-      style="background-image: url('/images/b5.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/b5.webp')"
     ></div>
 
     <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/10 pointer-events-none"></div>
@@ -205,7 +205,7 @@
     <!-- IMAGE -->
     <div
       class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-      style="background-image: url('/images/b6.webp')"
+      style="background-image: url('https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/b6.webp')"
     ></div>
 
     <!-- DARK OVERLAY (ONLY ON IMAGE) -->

@@ -103,7 +103,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer1.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer1.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 CLASSIC
@@ -116,7 +116,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer2.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer2.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 CLASSIC X
@@ -129,7 +129,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer3.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer3.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 DRIFTER X
@@ -142,7 +142,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer4.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer4.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 DRIFTER X PRO
@@ -155,7 +155,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer5.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer5.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 MINI
@@ -168,7 +168,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer6.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer6.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 PRO X
@@ -181,7 +181,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer7.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer7.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 SPINNER X
@@ -205,7 +205,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer8.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer8.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu21") }}
@@ -218,7 +218,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer9.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer9.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu22") }}
@@ -231,7 +231,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer10.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer10.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu23") }}
@@ -244,7 +244,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer11.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer11.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu24") }}
@@ -257,7 +257,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer12.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer12.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu25") }}
@@ -270,7 +270,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer13.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer13.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu26") }}
@@ -283,7 +283,7 @@
               @click="close()"
             >
               <div class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105">
-                <img src="/images/mer14.webp" class="w-full h-full object-cover" />
+                <img src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer14.webp" class="w-full h-full object-cover" />
               </div>
               <div class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black">
                 {{ $t("menu27") }}
