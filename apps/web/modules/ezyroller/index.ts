@@ -39,6 +39,11 @@ export default defineNuxtModule({
       priority: 100,
     });
     addComponent({
+      name: 'GuaranteeNotice',
+      filePath: resolve('./runtime/components/CheckoutDefaultGuaranteeNoticeDisabled.vue'),
+      priority: Number.MAX_SAFE_INTEGER,
+    });
+    addComponent({
       name: 'PaymentButtons',
       filePath: resolve('./runtime/components/CheckoutPaymentButtons.vue'),
       priority: 200,

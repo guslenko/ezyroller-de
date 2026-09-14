@@ -9,7 +9,7 @@
 - `runtime/components/` — шапка, меню, выбор языка, подвал, оформление карточек, фильтров и блоков каталога.
 - `runtime/layouts/default.vue` — компоновка с фирменной шапкой и статическим подвалом EzyRoller.
 - `runtime/layouts/simplifiedHeaderAndFooter.vue` — checkout с белой шапкой и тем же фирменным подвалом, что на остальных страницах.
-- `runtime/components/CheckoutPaymentButtons.vue` и `CheckoutGuaranteeLink.vue` — штатная кнопка оформления заказа с юридической PDF-ссылкой непосредственно под ней.
+- `runtime/components/CheckoutPaymentButtons.vue` и `CheckoutGuaranteeLink.vue` — штатная кнопка оформления заказа с единственной PDF-ссылкой непосредственно под ней; стандартный `GuaranteeNotice` Plenty заменён в модуле пустым компонентом, чтобы не появлялся дубликат.
 - `runtime/lang/{de,en,fr,it,es,pl}.json` — все исходные значения переводов магазина, сохранённые из e57f355. Редактировать тексты здесь.
 - `runtime/server/api/` — серверные обработчики трёх собственных форм. Адреса `/api/business`, `/api/kontakt`, `/api/widerruf` сохранены.
 - `runtime/plugins/` — GTM, Clarity, согласие на маркетинговые cookies и ecommerce-события магазина.
