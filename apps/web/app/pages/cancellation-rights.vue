@@ -1,12 +1,5 @@
 <template>
-  <section class="w-full py-2 px-4 bg-white">
-    <div class="max-w-screen-2xl mx-auto relative">
-        <div
-          class="w-full overflow-x-auto no-preflight !text-lg"
-          v-html="getHTMLTexts()"
-        />
-    </div>
-  </section>
+  <div class="w-full p-5 overflow-x-auto break-words no-preflight" v-html="getHTMLTexts()" />
 </template>
 
 <script setup lang="ts">
@@ -21,28 +14,8 @@ const { getRobots, setRobotForStaticPage } = useRobots();
 const { setPageMeta } = usePageMeta();
 
 definePageMeta({
-  pageType: "static",
-})
-
-const { t } = useI18n()
-
-useHead({
-  title: t("widertitle"),
-  meta: [
-    {
-      name: "description",
-      content: t("widerdesc"),
-    },
-    {
-      property: "og:title",
-      content: t("widertitle"),
-    },
-    {
-      property: "og:description",
-      content: t("widerdesc"),
-    }
-  ]
-})
+  pageType: 'static',
+});
 
 await getLegalTexts({
   type: 'CancellationRights',

@@ -1,6 +1,7 @@
 import { useForm } from 'vee-validate';
 import { toTypedSchema } from '@vee-validate/yup';
-import { object, string } from 'yup';
+import { object } from 'yup';
+import { pageNameSchema } from './validation';
 import type { CategoryEntry, CategoryTreeItem, CategoryDetails, ApiError } from '@plentymarkets/shop-api';
 import { categoryEntryGetters } from '@plentymarkets/shop-api';
 
@@ -138,7 +139,7 @@ export const useAddPageModal = () => {
 
   const validationSchema = toTypedSchema(
     object({
-      pageName: string().required('Enter a page name').default(''),
+      pageName: pageNameSchema,
     }),
   );
 
@@ -190,10 +191,11 @@ export const useAddPageModal = () => {
   };
 
   const redirectToNewPage = async (newCategory: CategoryEntry) => {
+    const { resolvePathTrailingSlash } = useUrlTrailingSlash();
     const previewUrl = newCategory.details[0]?.previewUrl;
     const firstSlashIndex = previewUrl?.indexOf('/', 8) ?? -1;
-    const path = firstSlashIndex !== -1 ? previewUrl?.slice(firstSlashIndex) : '/';
-    await router.push({ path });
+    const path = firstSlashIndex !== -1 && previewUrl ? previewUrl.slice(firstSlashIndex) : '/';
+    await router.push({ path: resolvePathTrailingSlash(path) });
     setCategoryId({
       id: newCategory.id,
       parentId: newCategory.parentCategoryId ?? 0,

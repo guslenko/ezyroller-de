@@ -1,8 +1,8 @@
 <template>
   <SfAccordionItem v-if="facet" v-model="open">
     <template #summary>
-      <div class="flex justify-between py-1 px-4 mb-2 select-none bg-neutral-100">
-        <div class="py-1 rounded-none  select-none">
+      <div class="flex justify-between py-1 px-4 mb-2 select-none bg-primary-50/50">
+        <div class="py-1 rounded-none uppercase typography-headline-6 font-bold tracking-widest select-none">
           {{ facetGetters.getName(facet) }}
         </div>
         <SfIconChevronLeft :class="['text-neutral-500', open ? 'rotate-90' : '-rotate-90']" />
@@ -116,8 +116,6 @@ import {
   SfIconArrowUpward,
 } from '@storefront-ui/vue';
 import type { FilterProps } from '~/components/CategoryFilters/types';
-import type { Filters } from '~/composables';
-
 const { getFacetsFromURL, updateFilters, updatePrices } = useCategoryFilter();
 
 const open = ref(true);

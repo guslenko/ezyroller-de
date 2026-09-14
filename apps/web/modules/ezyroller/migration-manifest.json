@@ -1,0 +1,407 @@
+{
+  "sourceCommit": "e57f355",
+  "baseRelease": "v2.24.0",
+  "targetRelease": "v2.45.0",
+  "files": [
+    {
+      "original": "apps/web/app/components/CategoryFilters/Filter.vue",
+      "module": "runtime/components/CategoryFilters/Filter.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/CategoryFilters/SortSections.vue",
+      "module": "runtime/components/CategoryFilters/SortSections.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/CategoryItemsPerPage/CategoryItemsPerPage.vue",
+      "module": "runtime/components/CategoryItemsPerPage/CategoryItemsPerPage.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/CategoryPageContent/CategoryPageContent.vue",
+      "module": "runtime/components/CategoryPageContent/CategoryPageContent.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/CategorySorting/CategorySorting.vue",
+      "module": "runtime/components/CategorySorting/CategorySorting.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/CategoryTree/CategoryTree.vue",
+      "module": "runtime/components/CategoryTree/CategoryTree.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ConfirmationPageContent/ConfirmationPageContent.vue",
+      "module": "runtime/components/ConfirmationPageContent/ConfirmationPageContent.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/EditableBlocks/EditableBlocks.vue",
+      "module": "runtime/components/EditableBlocks/EditableBlocks.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/Home/BannerWidget.vue",
+      "module": "runtime/components/Home/BannerWidget.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/ErBVideo.vue",
+      "module": "runtime/components/Home/ErBVideo.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/ErBusiness.vue",
+      "module": "runtime/components/Home/ErBusiness.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/ErCare.vue",
+      "module": "runtime/components/Home/ErCare.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/ErFAQ.vue",
+      "module": "runtime/components/Home/ErFAQ.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/OurStory.vue",
+      "module": "runtime/components/Home/OurStory.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/ProductWidget.vue",
+      "module": "runtime/components/Home/ProductWidget.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/SizeGuide.vue",
+      "module": "runtime/components/Home/SizeGuide.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/SizeGuide2.vue",
+      "module": "runtime/components/Home/SizeGuide2.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/SizeGuideContent.vue",
+      "module": "runtime/components/Home/SizeGuideContent.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/TextWidget.vue",
+      "module": "runtime/components/Home/TextWidget.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/Home/VideoBanner.vue",
+      "module": "runtime/components/Home/VideoBanner.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/LanguageSelector/LanguageSelector.vue",
+      "module": "runtime/components/LanguageSelector/LanguageSelector.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/LanguageSelector/LanguageSelectorNew.vue",
+      "module": "runtime/components/LanguageSelector/LanguageSelectorNew.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/MegaMenu/MegaMenu.vue",
+      "module": "runtime/components/MegaMenu/MegaMenu.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/NarrowContainer/NarrowContainer.vue",
+      "module": "runtime/components/NarrowContainer/NarrowContainer.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/Price/Price.vue",
+      "module": "runtime/components/Price/Price.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ProductAttributes/AttributeImage/AttributeImage.vue",
+      "module": "runtime/components/ProductAttributes/AttributeImage/AttributeImage.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ProductSlider/ProductSlider.vue",
+      "module": "runtime/components/ProductSlider/ProductSlider.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ReviewsAccordion/ReviewsAccordion.vue",
+      "module": "runtime/components/ReviewsAccordion/ReviewsAccordion.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/CategoryData/CategoryData.vue",
+      "module": "runtime/components/blocks/CategoryData/CategoryData.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/CategoryData/FieldsOrder.vue",
+      "module": "runtime/components/blocks/CategoryData/FieldsOrder.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/CustomerReview/CustomerReview.vue",
+      "module": "runtime/components/blocks/CustomerReview/CustomerReview.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/Footer/Footer.vue",
+      "module": "runtime/components/blocks/Footer/Footer.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/blocks/Header/Header.vue",
+      "module": "runtime/components/blocks/Header/Header.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/ItemGrid/ItemGrid.vue",
+      "module": "runtime/components/blocks/ItemGrid/ItemGrid.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/ItemText/ItemText.vue",
+      "module": "runtime/components/blocks/ItemText/ItemText.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/ProductLegalInformation/ProductLegalInformation.vue",
+      "module": "runtime/components/blocks/ProductLegalInformation/ProductLegalInformation.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/SortFilter/SortFilter.vue",
+      "module": "runtime/components/blocks/SortFilter/SortFilter.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/blocks/structure/MultiGrid/MultiGrid.vue",
+      "module": "runtime/components/blocks/structure/MultiGrid/MultiGrid.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/settings/general/contact-form/2.cancellation-form/CancellationForm.vue",
+      "module": "runtime/components/settings/general/contact-form/2.cancellation-form/CancellationForm.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/Breadcrumbs/Breadcrumbs.vue",
+      "module": "runtime/components/ui/Breadcrumbs/Breadcrumbs.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/CategoryCard/CategoryCard.vue",
+      "module": "runtime/components/ui/CategoryCard/CategoryCard.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/ErMenu.vue",
+      "module": "runtime/components/ui/ErMenu.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/components/ui/Header.vue",
+      "module": "runtime/components/ui/Header.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/Logo.vue",
+      "module": "runtime/components/ui/Logo.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/NavbarBottom.vue",
+      "module": "runtime/components/ui/NavbarBottom.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/ProductCard/ProductCard.vue",
+      "module": "runtime/components/ui/ProductCard/ProductCard.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/components/ui/PurchaseCard/PurchaseCard.vue",
+      "module": "runtime/components/ui/PurchaseCard/PurchaseCard.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/composables/useCancellationForm/index.ts",
+      "module": "runtime/composables/useCancellationForm/index.ts",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/composables/useCancellationForm/types.ts",
+      "module": "runtime/composables/useCancellationForm/types.ts",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/composables/useCancellationForm/useCancellationForm.ts",
+      "module": "runtime/composables/useCancellationForm/useCancellationForm.ts",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/composables/useStaticMenu.ts",
+      "module": "runtime/composables/useStaticMenu.ts",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/lang/de.json",
+      "module": "runtime/lang/de.json",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/lang/en.json",
+      "module": "runtime/lang/en.json",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/lang/es.json",
+      "module": "runtime/lang/es.json",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/lang/fr.json",
+      "module": "runtime/lang/fr.json",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/lang/it.json",
+      "module": "runtime/lang/it.json",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/lang/pl.json",
+      "module": "runtime/lang/pl.json",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/layouts/default.vue",
+      "module": "runtime/layouts/default.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/[...slug].vue",
+      "module": "runtime/pages/[...slug].vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/business.vue",
+      "module": "runtime/pages/business.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/pages/cancellation-form.vue",
+      "module": "runtime/pages/cancellation-form.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/cancellation-rights.vue",
+      "module": "runtime/pages/cancellation-rights.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/contact.vue",
+      "module": "runtime/pages/contact.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/declaration-of-accessibility.vue",
+      "module": "runtime/pages/declaration-of-accessibility.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/ezyroller-care.vue",
+      "module": "runtime/pages/ezyroller-care.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/pages/faq.vue",
+      "module": "runtime/pages/faq.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/pages/find-ezyroller.vue",
+      "module": "runtime/pages/find-ezyroller.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/pages/index.vue",
+      "module": "runtime/pages/index.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/kontakt.vue",
+      "module": "runtime/pages/kontakt.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/pages/legal-disclosure.vue",
+      "module": "runtime/pages/legal-disclosure.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/our-story.vue",
+      "module": "runtime/pages/our-story.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/pages/privacy-policy.vue",
+      "module": "runtime/pages/privacy-policy.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/terms-and-conditions.vue",
+      "module": "runtime/pages/terms-and-conditions.vue",
+      "upstream": true
+    },
+    {
+      "original": "apps/web/app/pages/widerrufsformular.vue",
+      "module": "runtime/pages/widerrufsformular.vue",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/plugins/clarity.client.ts",
+      "module": "runtime/plugins/clarity.client.ts",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/plugins/gtm.client.ts",
+      "module": "runtime/plugins/gtm.client.ts",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/app/plugins/tracking.client.ts",
+      "module": "runtime/plugins/tracking.client.ts",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/server/api/business.post.ts",
+      "module": "runtime/server/api/business.post.ts",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/server/api/kontakt.post.ts",
+      "module": "runtime/server/api/kontakt.post.ts",
+      "upstream": false
+    },
+    {
+      "original": "apps/web/server/api/widerruf.post.ts",
+      "module": "runtime/server/api/widerruf.post.ts",
+      "upstream": false
+    }
+  ]
+}

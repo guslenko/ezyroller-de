@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full fixed bottom-0 left-0 flex flex-row items-stretch md:hidden z-10" data-testid="navbar-bottom">
+  <nav class="fixed bottom-0 left-0 z-sticky w-full flex flex-row items-stretch @md:hidden" data-testid="navbar-bottom">
     <UiButton
       v-for="{ label, icon, link } in items"
       :key="label"
@@ -11,7 +11,7 @@
       size="sm"
       :tag="link ? NuxtLink : undefined"
       :to="link || undefined"
-      @click="open()"
+      @click="label === t('common.labels.products') && open()"
     >
       <template #prefix>
         <div class="relative">
@@ -38,14 +38,12 @@
 
 <script setup lang="ts">
 import { SfBadge, SfIconShoppingCart, SfIconHome, SfIconMenu, SfIconPerson, SfIconFavorite } from '@storefront-ui/vue';
-import { useCustomer } from '~/composables/useCustomer';
-
-const localePath = useLocalePath();
+const localePath = useLocalizedPath();
 const route = useRoute();
 const { wishlistItemIds } = useWishlist();
 const { data: cart } = useCart();
 const { isAuthorized } = useCustomer();
-const { open } = useStaticMenu();
+const { open } = useMegaMenu();
 
 const items = computed(() => [
   {
@@ -54,7 +52,7 @@ const items = computed(() => [
     link: localePath(paths.home),
   },
   {
-    label: 'Menu',
+    label: t('common.labels.products'),
     icon: SfIconMenu,
     link: '',
   },

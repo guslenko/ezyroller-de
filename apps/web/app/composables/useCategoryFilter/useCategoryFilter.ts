@@ -1,6 +1,5 @@
 import type { Filters, GetFacetsFromURLResponse, UseCategoryFiltersResponse } from './types';
 import type { RouteLocationNormalizedGeneric } from 'vue-router';
-import { isPageOfType } from '~/utils/pathHelper';
 const nonFilters = new Set(['page', 'sort', 'term', 'facets', 'itemsPerPage', 'priceMin', 'priceMax']);
 
 const reduceFilters =
@@ -271,7 +270,12 @@ export const useCategoryFilter = (to?: RouteLocationNormalizedGeneric): UseCateg
         });
       });
 
-      updateQuery({ facets: updatedFacets.join(',') });
+      const newFacets = updatedFacets.join(',');
+      const currentFacets = facetsFromUrl.facets ?? '';
+
+      if (newFacets !== currentFacets) {
+        updateQuery({ facets: newFacets || null });
+      }
     }
   };
 

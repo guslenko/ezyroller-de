@@ -1,0 +1,196 @@
+name: Integration Gates
+on:
+  merge_group:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  packages: read
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fitness-docs:
+    if: github.repository == 'plentymarkets/plentyshop-pwa'
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: ./.github/actions/setup
+      - name: Build with VitePress
+        run: |
+          npm run docs:build
+
+      - name: Install & Run htmltest
+        env:
+          HTMLTEST_VERSION: '0.17.0'
+        run: |
+          cd docs/.vitepress
+          curl -fsSL -o htmltest.tar.gz "https://github.com/wjdp/htmltest/releases/download/v${HTMLTEST_VERSION}/htmltest_${HTMLTEST_VERSION}_linux_amd64.tar.gz"
+          tar -xzf htmltest.tar.gz htmltest
+          ./htmltest
+  fitness-compliance:
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Dependency review
+        uses: actions/dependency-review-action@v5
+        with:
+          license-check: true
+          deny-licenses: 'AGPL-1.0-or-later, GPL-1.0-or-later, LGPL-2.0-or-later, NGPL'
+          vulnerability-check: false
+          comment-summary-in-pr: on-failure
+
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      - name: Scan for malicious code
+        run: >
+          semgrep scan
+          --error
+          --severity ERROR
+          .
+  fitness-code-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup Node
+        uses: ./.github/actions/setup
+
+      - name: Run prettier
+        run: npm run format
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run typecheck
+        run: npm run typecheck
+
+      - name: Validate Vite dependency pre-bundling
+        run: npm run check:optimize-deps
+
+      - name: Run shellcheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './scripts'
+          additional_files: '.github/skills/code-generation/generate.sh .github/skills/documentation/scripts/fetch-templates.sh'
+          severity: warning
+          ignore_paths: 'node_modules'
+        env:
+          SHELLCHECK_OPTS: -e SC2312 -e SC1091
+  test-unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup Node
+        uses: ./.github/actions/setup
+
+      - name: Unit tests
+        run: npm run test
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup Node
+        uses: ./.github/actions/setup
+
+      - name: Setup environment
+        uses: ./.github/actions/environment
+        with:
+          api-security-token: ${{ secrets.API_SECURITY_TOKEN }}
+          api-endpoint: ${{ vars.API_ENDPOINT_TESTING }}
+          configuration: ${{ vars.CONFIG }}
+
+      - name: Build application
+        run: npm run build
+
+      - name: Install productive dependencies for server
+        run: |
+          npm install --omit=dev --ignore-scripts --workspace=apps/web
+          npm install --omit=dev --ignore-scripts --workspace=apps/server
+
+      - name: Tar build output
+        run: tar -czf build.tar.gz -C ${{ github.workspace }} apps/server/dist apps/web/.output apps/web/.nuxt
+
+      - name: Upload build
+        uses: actions/upload-artifact@v7
+        with:
+          name: build
+          path: build.tar.gz
+  smoke-shop:
+    if: github.repository == 'plentymarkets/plentyshop-pwa'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup Node
+        uses: ./.github/actions/setup
+
+      - name: Setup environment
+        uses: ./.github/actions/environment
+        with:
+          api-security-token: ${{ secrets.API_SECURITY_TOKEN }}
+          api-endpoint: ${{ vars.API_ENDPOINT_TESTING }}
+          configuration: ${{ vars.CONFIG }}
+
+      - name: Download build
+        uses: actions/download-artifact@v8
+        with:
+          name: build
+
+      - name: Extract build
+        run: tar -xzf build.tar.gz
+
+      - name: E2E Smoke Shop
+        uses: cypress-io/github-action@v7
+        with:
+          install: false
+          command: npm run test:cypress-smoke-shop
+        env:
+          NUXT_PUBLIC_CONFIG_ID: ${{ vars.CONFIG_ID }}
+  smoke-editor:
+    if: github.repository == 'plentymarkets/plentyshop-pwa'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup Node
+        uses: ./.github/actions/setup
+
+      - name: Setup environment
+        uses: ./.github/actions/environment
+        with:
+          api-security-token: ${{ secrets.API_SECURITY_TOKEN }}
+          api-endpoint: ${{ vars.API_ENDPOINT_TESTING }}
+          configuration: ${{ vars.CONFIG }}
+
+      - name: Download build
+        uses: actions/download-artifact@v8
+        with:
+          name: build
+
+      - name: Extract build
+        run: tar -xzf build.tar.gz
+
+      - name: E2E Smoke Editor
+        uses: cypress-io/github-action@v7
+        with:
+          install: false
+          command: npm run test:cypress-smoke-editor
+        env:
+          NUXT_PUBLIC_CONFIG_ID: ${{ vars.CONFIG_ID }}

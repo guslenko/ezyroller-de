@@ -1,5 +1,12 @@
 import type { Block } from '@plentymarkets/shop-api';
 
+export type BlockLayout = { narrowContainer?: boolean };
+
+export type BlockWithLayout = Block & {
+  content?: { layout?: BlockLayout };
+  layout?: BlockLayout;
+};
+
 export interface DragEvent<T = Block> {
   added?: {
     element: T;
@@ -19,6 +26,7 @@ export interface DragEvent<T = Block> {
 export type EditableBlocksProps = {
   identifier?: string | number;
   type?: string;
+  isRoot?: boolean;
   hasEnabledActions?: boolean;
   preventBlocksRequest?: boolean;
   readOnly?: boolean;

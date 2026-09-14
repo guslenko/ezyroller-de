@@ -1,0 +1,129 @@
+<template>
+  <section class="w-full bg-white">
+    <nav data-testid="breadcrumbs" class="relative z-[5] py-2 box-border flex items-center text-sm font-normal">
+      <ol class="flex w-auto leading-none group md:flex-wrap">
+        <li class="flex items-center sm:hidden text-neutral-500 z-10">
+          <NuxtLazyHydrate :on-interaction="['click', 'touchstart']">
+            <SfDropdown
+              v-model="dropdownOpened"
+              strategy="absolute"
+              placement="bottom-start"
+              class="z-overlap"
+              @update:model-value="close"
+            >
+              <template #trigger>
+                <UiButton
+                  class="relative w-5 h-5 !p-0 rounded-sm outline-secondary-600 hover:bg-transparent active:bg-transparent"
+                  :aria-label="t('common.navigation.breadcrumbsDropdown')"
+                  variant="tertiary"
+                  square
+                  data-testid="breadcrumbs-dropdown-button"
+                  @click="toggle"
+                >
+                  <template #prefix>
+                    <SfIconMoreHoriz
+                      size="sm"
+                      class="text-neutral-500 hover:text-primary-500 active:text-primary-800 active:bg-transparent"
+                    />
+                  </template>
+                </UiButton>
+              </template>
+              <ol class="px-4 py-2 rounded-md shadow-md border-neutral-100 bg-white" data-testid="breadcrumbs-dropdown">
+                <li v-for="item in breadcrumbs" :key="item.name" class="py-2 last-of-type:hidden">
+                  <UiLink
+                    :tag="NuxtLink"
+                    :to="localePath(item.link)"
+                    variant="secondary"
+                    class="leading-5 no-underline text-inherit hover:underline active:underline whitespace-nowrap outline-secondary-600"
+                  >
+                    {{ item.name }}
+                  </UiLink>
+                </li>
+              </ol>
+            </SfDropdown>
+          </NuxtLazyHydrate>
+        </li>
+        <li
+          v-for="(item, index) in breadcrumbs"
+          :key="item.name"
+          class="peer hidden @sm:flex items-center peer-[:nth-of-type(even)]:before:content-['/'] peer-[:nth-of-type(even)]:before:px-2 peer-[:nth-of-type(even)]:before:leading-5 last-of-type:flex last-of-type:before:font-normal last-of-type:before:text-neutral-500 text-neutral-500 last-of-type:text-neutral-900 last-of-type:font-medium"
+        >
+          <UiLink
+            v-if="index < breadcrumbs.length - 1"
+            :tag="NuxtLink"
+            :to="localePath(item.link)"
+            variant="secondary"
+            class="leading-5 no-underline hover:underline active:underline whitespace-nowrap outline-secondary-600 text-inherit"
+          >
+            {{ item.name }}
+          </UiLink>
+          <span v-else>
+            {{ item.name }}
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { SfDropdown, SfIconMoreHoriz } from '@storefront-ui/vue';
+import type { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
+import type { WithContext, BreadcrumbList as SchemaBreadcrumbList, ListItem as SchemaListItem } from 'schema-dts';
+
+defineProps<BreadcrumbsProps>();
+
+const localePath = useLocalizedPath();
+const dropdownOpened = ref(false);
+const close = () => {
+  dropdownOpened.value = false;
+};
+const toggle = () => {
+  dropdownOpened.value = !dropdownOpened.value;
+};
+
+const NuxtLink = resolveComponent('NuxtLink');
+const route = useRoute();
+
+const structuredData = computed<WithContext<SchemaBreadcrumbList>>(() => {
+  const segments = route.path.split('/').filter(Boolean);
+
+  const itemListElement: SchemaListItem[] = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'WebPage',
+        '@id': '/',
+        name: 'Home',
+      },
+    },
+  ];
+  segments.forEach((segment, index) => {
+    itemListElement.push({
+      '@type': 'ListItem',
+      position: index + 2,
+      item: {
+        '@type': 'WebPage',
+        '@id': `/${segments.slice(0, index + 1).join('/')}/`,
+        name: segment,
+      },
+    });
+  });
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement,
+  };
+});
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: computed(() => safeSerializeJsonLd(structuredData.value)),
+    },
+  ],
+});
+</script>

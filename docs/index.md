@@ -3,15 +3,15 @@
 layout: home
 
 hero:
-  name: 'EzyRoller'
+  name: 'PlentyONE Shop'
   text: 'Documentation'
   image:
     src: /logo.png
-    alt: EzyRoller
+    alt: PlentyONE Shop
   actions:
     - theme: brand
       text: Get started
-      link: /guide/setup/quickstart
+      link: /guide/introduction/quickstart
     - theme: alt
       text: Composables
       link: /reference/composables/

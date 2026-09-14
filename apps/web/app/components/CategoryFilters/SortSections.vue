@@ -1,9 +1,9 @@
 <template>
-  <div v-if="shouldRenderFacet" class="border border-neutral-200 mb-4">
+  <div v-if="shouldRenderFacet">
     <SfAccordionItem v-if="facet" v-model="open">
       <template #summary>
-        <div class="flex justify-between py-1 px-4 mb-2 select-none bg-neutral-100">
-          <div class="py-1 rounded-none font-medium text-sm select-none">
+        <div class="flex justify-between py-1 px-4 mb-2 select-none bg-primary-50/50">
+          <div class="py-1 rounded-none uppercase typography-headline-6 font-bold tracking-widest select-none">
             {{ facetGetters.getName(facet) }}
           </div>
 
@@ -119,7 +119,6 @@ import {
   SfIconArrowUpward,
 } from '@storefront-ui/vue';
 import type { FilterProps } from '~/components/CategoryFilters/types';
-import type { Filters } from '~/composables';
 import type { SortFilterContent } from '~/components/blocks/SortFilter/types';
 const { getFacetsFromURL, updateFilters, updatePrices } = useCategoryFilter();
 

@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full border border-neutral-200 pb-4" data-testid="category-sorting">
+  <div class="w-full" data-testid="category-sorting">
     <div
       v-if="!selectionModeCompact"
-      class="bg-neutral-100 mb-4 px-4 py-2 rounded-none font-medium text-sm"
+      class="bg-primary-50/50 mb-4 px-4 py-2 rounded-none uppercase typography-headline-6 font-bold tracking-widest select-none"
     >
       {{ t('common.labels.sortBy') }}
     </div>
@@ -20,8 +20,6 @@
 <script setup lang="ts">
 import { SfSelect } from '@storefront-ui/vue';
 import { useRoute } from 'vue-router';
-import { isPageOfType } from '~/utils/pathHelper';
-
 const props = defineProps<{ selectionModeCompact?: boolean }>();
 const { updateSorting } = useCategoryFilter();
 const { getJsonSetting: availableSortingOptions } = useSiteSettings('availableSortingOptions');

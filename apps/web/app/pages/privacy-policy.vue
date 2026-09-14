@@ -1,12 +1,5 @@
 <template>
-  <section class="w-full py-2 px-4 bg-white">
-    <div class="max-w-screen-2xl mx-auto relative">
-        <div
-          class="w-full overflow-x-auto no-preflight !text-lg"
-          v-html="getHTMLTexts()"
-        />
-    </div>
-  </section>
+  <div class="w-full p-5 overflow-x-auto break-words no-preflight" v-html="getHTMLTexts()" />
 </template>
 
 <script setup lang="ts">
@@ -20,28 +13,8 @@ const { data, getLegalTexts } = useLegalInformation();
 const { getRobots, setRobotForStaticPage } = useRobots();
 
 definePageMeta({
-  pageType: "static",
-})
-
-const { t } = useI18n()
-
-useHead({
-  title: t("datentitle"),
-  meta: [
-    {
-      name: "description",
-      content: t("datendesc"),
-    },
-    {
-      property: "og:title",
-      content: t("datentitle"),
-    },
-    {
-      property: "og:description",
-      content: t("datendesc"),
-    }
-  ]
-})
+  pageType: 'static',
+});
 
 const { setPageMeta } = usePageMeta();
 

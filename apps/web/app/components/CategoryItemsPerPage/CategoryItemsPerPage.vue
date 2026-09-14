@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full pb-4 border border-neutral-200" data-testid="category-items-per-page">
+  <div class="w-full" data-testid="category-items-per-page">
     <div
       v-if="!selectionModeCompact"
-      class="bg-neutral-100 mb-4 px-4 py-2 rounded-none font-medium text-sm"
+      class="bg-primary-50/50 mb-4 px-4 py-2 rounded-none uppercase typography-headline-6 font-bold tracking-widest select-none"
     >
       {{ t('common.labels.perPage') }}
     </div>
@@ -27,8 +27,6 @@
 <script setup lang="ts">
 import { SfSelect } from '@storefront-ui/vue';
 import type { CategoryItemsPerPageProps, Option } from '~/components/CategoryItemsPerPage/types';
-import { defaults } from '~/composables';
-
 const props = defineProps<CategoryItemsPerPageProps & { selectionModeCompact?: boolean }>();
 
 const { updateItemsPerPage: updateItemsPerPageFromComposable, getFacetsFromURL } = useCategoryFilter();

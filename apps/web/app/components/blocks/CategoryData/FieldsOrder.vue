@@ -1,20 +1,14 @@
 <template>
   <template v-for="key in renderOrder" :key="key">
     <template v-if="fields?.[key]">
-
-      <section class="w-full bg-white py-0 !m-0" v-if="key === 'name' && texts.name">
-  <NarrowContainer class="px-4 md:px-0 ">
-    <h1
-      id="category-headline"
-      class="font-bold text-3xl mb-2"
-      data-testid="category-name"
-    >
-      {{ texts.name }}
-    </h1>
-  </NarrowContainer>
-</section>
-
-
+      <h1
+        v-if="key === 'name' && texts.name"
+        id="category-headline"
+        class="font-bold typography-headline-3 @md:typography-headline-2"
+        data-testid="category-name"
+      >
+        {{ texts.name }}
+      </h1>
 
       <div
         v-else-if="key === 'description1' && texts.description1"
