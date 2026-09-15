@@ -1,6 +1,6 @@
 <template>
-  <NarrowContainer class="mb-20 px-4 md:px-0" data-testid="category-layout">
-    <h1 class="relative z-0 my-10 font-lught typography-headline-3 md:typography-headline-2">
+  <NarrowContainer class="mb-20 px-4" data-testid="category-layout">
+    <h1 class="relative z-base my-10 font-light typography-headline-3 md:typography-headline-2">
       {{ title }}
     </h1>
     <div class="md:flex gap-6" data-testid="category-page-content">
