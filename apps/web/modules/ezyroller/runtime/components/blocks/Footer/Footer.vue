@@ -224,6 +224,16 @@
             </li>
             <li>
               <UiLink
+                href="https://cdn02.plentyone.com/4in9ikd3ipve/frontend/category_images/Legal_guarantee_notice_DEN.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-neutral-700 hover:text-black hover:underline"
+              >
+                Gesetzliche Gewährleistung
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/legal-disclosure')"
                 class="text-neutral-700 hover:text-black hover:underline"
