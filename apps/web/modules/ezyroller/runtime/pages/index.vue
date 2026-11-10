@@ -1,6 +1,10 @@
 <template>
   <div>
-    <a :href="$t('snowKitUrl')" class="group block overflow-hidden bg-black" :aria-label="$t('snowKitName')">
+    <a
+      :href="$t('snowKitUrl')"
+      class="group block overflow-hidden border-b border-neutral-300 bg-black"
+      :aria-label="$t('snowKitName')"
+    >
       <img
         src="https://cdn02.plentyone.com/4in9ikd3ipve/frontend/www-ezyroller-de/snowkit_banner.webp"
         :alt="$t('snowKitName')"
