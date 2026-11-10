@@ -264,7 +264,7 @@
         @click.stop
       >
         <div class="max-w-screen-2xl mx-auto px-0 py-6 space-y-6">
-          <!-- GRID 7 ITEMS -->
+          <!-- ACCESSORIES GRID -->
           <div class="grid grid-cols-7 gap-4">
             <!-- CARD 1 (SfLink) -->
             <SfLink
@@ -311,27 +311,6 @@
 
             <SfLink
               :tag="NuxtLink"
-              :href="localePath(t('bizl12'))"
-              class="group flex flex-col items-center gap-2 !no-underline"
-            >
-              <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
-              >
-                <img
-                  src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer10.webp"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-
-              <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
-              >
-                {{ $t('menu23') }}
-              </div>
-            </SfLink>
-
-            <SfLink
-              :tag="NuxtLink"
               :href="localePath(t('textWidgetLI6'))"
               class="group flex flex-col items-center gap-2 !no-underline"
             >
@@ -348,6 +327,27 @@
                 class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
               >
                 {{ $t('menu24') }}
+              </div>
+            </SfLink>
+
+            <SfLink
+              :tag="NuxtLink"
+              :href="t('snowKitUrl')"
+              class="group flex flex-col items-center gap-2 !no-underline"
+            >
+              <div
+                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+              >
+                <img
+                  src="https://cdn02.plentyone.com/4in9ikd3ipve/frontend/www-ezyroller-de/snowkit_menu.webp"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div
+                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+              >
+                {{ $t('snowKitName') }}
               </div>
             </SfLink>
 
