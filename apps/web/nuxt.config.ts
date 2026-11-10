@@ -30,6 +30,15 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: ['~/composables', '~/composables/**', '~/utils/**'],
+    // Nuxt skips node_modules by default, but extension packages (from any agency) ship runtime components
+    // that rely on auto-imports. Re-enable the transform for files matching:
+    //   node_modules/[@scope/]<package>/[<one folder, e.g. dist>/]runtime/...
+    transform: {
+      include: [/node_modules[\\/](?:@[^\\/]+[\\/])?[^\\/]+[\\/](?:[^\\/]+[\\/])?runtime[\\/]/],
+    },
+  },
+  alias: {
+    '@workspace': resolve(__dirname, '..', '..'),
   },
   vite: {
     server: {
@@ -61,9 +70,9 @@ export default defineNuxtConfig({
     },
     plugins: [FailOnLargeChunksPlugin, FailOnForbiddenDataInPublicFolderPlugin, FailOnUnmarkedBlockOverridesPlugin],
     resolve: {
-      // cookiejs (via nuxt-viewport) ships a UMD `browser` entry without a default export.
-      // Vite 8 resolves to it and breaks the client bundle; force the ESM build instead.
       alias: {
+        // cookiejs (via nuxt-viewport) ships a UMD `browser` entry without a default export.
+        // Vite 8 resolves to it and breaks the client bundle; force the ESM build instead.
         cookiejs: 'cookiejs/dist/cookie.esm.js',
       },
     },
@@ -78,7 +87,13 @@ export default defineNuxtConfig({
             if (id.includes('utils/blocks/blocks-imports')) return 'block-registry';
             if (/[/\\]blocks[/\\].+[/\\]defaults\.ts$/.test(id)) return 'block-registry';
 
+            /*
+             * Keep Floating UI separate because it is shared by the storefront and Tiptap.
+             * Otherwise Rollup can absorb it into a Tiptap chunk, causing pages to
+             * download the entire editor bundle when e.g. the UtilityBar imports @floating-ui/vue.
+             */
             const vendorChunks: Record<string, string[]> = {
+              floatingUi: ['@floating-ui/'],
               tiptapExtensions: [
                 '@tiptap/extension-color',
                 '@tiptap/extension-emoji',
@@ -88,7 +103,6 @@ export default defineNuxtConfig({
                 '@tiptap/extension-text-style',
               ],
               tiptap: ['@tiptap/'],
-              vuetify: ['vuetify/', '@mdi/js'],
             };
 
             for (const [chunk, packages] of Object.entries(vendorChunks)) {
@@ -140,6 +154,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/test-utils/module',
+    '@nuxtjs/critters',
     '@nuxtjs/i18n',
     '~~/modules/locale-routes',
     '@nuxtjs/tailwindcss',
@@ -148,23 +163,8 @@ export default defineNuxtConfig({
     'nuxt-viewport',
     '@vee-validate/nuxt',
     '@vite-pwa/nuxt',
-    'vuetify-nuxt-module',
     'nuxt-color-picker',
   ],
-  vuetify: {
-    moduleOptions: {
-      prefixComposables: true,
-      disableVuetifyStyles: true,
-    },
-    vuetifyOptions: {
-      icons: {
-        defaultSet: 'mdi-svg',
-      },
-      theme: {
-        defaultTheme: 'light',
-      },
-    },
-  },
   plentySitemap: {
     locales: (process.env.LANGUAGELIST || 'en,de').split(','),
     defaultLocale: nuxtI18nOptions.defaultLocale,
@@ -198,8 +198,7 @@ export default defineNuxtConfig({
   },
   fonts: {
     defaults: {
-      weights: [300, 400, 500, 700],
-      preload: true,
+      weights: [400, 500, 600, 700],
     },
     assets: {
       prefix: '/_nuxt-plenty/fonts/',
@@ -209,6 +208,11 @@ export default defineNuxtConfig({
   tailwindcss: {
     configPath: '~/configuration/tailwind.config.ts',
     exposeConfig: true,
+  },
+  postcss: {
+    plugins: {
+      'tailwindcss/nesting': false,
+    },
   },
   viewport: {
     breakpoints: {

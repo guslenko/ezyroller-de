@@ -23,6 +23,9 @@ export default defineNuxtModule({
     applyBranding(nuxt);
 
     for (const entry of manifest.files) {
+      if (entry.module === 'runtime/components/EditableBlocks/EditableBlocks.vue') {
+        continue;
+      }
       if (!entry.module.endsWith('.vue') || !entry.module.includes('/components/')) {
         continue;
       }
