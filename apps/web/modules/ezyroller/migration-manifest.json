@@ -39,11 +39,6 @@
       "upstream": true
     },
     {
-      "original": "apps/web/app/components/EditableBlocks/EditableBlocks.vue",
-      "module": "runtime/components/EditableBlocks/EditableBlocks.vue",
-      "upstream": true
-    },
-    {
       "original": "apps/web/app/components/Home/BannerWidget.vue",
       "module": "runtime/components/Home/BannerWidget.vue",
       "upstream": false

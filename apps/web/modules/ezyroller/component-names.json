@@ -6,7 +6,6 @@
   "components/CategorySorting/CategorySorting.vue": "CategorySorting",
   "components/CategoryTree/CategoryTree.vue": "CategoryTree",
   "components/ConfirmationPageContent/ConfirmationPageContent.vue": "ConfirmationPageContent",
-  "components/EditableBlocks/EditableBlocks.vue": "EditableBlocks",
   "components/Home/BannerWidget.vue": "HomeBannerWidget",
   "components/Home/ErBVideo.vue": "HomeErBVideo",
   "components/Home/ErBusiness.vue": "HomeErBusiness",
