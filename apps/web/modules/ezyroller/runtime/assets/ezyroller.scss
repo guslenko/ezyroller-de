@@ -1,3 +1,9 @@
 .items-stretch {
   z-index: 999;
 }
+
+/* Keep the category title close to the breadcrumb and product grid. */
+[data-testid='category-page-content'] [data-testid='block-wrapper']:has([data-testid='category-data']) {
+  margin-block-end: 0 !important;
+  padding-block: 0.5rem !important;
+}
