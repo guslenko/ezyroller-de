@@ -8,18 +8,25 @@
   padding-block: 0.5rem !important;
 }
 
-[data-testid='cart-page-content'] [data-testid^='quantity-selector-'] button:hover:not(:disabled),
-[data-testid='cart-page-content'] button[data-testid^='quantity-selector-']:hover:not(:disabled) {
+[data-testid='cart-product-card'] button[data-testid^='quantity-selector-']:hover:not(:disabled),
+[data-testid='cart-product-card'] button[data-testid='remove-item-from-basket']:hover:not(:disabled) {
+  background-color: #d1d5db !important;
+}
+
+[data-testid='preferred-delivery'] summary:hover,
+[data-testid='preferred-delivery-location-finder'] summary:hover {
   background-color: #d1d5db !important;
 }
 
 [data-testid^='save-address-'],
+[data-testid^='edit-address-'],
 [data-testid='quick-checkout-cart-button'] {
   border: 1px solid #1f2937 !important;
   box-shadow: none !important;
 }
 
 [data-testid^='save-address-']:hover:not(:disabled),
+[data-testid^='edit-address-']:hover:not(:disabled),
 [data-testid='quick-checkout-cart-button']:hover:not(:disabled) {
   background-color: #111827 !important;
   border-color: #111827 !important;
