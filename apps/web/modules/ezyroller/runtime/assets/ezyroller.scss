@@ -7,3 +7,46 @@
   margin-block-end: 0 !important;
   padding-block: 0.5rem !important;
 }
+
+[data-testid='cart-page-content'] [data-testid^='quantity-selector-'] button:hover:not(:disabled),
+[data-testid='cart-page-content'] button[data-testid^='quantity-selector-']:hover:not(:disabled) {
+  background-color: #d1d5db !important;
+}
+
+[data-testid^='save-address-'],
+[data-testid='quick-checkout-cart-button'] {
+  border: 1px solid #1f2937 !important;
+  box-shadow: none !important;
+}
+
+[data-testid^='save-address-']:hover:not(:disabled),
+[data-testid='quick-checkout-cart-button']:hover:not(:disabled) {
+  background-color: #111827 !important;
+  border-color: #111827 !important;
+  color: #fff !important;
+}
+
+[data-testid='checkout-payment'] label > span,
+[data-testid='shipping-method-list'] > label {
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+[data-testid='checkout-payment'] label > span > span,
+[data-testid='shipping-method-list'] > label span {
+  color: #1f2937 !important;
+}
+
+[data-testid='checkout-payment'] label:has(input:checked) > span,
+[data-testid='shipping-method-list'] > label:has(input:checked),
+[data-testid='checkout-payment'] label:has(input:not(:disabled)):hover > span,
+[data-testid='shipping-method-list'] > label:has(input:not(:disabled)):hover {
+  background-color: #d1d5db !important;
+  border-color: #d1d5db !important;
+  outline-color: #d1d5db !important;
+}
+
+/* Pagination controls in product listings. */
+[data-testid='pagination'] button:hover:not(:disabled) {
+  background-color: #d1d5db !important;
+}

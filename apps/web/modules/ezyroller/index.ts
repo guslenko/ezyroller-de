@@ -67,6 +67,13 @@ export default defineNuxtModule({
       priority: 200,
     });
 
+    addComponent({ name: 'UiSearch', filePath: resolve('./runtime/components/ui/Search.vue'), priority: 200 });
+    addComponent({
+      name: 'UiSearchSuggestionItem',
+      filePath: resolve('./runtime/components/ui/Search/SearchSuggestionItem.vue'),
+      priority: 200,
+    });
+
     addImportsDir(resolve('./runtime/composables'));
     addImportsDir(resolve('./runtime/composables/**'));
     for (const file of readdirSync(resolve('./runtime/plugins'))) {
