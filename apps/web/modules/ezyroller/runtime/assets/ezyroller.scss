@@ -20,6 +20,7 @@
 
 [data-testid^='save-address-'],
 [data-testid^='edit-address-'],
+[data-testid='preferred-delivery-location-finder'] form button[type='submit'],
 [data-testid='quick-checkout-cart-button'] {
   border: 1px solid #1f2937 !important;
   box-shadow: none !important;
@@ -27,6 +28,7 @@
 
 [data-testid^='save-address-']:hover:not(:disabled),
 [data-testid^='edit-address-']:hover:not(:disabled),
+[data-testid='preferred-delivery-location-finder'] form button[type='submit']:hover:not(:disabled),
 [data-testid='quick-checkout-cart-button']:hover:not(:disabled) {
   background-color: #111827 !important;
   border-color: #111827 !important;

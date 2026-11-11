@@ -1,16 +1,5 @@
 <template>
   <div>
-    <a
-      :href="$t('snowKitUrl')"
-      class="group block overflow-hidden border-b border-neutral-300 bg-black"
-      :aria-label="$t('snowKitName')"
-    >
-      <img
-        src="https://cdn02.plentyone.com/4in9ikd3ipve/frontend/www-ezyroller-de/snowkit_banner.webp"
-        :alt="$t('snowKitName')"
-        class="mx-auto block h-auto w-full max-w-[1920px] transition-transform duration-300 group-hover:scale-[1.02]"
-      />
-    </a>
     <VideoBanner />
     <BannerWidget />
 

@@ -69,6 +69,11 @@ export default defineNuxtModule({
 
     addComponent({ name: 'UiSearch', filePath: resolve('./runtime/components/ui/Search.vue'), priority: 200 });
     addComponent({
+      name: 'UiCartProductCard',
+      filePath: resolve('./runtime/components/ui/CartProductCard/CartProductCard.vue'),
+      priority: 200,
+    });
+    addComponent({
       name: 'UiSearchSuggestionItem',
       filePath: resolve('./runtime/components/ui/Search/SearchSuggestionItem.vue'),
       priority: 200,
