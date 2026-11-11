@@ -14,10 +14,10 @@
           <div class="hidden md:block"></div>
 
           <!-- SELECT LEFT -->
-          <div class="p-4">
+          <div class="px-4 py-2">
             <select
               v-model="leftModel"
-              class="w-full border border-neutral-400 rounded-lg px-4 py-3 bg-white font-medium hover:bg-black hover:text-white transition cursor-pointer"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white text-base text-gray-800 font-medium hover:bg-gray-900 hover:text-white transition cursor-pointer"
             >
               <option v-for="m in modelsSorted" :key="m.id" :value="m.id" :disabled="m.id === rightModel">
                 {{ m.name }}
@@ -26,10 +26,10 @@
           </div>
 
           <!-- SELECT RIGHT -->
-          <div class="p-4">
+          <div class="px-4 py-2">
             <select
               v-model="rightModel"
-              class="w-full border border-neutral-400 rounded-lg px-4 py-3 bg-white font-medium hover:bg-black hover:text-white transition cursor-pointer"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white text-base text-gray-800 font-medium hover:bg-gray-900 hover:text-white transition cursor-pointer"
             >
               <option v-for="m in modelsSorted" :key="m.id" :value="m.id" :disabled="m.id === leftModel">
                 {{ m.name }}
@@ -40,13 +40,13 @@
           <!-- IMAGES -->
           <div class="hidden md:block"></div>
 
-          <div class="p-4">
+          <div class="px-4 py-2">
             <NuxtLink :to="$localePath(productLeft.link)" class="block group">
               <img :src="productLeft.img" class="mx-auto w-full object-contain transition group-hover:opacity-80" />
             </NuxtLink>
           </div>
 
-          <div class="p-4">
+          <div class="px-4 py-2">
             <NuxtLink :to="$localePath(productRight.link)" class="block group">
               <img :src="productRight.img" class="mx-auto w-full object-contain transition group-hover:opacity-80" />
             </NuxtLink>
@@ -54,30 +54,30 @@
 
           <!-- COLORS HEADER -->
           <div
-            class="col-span-2 md:col-span-1 left-0 text-left font-medium text-black text-lg px-4 py-4 border-t border-neutral-200 bg-white"
+            class="col-span-2 md:col-span-1 left-0 text-left font-medium text-gray-800 text-base px-4 py-2 border-t border-gray-300 bg-white"
           >
             {{ $t('sgTColors') }}
           </div>
 
           <!-- COLORS LEFT -->
-          <div class="p-4 border-t border-neutral-200">
+          <div class="px-4 py-2 border-t border-gray-300">
             <div class="flex flex-wrap justify-center gap-3">
               <div
                 v-for="c in productLeft.colors"
                 :key="c"
-                class="w-8 h-8 rounded-full border shadow-sm flex-shrink-0"
+                class="w-6 h-6 rounded-full border shadow-sm flex-shrink-0"
                 :class="`bg-${c}`"
               ></div>
             </div>
           </div>
 
           <!-- COLORS RIGHT -->
-          <div class="p-4 border-t border-neutral-200">
+          <div class="px-4 py-2 border-t border-gray-300">
             <div class="flex flex-wrap justify-center gap-3">
               <div
                 v-for="c in productRight.colors"
                 :key="c"
-                class="w-8 h-8 rounded-full border shadow-sm flex-shrink-0"
+                class="w-6 h-6 rounded-full border shadow-sm flex-shrink-0"
                 :class="`bg-${c}`"
               ></div>
             </div>
@@ -87,19 +87,19 @@
           <div v-for="(c, idx) in characteristics" :key="c.key" class="contents">
             <!-- LABEL -->
             <div
-              class="col-span-2 md:col-span-1 left-0 text-left font-medium text-lg text-black px-4 py-4 border-t border-neutral-200"
-              :class="idx % 2 === 0 ? 'bg-white md:bg-neutral-100 border-t border-neutral-200' : 'bg-white'"
+              class="col-span-2 md:col-span-1 left-0 text-left font-medium text-base text-gray-800 px-4 py-2 border-t border-gray-300"
+              :class="idx % 2 === 0 ? 'bg-white md:bg-gray-200 border-t border-gray-300' : 'bg-white'"
             >
               {{ c.label }}
             </div>
 
             <!-- LEFT VALUE -->
             <div
-              class="text-center text-lg font-medium px-4 py-4"
+              class="text-center text-base text-gray-800 font-medium px-4 py-2"
               :class="
                 idx % 2 === 0
-                  ? 'bg-neutral-100 border-t border-neutral-200'
-                  : 'bg-neutral-100 md:bg-white border-t border-neutral-200'
+                  ? 'bg-gray-200 border-t border-gray-300'
+                  : 'bg-gray-200 md:bg-white border-t border-gray-300'
               "
             >
               {{ translatedValue(productLeft, c.key) }}
@@ -107,11 +107,11 @@
 
             <!-- RIGHT VALUE -->
             <div
-              class="text-center text-lg font-medium px-4 py-4"
+              class="text-center text-base text-gray-800 font-medium px-4 py-2"
               :class="
                 idx % 2 === 0
-                  ? 'bg-neutral-100 border-t border-neutral-200'
-                  : 'bg-neutral-100 md:bg-white border-t border-neutral-200'
+                  ? 'bg-gray-200 border-t border-gray-300'
+                  : 'bg-gray-200 md:bg-white border-t border-gray-300'
               "
             >
               {{ translatedValue(productRight, c.key) }}
@@ -119,13 +119,13 @@
           </div>
 
           <!-- BUTTONS HEADER SPACER -->
-          <div class="hidden md:block left-0 bg-white z-10 px-4 py-4 border-t border-neutral-300"></div>
+          <div class="hidden md:block left-0 bg-white z-10 px-4 py-2 border-t border-gray-300"></div>
 
           <!-- BUTTON LEFT -->
-          <div class="p-4 border-t border-neutral-300 bg-white">
+          <div class="px-4 py-2 border-t border-gray-300 bg-white">
             <NuxtLink
               :to="$localePath(productLeft.link)"
-              class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+              class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] text-gray-800 text-base font-medium transition-colors duration-300 hover:border-gray-900 hover:text-gray-900 group"
             >
               {{ productLeft.name }}
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -133,10 +133,10 @@
           </div>
 
           <!-- BUTTON RIGHT -->
-          <div class="p-4 border-t border-neutral-300 bg-white">
+          <div class="px-4 py-2 border-t border-gray-300 bg-white">
             <NuxtLink
               :to="$localePath(productRight.link)"
-              class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+              class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] text-gray-800 text-base font-medium transition-colors duration-300 hover:border-gray-900 hover:text-gray-900 group"
             >
               {{ productRight.name }}
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>

@@ -29,14 +29,14 @@
                 </UiButton>
               </template>
               <ol class="px-4 py-2 rounded-md shadow-md border-neutral-100 bg-white" data-testid="breadcrumbs-dropdown">
-                <li v-for="item in breadcrumbs" :key="item.name" class="py-2 last-of-type:hidden">
+                <li v-for="(item, index) in breadcrumbs" :key="item.name" class="py-2 last-of-type:hidden">
                   <UiLink
                     :tag="NuxtLink"
                     :to="localePath(item.link)"
                     variant="secondary"
                     class="leading-5 no-underline text-inherit hover:underline active:underline whitespace-nowrap outline-secondary-600"
                   >
-                    {{ item.name }}
+                    {{ breadcrumbName(item, index) }}
                   </UiLink>
                 </li>
               </ol>
@@ -55,10 +55,10 @@
             variant="secondary"
             class="leading-5 no-underline hover:underline active:underline whitespace-nowrap outline-secondary-600 text-inherit"
           >
-            {{ item.name }}
+            {{ breadcrumbName(item, index) }}
           </UiLink>
           <span v-else>
-            {{ item.name }}
+            {{ breadcrumbName(item, index) }}
           </span>
         </li>
       </ol>
@@ -74,6 +74,8 @@ import type { WithContext, BreadcrumbList as SchemaBreadcrumbList, ListItem as S
 defineProps<BreadcrumbsProps>();
 
 const localePath = useLocalizedPath();
+const breadcrumbName = (item: BreadcrumbsProps['breadcrumbs'][number], index: number) =>
+  index === 0 && /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/?)?$/i.test(item.link || '') ? 'EzyRoller' : item.name;
 const dropdownOpened = ref(false);
 const close = () => {
   dropdownOpened.value = false;
@@ -95,7 +97,7 @@ const structuredData = computed<WithContext<SchemaBreadcrumbList>>(() => {
       item: {
         '@type': 'WebPage',
         '@id': '/',
-        name: 'Home',
+        name: 'EzyRoller',
       },
     },
   ];

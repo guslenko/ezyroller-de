@@ -5,13 +5,13 @@
       :key="label"
       variant="tertiary"
       :class="[
-        '!p-1 !pt-3 flex flex-col h-full w-full rounded-none bg-primary-500 text-white hover:text-white hover:bg-primary-800 active:text-white active:bg-primary-700 !text-xs !font-base',
-        { 'text-white bg-primary-700': route.path === link },
+        '!p-1 !pt-3 flex flex-col h-full w-full rounded-none !bg-gray-800 !text-white hover:!text-white hover:!bg-gray-900 active:!text-white active:!bg-gray-900 !text-xs !font-base',
+        { '!bg-gray-900': link ? route.path === link : isOpen },
       ]"
       size="sm"
       :tag="link ? NuxtLink : undefined"
       :to="link || undefined"
-      @click="open()"
+      @click="!link && open()"
     >
       <template #prefix>
         <div class="relative">
@@ -43,11 +43,11 @@ const route = useRoute();
 const { wishlistItemIds } = useWishlist();
 const { data: cart } = useCart();
 const { isAuthorized } = useCustomer();
-const { open } = useStaticMenu();
+const { open, isOpen } = useStaticMenu();
 
 const items = computed(() => [
   {
-    label: t('common.labels.home'),
+    label: 'EzyRoller',
     icon: SfIconHome,
     link: localePath(paths.home),
   },

@@ -1,13 +1,13 @@
 <template>
-  <nav class="relative bg-white py-2" ref="menuRef">
+  <nav class="relative bg-white py-1.5" ref="menuRef">
     <!-- TOP LEVEL MENU -->
     <ul class="flex gap-2 max-w-screen-2xl mx-auto text-lg">
       <!-- MENU 1 -->
       <li>
         <button
           @click.stop="toggleMenu('menu1')"
-          class="inline-flex items-center rounded-lg gap-2 px-5 py-3 font-medium transition-colors duration-200 hover:bg-slate-700 hover:text-white"
-          :class="activeMenu === 'menu1' ? 'bg-slate-700 text-white' : ''"
+          class="inline-flex items-center rounded-lg gap-2 px-5 py-2 font-medium text-gray-800 transition-all duration-300 ease-in-out hover:bg-gray-900 hover:!text-white hover:!shadow-md"
+          :class="activeMenu === 'menu1' ? 'bg-gray-900 !text-white' : ''"
         >
           <span>{{ t('menu1') }}</span>
 
@@ -29,8 +29,8 @@
       <li>
         <button
           @click.stop="toggleMenu('menu2')"
-          class="inline-flex items-center rounded-lg gap-2 px-5 py-3 font-medium transition-colors duration-200 hover:bg-slate-700 hover:text-white"
-          :class="activeMenu === 'menu2' ? 'bg-slate-700 text-white' : ''"
+          class="inline-flex items-center rounded-lg gap-2 px-5 py-2 font-medium text-gray-800 transition-all duration-300 ease-in-out hover:bg-gray-900 hover:!text-white hover:!shadow-md"
+          :class="activeMenu === 'menu2' ? 'bg-gray-900 !text-white' : ''"
         >
           <span>{{ t('menu2') }}</span>
 
@@ -53,7 +53,7 @@
         <SfLink
           :tag="NuxtLink"
           :href="localePath(t('textWidgetLI4'))"
-          class="inline-flex items-center rounded-lg gap-2 px-5 py-3 font-medium transition-colors duration-200 hover:bg-slate-700 hover:text-white !no-underline"
+          class="inline-flex items-center rounded-lg gap-2 px-5 py-2 font-medium text-gray-800 transition-all duration-300 ease-in-out hover:bg-gray-900 hover:!text-white hover:!shadow-md !no-underline"
         >
           {{ t('menu3') }}
         </SfLink>
@@ -63,7 +63,7 @@
         <SfLink
           :tag="NuxtLink"
           :href="localePath('/our-story')"
-          class="inline-flex items-center rounded-lg gap-2 px-5 py-3 font-medium transition-colors duration-200 hover:bg-slate-700 hover:text-white !no-underline"
+          class="inline-flex items-center rounded-lg gap-2 px-5 py-2 font-medium text-gray-800 transition-all duration-300 ease-in-out hover:bg-gray-900 hover:!text-white hover:!shadow-md !no-underline"
         >
           {{ t('menu4') }}
         </SfLink>
@@ -73,7 +73,7 @@
         <SfLink
           :tag="NuxtLink"
           :href="localePath('/business')"
-          class="inline-flex items-center rounded-lg gap-2 px-5 py-3 font-medium transition-colors duration-200 hover:bg-slate-700 hover:text-white !no-underline"
+          class="inline-flex items-center rounded-lg gap-2 px-5 py-2 font-medium text-gray-800 transition-all duration-300 ease-in-out hover:bg-gray-900 hover:!text-white hover:!shadow-md !no-underline"
         >
           {{ t('menu5') }}
         </SfLink>
@@ -94,9 +94,9 @@
         class="absolute left-0 right-0 top-full bg-white shadow-xl z-50 w-screen border-t border-neutral-200"
         @click.stop
       >
-        <div class="max-w-screen-2xl mx-auto px-0 py-6 space-y-6">
+        <div class="max-w-screen-2xl mx-auto py-6 space-y-6">
           <!-- GRID 7 ITEMS -->
-          <div class="grid grid-cols-7 gap-4">
+          <div class="grid grid-cols-7 gap-2">
             <!-- CARD 1 (SfLink) -->
             <SfLink
               :tag="NuxtLink"
@@ -104,7 +104,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer1.webp"
@@ -113,7 +113,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 CLASSIC
               </div>
@@ -125,7 +125,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer2.webp"
@@ -134,7 +134,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 CLASSIC X
               </div>
@@ -146,7 +146,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer3.webp"
@@ -155,7 +155,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 DRIFTER X
               </div>
@@ -167,7 +167,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer4.webp"
@@ -176,7 +176,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 DRIFTER PRO X
               </div>
@@ -188,7 +188,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer5.webp"
@@ -197,7 +197,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 MINI
               </div>
@@ -209,7 +209,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer6.webp"
@@ -218,7 +218,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 PRO X
               </div>
@@ -230,7 +230,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer7.webp"
@@ -239,7 +239,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 SPINNER X
               </div>
@@ -263,9 +263,9 @@
         class="absolute left-0 right-0 top-full bg-white shadow-xl z-50 w-screen border-t border-neutral-200"
         @click.stop
       >
-        <div class="max-w-screen-2xl mx-auto px-0 py-6 space-y-6">
+        <div class="max-w-screen-2xl mx-auto py-6 space-y-6">
           <!-- ACCESSORIES GRID -->
-          <div class="grid grid-cols-7 gap-4">
+          <div class="grid grid-cols-7 gap-2">
             <!-- CARD 1 (SfLink) -->
             <SfLink
               :tag="NuxtLink"
@@ -273,7 +273,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer8.webp"
@@ -282,7 +282,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('menu21') }}
               </div>
@@ -294,7 +294,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer9.webp"
@@ -303,7 +303,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('menu22') }}
               </div>
@@ -315,7 +315,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer11.webp"
@@ -324,7 +324,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('menu24') }}
               </div>
@@ -336,7 +336,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentyone.com/4in9ikd3ipve/frontend/www-ezyroller-de/snowkit_menu.webp"
@@ -345,7 +345,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('snowKitName') }}
               </div>
@@ -357,7 +357,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer12.webp"
@@ -366,7 +366,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('menu25') }}
               </div>
@@ -378,7 +378,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer13.webp"
@@ -387,7 +387,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('menu26') }}
               </div>
@@ -399,7 +399,7 @@
               class="group flex flex-col items-center gap-2 !no-underline"
             >
               <div
-                class="aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
+                class="w-[calc(100%-1rem)] aspect-[4/3] overflow-hidden rounded-lg bg-neutral-50 transition-all duration-200 group-hover:scale-105"
               >
                 <img
                   src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/mer14.webp"
@@ -408,7 +408,7 @@
               </div>
 
               <div
-                class="inline-flex w-fit items-center gap-1 border-b border-slate-400 pb-[2px] font-medium text-base transition-all duration-300 group-hover:border-black group-hover:text-black"
+                class="inline-flex w-fit items-center gap-1 border-b border-gray-300 pb-[2px] font-medium text-sm text-gray-800 transition-colors duration-300 ease-in-out group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 {{ $t('menu27') }}
               </div>

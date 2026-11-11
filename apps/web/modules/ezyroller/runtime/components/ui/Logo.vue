@@ -5,7 +5,7 @@
         ref="logo"
         src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/ezyroller/img/ERLOGONEW.svg"
         :alt="`${storeName} logo`"
-        class="w-100 py-1 px-1 mx-auto hover:scale-110 transition delay-150 duration-25 ease-in-out origin-bottom hover:-rotate-6"
+        class="w-100 py-1 px-1 mx-auto hover:scale-110 transition delay-150 duration-25 ease-in-out origin-bottom hover:-rotate-3"
         width="160"
         height="40"
         preload

@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-4 px-4">
+  <section class="w-full py-4 px-4 text-gray-800">
     <div class="max-w-6xl mx-auto items-center">
       <h3 class="text-3xl uppercase font-bold mb-4 px-0 py-2 text-center">{{ $t('biz1') }}</h3>
 
@@ -60,7 +60,7 @@
 
       <!-- TEXT SECOND ON MOBILE -->
       <div class="order-2 md:order-1 text-gray-800">
-        <span class="text-base text-gray-700 uppercase font-normal tracking-[0.5em] block">EzyRoller</span>
+        <span class="text-base text-gray-800 uppercase font-normal tracking-[0.5em] block">EzyRoller</span>
         <h3 class="text-3xl uppercase font-bold mb-4 p-0">{{ $t('biz8') }}</h3>
 
         <ul class="list-disc pl-5">
@@ -80,7 +80,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="localePath('/business#business')"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:text-gray-900 group"
           >
             {{ $t('businesstop3')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -101,7 +101,7 @@
       <div class="max-w-screen-2xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 pb-4 text-center">
         <!-- CARD 1 -->
         <div class="flex flex-col items-center">
-          <NuxtLink :to="localePath($t('bizl1'))" class="block text-center group">
+          <NuxtLink :to="localePath($t('bizl1'))" class="block text-center group !no-underline">
             <!-- IMAGE -->
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERMINI.webp"
@@ -111,7 +111,7 @@
 
             <!-- TEXT + ARROW -->
             <div
-              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
             >
               MINI
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -127,7 +127,7 @@
 
         <!-- CARD 2 -->
         <div class="flex flex-col items-center">
-          <NuxtLink :to="localePath($t('bizl2'))" class="block text-center group">
+          <NuxtLink :to="localePath($t('bizl2'))" class="block text-center group !no-underline">
             <!-- IMAGE -->
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERCLASSICX.webp"
@@ -137,7 +137,7 @@
 
             <!-- TEXT + ARROW -->
             <div
-              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
             >
               CLASSIC X
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -153,7 +153,7 @@
 
         <!-- CARD 3 -->
         <div class="flex flex-col items-center">
-          <NuxtLink :to="localePath($t('bizl3'))" class="block text-center group">
+          <NuxtLink :to="localePath($t('bizl3'))" class="block text-center group !no-underline">
             <!-- IMAGE -->
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERSPINNERX.webp"
@@ -163,7 +163,7 @@
 
             <!-- TEXT + ARROW -->
             <div
-              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
             >
               SPINNER X
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -179,7 +179,7 @@
 
         <!-- CARD 4 -->
         <div class="flex flex-col items-center">
-          <NuxtLink :to="localePath($t('bizl4'))" class="block text-center group">
+          <NuxtLink :to="localePath($t('bizl4'))" class="block text-center group !no-underline">
             <!-- IMAGE -->
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERX.webp"
@@ -189,7 +189,7 @@
 
             <!-- TEXT + ARROW -->
             <div
-              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
             >
               DRIFTER X
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -205,7 +205,7 @@
 
         <!-- CARD 5 -->
         <div class="flex flex-col items-center">
-          <NuxtLink :to="localePath($t('bizl5'))" class="block text-center group">
+          <NuxtLink :to="localePath($t('bizl5'))" class="block text-center group !no-underline">
             <!-- IMAGE -->
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERPROX.webp"
@@ -215,7 +215,7 @@
 
             <!-- TEXT + ARROW -->
             <div
-              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
             >
               PRO X
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -231,7 +231,7 @@
 
         <!-- CARD 6 -->
         <div class="flex flex-col items-center">
-          <NuxtLink :to="localePath($t('bizl6'))" class="block text-center group">
+          <NuxtLink :to="localePath($t('bizl6'))" class="block text-center group !no-underline">
             <!-- IMAGE -->
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ERDRIFTERPROX.webp"
@@ -241,7 +241,7 @@
 
             <!-- TEXT + ARROW -->
             <div
-              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+              class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
             >
               DRIFTER PRO X
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -260,7 +260,7 @@
 
   <section class="w-full py-4 px-4">
     <div class="max-w-6xl mx-auto items-center">
-      <h3 class="text-3xl uppercase font-bold mb-0 px-0 py-2 text-center">{{ $t('biz18') }}</h3>
+      <h3 class="text-3xl uppercase font-bold mb-0 px-0 py-2 text-center text-gray-800">{{ $t('biz18') }}</h3>
     </div>
   </section>
 
@@ -286,7 +286,7 @@
           />
 
           <div class="flex flex-col">
-            <span class="text-base text-gray-700 uppercase font-normal tracking-[0.5em] block"> EzyRoller </span>
+            <span class="text-base text-gray-800 uppercase font-normal tracking-[0.5em] block"> EzyRoller </span>
 
             <h3 class="text-3xl uppercase font-bold mb-0 p-0">
               {{ $t('biz19') }}
@@ -311,7 +311,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="localePath('/business#business')"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:text-gray-900 group"
           >
             {{ $t('businesstop3')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -342,7 +342,7 @@
           />
 
           <div class="flex flex-col">
-            <span class="text-base text-gray-700 uppercase font-normal tracking-[0.5em] block"> EzyRoller </span>
+            <span class="text-base text-gray-800 uppercase font-normal tracking-[0.5em] block"> EzyRoller </span>
 
             <h3 class="text-3xl uppercase font-bold mb-0 p-0">
               {{ $t('biz24') }}
@@ -367,7 +367,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="localePath('/business#business')"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:text-gray-900 group"
           >
             {{ $t('businesstop3')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -398,7 +398,7 @@
           />
 
           <div class="flex flex-col">
-            <span class="text-base text-gray-700 uppercase font-normal tracking-[0.5em] block"> EzyRoller </span>
+            <span class="text-base text-gray-800 uppercase font-normal tracking-[0.5em] block"> EzyRoller </span>
 
             <h3 class="text-3xl uppercase font-bold mb-0 p-0">
               {{ $t('biz29') }}
@@ -423,7 +423,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="localePath('/business#business')"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:text-gray-900 group"
           >
             {{ $t('businesstop3')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>

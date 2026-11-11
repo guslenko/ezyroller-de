@@ -45,7 +45,15 @@
         <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
           <OrderShippingSummary :order="order" />
           <OrderPaymentSummary :order="order" />
-          <OrderBankDetails v-if="bankDetails" :bank-details="bankDetails" />
+          <div v-if="bankDetails" class="mt-4">
+            <h2 class="font-medium text-base">{{ t('account.ordersAndReturns.orderDetails.bankDetails.heading') }}</h2>
+            <p>
+              {{ t('account.ordersAndReturns.orderDetails.bankDetails.accountOwner') }}: Pentagon Sports GmbH &amp; Co. KG<br />
+              {{ t('account.ordersAndReturns.orderDetails.bankDetails.bank') }}: VR Bank Heilbronn Schwäbisch Hall eG<br />
+              {{ t('account.ordersAndReturns.orderDetails.bankDetails.iban') }}: DE51622901100210552000<br />
+              {{ t('account.ordersAndReturns.orderDetails.bankDetails.bic') }}: GENODES1SHA
+            </p>
+          </div>
           <PayPalInvoiceDetails :order="order" />
         </div>
 

@@ -1,6 +1,6 @@
 <template>
   <NarrowContainer class="mb-20 px-4" data-testid="category-layout">
-    <h1 class="relative z-base my-10 font-light typography-headline-3 md:typography-headline-2">
+    <h1 class="font-bold text-3xl mb-2">
       {{ title }}
     </h1>
     <div class="md:flex gap-6" data-testid="category-page-content">
@@ -28,7 +28,7 @@
         </div>
         <section
           v-if="products?.length"
-          class="grid grid-cols-1 @2xs:grid-cols-2 gap-4 @md:gap-6 @md:grid-cols-2 @lg:grid-cols-3 @3xl:grid-cols-4 mb-10 @md:mb-5"
+          class="grid grid-cols-1 @2xs:grid-cols-2 gap-4 @md:gap-6 @md:grid-cols-3 @lg:grid-cols-4 mb-10 @md:mb-5"
           data-testid="category-grid"
         >
           <NuxtLazyHydrate

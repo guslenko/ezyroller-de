@@ -1,31 +1,35 @@
 <!-- @overrides-core-block -->
 <template>
   <footer class="w-full bg-zinc-100" data-testid="footer">
-    <div class="w-full bg-white border-t border-zinc-300 py-0">
+    <div class="w-full bg-white border-t border-gray-300 py-0">
       <div class="max-w-screen-2xl mx-auto w-full px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 w-full">
           <!-- BLOCK 1 -->
-          <div class="flex items-center gap-3 py-4 border-b border-zinc-300 md:border-none">
+          <div class="flex items-center gap-3 py-4 border-b border-gray-300 md:border-none">
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon9.webp"
               alt=""
+              width="56"
+              height="56"
               class="h-14 w-14 mr-4"
             />
-            <div class="flex flex-col leading-tight text-left font-normal text-xl">
-              <span class="font-bold">{{ $t('biz35') }}</span>
+            <div class="flex flex-col leading-tight text-left font-normal text-xl text-gray-800">
+              <span class="text-xl font-bold text-gray-800">{{ $t('biz35') }}</span>
               <span class="font-light text-base">{{ $t('biz36') }}</span>
             </div>
           </div>
 
           <!-- BLOCK 2 -->
-          <div class="flex items-center gap-3 py-2 border-b border-zinc-300 md:border-none">
+          <div class="flex items-center gap-3 py-2 border-b border-gray-300 md:border-none">
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon7.webp"
               alt=""
+              width="56"
+              height="56"
               class="h-14 w-14 mr-4"
             />
-            <div class="flex flex-col leading-tight text-left font-normal text-xl">
-              <span class="font-bold">{{ $t('biz37') }}</span>
+            <div class="flex flex-col leading-tight text-left font-normal text-xl text-gray-800">
+              <span class="text-xl font-bold text-gray-800">{{ $t('biz37') }}</span>
               <span class="font-light text-base">{{ $t('biz38') }}</span>
             </div>
           </div>
@@ -35,10 +39,12 @@
             <img
               src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/icon8.webp"
               alt=""
+              width="56"
+              height="56"
               class="h-14 w-14 mr-4"
             />
-            <div class="flex flex-col leading-tight text-left font-normal text-xl">
-              <span class="font-bold">{{ $t('biz39') }}</span>
+            <div class="flex flex-col leading-tight text-left font-normal text-xl text-gray-800">
+              <span class="text-xl font-bold text-gray-800">{{ $t('biz39') }}</span>
               <span class="font-light text-base">{{ $t('biz40') }}</span>
             </div>
           </div>
@@ -49,7 +55,7 @@
     <!-- TOP STRIP: PAYMENT + SHIPPING ICONS -->
 
     <!-- MAIN FOOTER -->
-    <section class="w-full py-10 px-4 bg-white border-t border-zinc-300">
+    <section class="w-full py-10 px-4 bg-white border-t border-gray-300">
       <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <!-- COLUMN 1: BRAND (2 columns wide) -->
         <div class="md:col-span-2">
@@ -61,13 +67,13 @@
             />
           </NuxtLink>
 
-          <div class="text-xl font-bold mb-2 text-black">
+          <div class="text-xl font-bold mb-2 text-gray-800">
             {{ $t('textWidgetTitle') }}
           </div>
 
-          <p class="text-black text-base leading-relaxed font-light mb-4">
+          <p class="text-gray-800 text-base leading-relaxed font-light mb-4">
             {{ $t('textWidgetDesc') }}
-            <NuxtLink :to="localePath('/kontakt')" class="underline hover:text-black">{{
+            <NuxtLink :to="localePath('/kontakt')" class="border-b border-gray-300 pb-[2px] text-gray-800 no-underline transition-colors duration-300 hover:border-gray-900 hover:text-gray-900">{{
               $t('textWidgetLink')
             }}</NuxtLink
             >.
@@ -76,8 +82,8 @@
           <!-- SOCIAL ICONS -->
           <div class="flex items-center gap-4 mt-4">
             <!-- Facebook -->
-            <NuxtLink :to="'https://www.facebook.com/ezyroller.eu'" target="_blank">
-              <svg class="h-10 w-10 text-neutral-700 hover:text-black" fill="currentColor" viewBox="0 0 24 24">
+            <NuxtLink :to="'https://www.facebook.com/ezyroller.eu'" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
+              <svg class="h-10 w-10 text-gray-500 hover:text-gray-900 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0022 12z"
                 />
@@ -85,8 +91,8 @@
             </NuxtLink>
 
             <!-- Instagram -->
-            <NuxtLink :to="'https://www.instagram.com/ezyroller.de'" target="_blank">
-              <svg class="h-10 w-10 text-neutral-700 hover:text-black" fill="currentColor" viewBox="0 0 24 24">
+            <NuxtLink :to="'https://www.instagram.com/ezyroller.de'" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+              <svg class="h-10 w-10 text-gray-500 hover:text-gray-900 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"
                 />
@@ -94,8 +100,8 @@
             </NuxtLink>
 
             <!-- TikTok -->
-            <NuxtLink :to="'https://www.tiktok.com/@ezyroller.de'" target="_blank">
-              <svg class="h-10 w-10 text-neutral-700 hover:text-black" fill="currentColor" viewBox="0 0 24 24">
+            <NuxtLink :to="'https://www.tiktok.com/@ezyroller.de'" target="_blank" aria-label="TikTok" rel="noopener noreferrer">
+              <svg class="h-10 w-10 text-gray-500 hover:text-gray-900 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12.75 2c.41 2.07 1.88 3.67 3.75 4.03v3.02a7.1 7.1 0 01-3.75-1.1v6.17a5.88 5.88 0 11-5.88-5.88c.41 0 .81.05 1.19.14v3.07a2.81 2.81 0 102.81 2.81V2h1.88z"
                 />
@@ -103,103 +109,16 @@
             </NuxtLink>
           </div>
         </div>
-        <!-- COLUMN 2: CATEGORIES -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">EzyRoller</h3>
-          <ul class="space-y-2">
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath('/find-ezyroller')"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('videoCta') }}
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath($t('textWidgetLI1'))"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('textWidgetL10') }}
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath($t('textWidgetLI2'))"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                EzyRoller Originals
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath($t('textWidgetLI3'))"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                EzyRoller X-Series
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath($t('textWidgetLI6'))"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('textWidgetL11') }}
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath($t('textWidgetLI5'))"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('textWidgetL12') }}
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath($t('textWidgetLI4'))"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('textWidgetL13') }}
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath('/business')"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('textWidgetL14') }}
-              </UiLink>
-            </li>
-            <li>
-              <UiLink
-                :tag="NuxtLink"
-                :to="localePath('/our-story')"
-                class="text-neutral-700 hover:text-black hover:underline"
-              >
-                {{ $t('textWidgetL15') }}
-              </UiLink>
-            </li>
-          </ul>
-        </div>
         <!-- COLUMN 3: SHOP LINKS -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">{{ $t('textWidgetL16') }}</h3>
+          <h3 class="text-xl font-bold mb-4 text-gray-800">{{ $t('textWidgetL16') }}</h3>
 
           <ul class="space-y-2">
             <li>
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/ezyroller-care')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL8') }} & {{ $t('textWidgetL9') }}
               </UiLink>
@@ -208,7 +127,7 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/cancellation-rights')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL2') }}
               </UiLink>
@@ -217,7 +136,7 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/widerrufsformular')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL001') }}
               </UiLink>
@@ -227,7 +146,7 @@
                 href="https://cdn02.plentyone.com/4in9ikd3ipve/frontend/category_images/Legal_guarantee_notice_DEN.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 Gesetzliche Gewährleistung
               </UiLink>
@@ -236,7 +155,7 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/legal-disclosure')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL3') }}
               </UiLink>
@@ -245,7 +164,7 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/privacy-policy')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL4') }}
               </UiLink>
@@ -254,7 +173,7 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/terms-and-conditions')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL5') }}
               </UiLink>
@@ -263,7 +182,7 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/faq')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL6') }}
               </UiLink>
@@ -272,9 +191,106 @@
               <UiLink
                 :tag="NuxtLink"
                 :to="localePath('/kontakt')"
-                class="text-neutral-700 hover:text-black hover:underline"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
               >
                 {{ $t('textWidgetL7') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                tag="button"
+                type="button"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+                @click="openCookieSettings"
+              >
+                {{ $t('CookieBar.Cookie Settings') }}
+              </UiLink>
+            </li>
+          </ul>
+        </div>
+        <!-- COLUMN 2: CATEGORIES -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-gray-800">EzyRoller</h3>
+          <ul class="space-y-2">
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath('/find-ezyroller')"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('videoCta') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath($t('textWidgetLI1'))"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('textWidgetL10') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath($t('textWidgetLI2'))"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                EzyRoller Originals
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath($t('textWidgetLI3'))"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                EzyRoller X-Series
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath($t('textWidgetLI6'))"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('textWidgetL11') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath($t('textWidgetLI5'))"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('textWidgetL12') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath($t('textWidgetLI4'))"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('textWidgetL13') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath('/business')"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('textWidgetL14') }}
+              </UiLink>
+            </li>
+            <li>
+              <UiLink
+                :tag="NuxtLink"
+                :to="localePath('/our-story')"
+                class="inline-block border-b border-gray-300 pb-[2px] !text-gray-800 !no-underline transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900"
+              >
+                {{ $t('textWidgetL15') }}
               </UiLink>
             </li>
           </ul>
@@ -282,7 +298,7 @@
       </div>
     </section>
 
-    <div class="w-full bg-white border-t border-zinc-300 py-4">
+    <div class="w-full bg-white border-t border-gray-300 py-4">
       <div class="max-w-screen-2xl mx-auto flex flex-wrap justify-center items-center gap-6 sm:gap-8 px-4">
         <img
           src="https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/dhl.webp"
@@ -351,7 +367,7 @@
     </div>
 
     <!-- COPYRIGHT BAR -->
-    <div class="text-black bg-white border-t border-zinc-300 text-center py-4 text-base font-light">
+    <div class="text-gray-800 bg-white border-t border-gray-300 text-center py-4 text-sm font-light">
       © {{ new Date().getFullYear() }} EzyRoller — {{ $t('textWidgetCopy') }}
     </div>
   </footer>
@@ -361,4 +377,8 @@
 const { t } = useI18n();
 const localePath = useLocalizedPath();
 const NuxtLink = resolveComponent('NuxtLink');
+const { visible: cookieSettingsVisible, changeVisibilityState } = useCookieBar();
+const openCookieSettings = () => {
+  if (!cookieSettingsVisible.value) changeVisibilityState();
+};
 </script>

@@ -1,15 +1,37 @@
 <template>
   <MegaMenu :categories="categoryTree">
-    <!-- DESKTOP SEARCH -->
     <template #search>
-      <UiSearch class="hidden md:block flex-1" />
+      <div ref="desktopSearchRef" class="w-full">
+        <Transition
+          enter-active-class="transition duration-200 ease-out"
+          enter-from-class="opacity-0 translate-x-4"
+          leave-active-class="transition duration-150 ease-in"
+          leave-to-class="opacity-0 translate-x-4"
+        >
+          <div v-if="isDesktopSearchOpen" id="desktop-search-panel" class="w-full">
+            <UiSearch :close="closeDesktopSearch" />
+          </div>
+        </Transition>
+      </div>
     </template>
-
     <!-- DESKTOP ICONS -->
     <template #actions>
+      <div ref="desktopSearchButtonRef">
+        <UiButton
+          class="group header-icon !text-gray-800 hover:!bg-gray-300 active:!bg-gray-300 rounded-md p-0"
+          variant="tertiary"
+          square
+          :aria-label="t('common.actions.search')"
+          :aria-expanded="isDesktopSearchOpen"
+          aria-controls="desktop-search-panel"
+          @click="toggleDesktopSearch"
+        >
+          <SfIconSearch class="w-5 h-5" />
+        </UiButton>
+      </div>
       <!-- LANGUAGES -->
       <UiButton
-        class="group hover:bg-neutral-200 rounded-md p-0"
+        class="group header-icon !text-gray-800 hover:!bg-gray-300 active:!bg-gray-300 rounded-md p-0"
         variant="tertiary"
         square
         @click="toggleLanguageSelect()"
@@ -19,7 +41,7 @@
 
       <!-- ACCOUNT (AUTH → /my-account, GUEST → /login) -->
       <UiButton
-        class="group hover:bg-neutral-200 rounded-md p-0"
+        class="group header-icon !text-gray-800 hover:!bg-gray-300 active:!bg-gray-300 rounded-md p-0"
         variant="tertiary"
         square
         :tag="NuxtLink"
@@ -30,7 +52,7 @@
 
       <!-- WISHLIST -->
       <UiButton
-        class="group relative hover:bg-neutral-200 rounded-md p-0"
+        class="group relative header-icon !text-gray-800 hover:!bg-gray-300 active:!bg-gray-300 rounded-md p-0"
         :tag="NuxtLink"
         :to="localePath(paths.wishlist)"
         variant="tertiary"
@@ -46,7 +68,7 @@
 
       <!-- CART -->
       <UiButton
-        class="group relative hover:bg-neutral-200 rounded-md p-0"
+        class="group relative header-icon !text-gray-800 hover:!bg-gray-300 active:!bg-gray-300 rounded-md p-0"
         :tag="NuxtLink"
         :to="localePath(paths.cart)"
         variant="tertiary"
@@ -63,12 +85,8 @@
 
     <!-- MOBILE ICONS -->
     <template #mobile-actions>
-      <UiButton variant="tertiary" class="rounded-md" square @click="toggleLanguageSelect()">
-        <SfIconLanguage class="w-8 h-8" />
-      </UiButton>
-
-      <UiButton variant="tertiary" class="rounded-md" square @click="searchModalOpen">
-        <SfIconSearch class="w-8 h-8" />
+      <UiButton variant="tertiary" class="rounded-md !text-gray-800 hover:!bg-gray-300 active:!bg-gray-300" square @click="searchModalOpen">
+        <SfIconSearch class="w-6 h-6" />
       </UiButton>
     </template>
   </MegaMenu>
@@ -90,7 +108,7 @@
           :aria-label="t('common.navigation.closeDialog')"
           square
           variant="tertiary"
-          class="absolute right-4 top-2"
+          class="absolute right-4 top-2 hover:!bg-gray-300 active:!bg-gray-300"
           @click="searchModalClose"
         >
           <SfIconClose class="text-neutral-500" />
@@ -119,11 +137,30 @@ import {
 } from '@storefront-ui/vue';
 
 import LanguageSelector from '#ezyroller/components/LanguageSelector/LanguageSelector.vue';
+import { onClickOutside, onKeyStroke } from '@vueuse/core';
 import { paths } from '~/utils/paths';
 
 const NuxtLink = resolveComponent('NuxtLink');
 const localePath = useLocalePath();
 const viewport = useViewport();
+const route = useRoute();
+const desktopSearchRef = ref<HTMLElement | null>(null);
+const desktopSearchButtonRef = ref<HTMLElement | null>(null);
+const isDesktopSearchOpen = ref(false);
+const closeDesktopSearch = () => {
+  isDesktopSearchOpen.value = false;
+  return true;
+};
+const toggleDesktopSearch = async () => {
+  isDesktopSearchOpen.value = !isDesktopSearchOpen.value;
+  if (isDesktopSearchOpen.value) {
+    await nextTick();
+    desktopSearchRef.value?.querySelector<HTMLInputElement>('#search-bar')?.focus();
+  }
+};
+onClickOutside(desktopSearchRef, closeDesktopSearch, { ignore: [desktopSearchButtonRef] });
+onKeyStroke('Escape', closeDesktopSearch);
+watch(() => route.fullPath, closeDesktopSearch);
 
 const { data: cart } = useCart();
 const { wishlistItemIds } = useWishlist();
@@ -149,6 +186,13 @@ watch(
 </script>
 
 <style scoped>
+.header-icon:hover,
+.header-icon:active,
+.header-icon[aria-expanded="true"] {
+  background-color: #d1d5db !important;
+  color: #1f2937 !important;
+}
+
 @keyframes cartPulse {
   0% {
     transform: scale(1);

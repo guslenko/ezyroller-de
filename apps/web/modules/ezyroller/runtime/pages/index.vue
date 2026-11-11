@@ -35,14 +35,14 @@
               />
 
               <div
-                class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+                class="text-base font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 MINI
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </div>
             </NuxtLink>
 
-            <p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
+            <p class="text-base font-normal text-gray-800 pt-2 leading-relaxed">
               {{ $t('biz14') }} 2-5 {{ $t('biz15') }}<br />
               80-105 cm<br />
               {{ $t('biz16') }} 30 kg
@@ -59,14 +59,14 @@
               />
 
               <div
-                class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+                class="text-base font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 CLASSIC X
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </div>
             </NuxtLink>
 
-            <p class="text-xs md:text-base font-normal text-black pt-2 leading-relaxed">
+            <p class="text-base font-normal text-gray-800 pt-2 leading-relaxed">
               {{ $t('biz14') }} 3-14 {{ $t('biz15') }}<br />
               95-160 cm<br />
               {{ $t('biz16') }} 70 kg
@@ -83,14 +83,14 @@
               />
 
               <div
-                class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+                class="text-base font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 SPINNER X
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </div>
             </NuxtLink>
 
-            <p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
+            <p class="text-base font-normal text-gray-800 pt-2 leading-relaxed">
               {{ $t('biz14') }} 4-14+ {{ $t('biz15') }}<br />
               100-160 cm<br />
               {{ $t('biz16') }} 70 kg
@@ -107,14 +107,14 @@
               />
 
               <div
-                class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+                class="text-base font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 DRIFTER X
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </div>
             </NuxtLink>
 
-            <p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
+            <p class="text-base font-normal text-gray-800 pt-2 leading-relaxed">
               {{ $t('biz14') }} 4-14+ {{ $t('biz15') }}<br />
               100-160 cm<br />
               {{ $t('biz16') }} 70 kg
@@ -131,14 +131,14 @@
               />
 
               <div
-                class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+                class="text-base font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 PRO X
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </div>
             </NuxtLink>
 
-            <p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
+            <p class="text-base font-normal text-gray-800 pt-2 leading-relaxed">
               {{ $t('biz17') }} 10 {{ $t('biz15') }}<br />
               135-180 cm<br />
               {{ $t('biz16') }} 100 kg
@@ -155,14 +155,14 @@
               />
 
               <div
-                class="text-xl md:text-2xl font-medium inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 transition-all duration-300 group-hover:border-slate-700 group-hover:text-black group-hover:ml-2"
+                class="text-base font-medium inline-flex items-center gap-1 border-b border-gray-300 pb-[2px] text-gray-800 transition-colors duration-300 group-hover:border-gray-900 group-hover:text-gray-900"
               >
                 DRIFTER PRO X
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </div>
             </NuxtLink>
 
-            <p class="text-xs sm:text-base font-normal text-black pt-2 leading-relaxed">
+            <p class="text-base font-normal text-gray-800 pt-2 leading-relaxed">
               {{ $t('biz17') }} 10 {{ $t('biz15') }}<br />
               135-180 cm<br />
               {{ $t('biz16') }} 100 kg
@@ -372,6 +372,10 @@ definePageMeta({
 useHead(() => ({
   title: t('homeTitle'),
   meta: [
+    {
+      property: 'og:image',
+      content: 'https://cdn02.plentymarkets.com/4in9ikd3ipve/frontend/www-ezyroller-de/ezrp.webp',
+    },
     {
       name: 'description',
       content: t('homeDescription'),

@@ -49,6 +49,24 @@ export default defineNuxtModule({
       priority: 200,
     });
 
+    addComponent({
+      name: 'Cookiebar',
+      filePath: resolve('./runtime/components/Cookiebar/Cookiebar.vue'),
+      priority: 200,
+    });
+
+    addComponent({
+      name: 'WishlistPageContent',
+      filePath: resolve('./runtime/components/WishlistPageContent/WishlistPageContent.vue'),
+      priority: 200,
+    });
+
+    addComponent({
+      name: 'HeaderWithLink',
+      filePath: resolve('./runtime/components/HeaderWithLink/HeaderWithLink.vue'),
+      priority: 200,
+    });
+
     addImportsDir(resolve('./runtime/composables'));
     addImportsDir(resolve('./runtime/composables/**'));
     for (const file of readdirSync(resolve('./runtime/plugins'))) {
@@ -78,6 +96,8 @@ export default defineNuxtModule({
     });
     nuxt.hook('app:resolve', (app) => {
       app.layouts.default = { name: 'default', file: resolve('./runtime/layouts/default.vue') };
+      app.layouts.auth = { name: 'auth', file: resolve('./runtime/layouts/auth.vue') };
+      app.layouts.checkout = { name: 'checkout', file: resolve('./runtime/layouts/checkout.vue') };
       app.layouts['simplified-header-and-footer'] = {
         name: 'simplified-header-and-footer',
         file: resolve('./runtime/layouts/simplifiedHeaderAndFooter.vue'),
