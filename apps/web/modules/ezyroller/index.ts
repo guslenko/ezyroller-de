@@ -62,6 +62,8 @@ export default defineNuxtModule({
       });
     }
 
+    addServerHandler({ middleware: true, handler: resolve('./runtime/server/redirect-polish.ts') });
+
     extendPages((pages) => {
       for (const entry of manifest.files.filter((entry) => entry.module.startsWith('runtime/pages/'))) {
         const filename = entry.module.replace('runtime/pages/', '').replace('.vue', '');
