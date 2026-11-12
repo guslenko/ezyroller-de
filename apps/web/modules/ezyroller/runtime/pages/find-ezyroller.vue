@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-gray-800">
     <section class="relative w-full overflow-hidden h-[380px] md:h-[480px]">
       <!-- IMAGE WRAPPER -->
       <div class="relative w-full h-full overflow-hidden">

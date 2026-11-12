@@ -36,7 +36,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="$localePath($t('bizl1'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT13')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -75,7 +75,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="$localePath($t('bizl7'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT24')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -84,7 +84,7 @@
         <p class="text-base leading-relaxed pt-2">
           <NuxtLink
             :to="$localePath($t('bizl2'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT25')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -123,7 +123,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="$localePath($t('bizl3'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT34')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -162,7 +162,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="$localePath($t('bizl4'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT44')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -198,7 +198,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="$localePath($t('bizl5'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT53')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>
@@ -237,7 +237,7 @@
         <p class="text-base leading-relaxed pt-4">
           <NuxtLink
             :to="$localePath($t('bizl6'))"
-            class="inline-flex items-center gap-1 border-b border-slate-400 pb-[2px] text-gray-500 font-medium transition-all duration-300 hover:border-slate-700 hover:text-black hover:ml-2 group"
+            class="inline-flex items-center gap-1 !no-underline border-b border-gray-300 pb-[2px] !text-gray-800 font-medium transition-colors duration-300 hover:border-gray-900 hover:!text-gray-900 group"
           >
             {{ $t('sgT64')
             }}<span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> → </span>

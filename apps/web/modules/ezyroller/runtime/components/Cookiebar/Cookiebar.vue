@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="visible"
-    class="@max-sm:flex @max-sm:flex-col @max-sm:justify-between z-cookiebar w-full @xl:w-3/5 shadow-lg p-3 bg-white rounded overflow-auto fixed @xl:right-2 bottom-0 @max-md:bottom-[3.9rem] end-0 @sm:top-auto"
+    class="@max-sm:flex @max-sm:flex-col @max-sm:justify-between z-cookiebar w-full @xl:w-3/5 shadow-lg p-3 bg-white text-gray-800 rounded overflow-auto fixed @xl:right-2 bottom-0 @max-md:bottom-[3.9rem] end-0 @sm:top-auto"
   >
     <div v-if="!furtherSettingsOn">
       <!-- cookie info -->

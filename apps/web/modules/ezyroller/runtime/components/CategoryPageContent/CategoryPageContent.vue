@@ -19,7 +19,7 @@
               })
             }}
           </span>
-          <UiButton variant="tertiary" class="@md:hidden whitespace-nowrap" @click="open">
+          <UiButton variant="tertiary" class="ezy-list-settings @md:hidden whitespace-nowrap" @click="open">
             <template #prefix>
               <SfIconTune />
             </template>

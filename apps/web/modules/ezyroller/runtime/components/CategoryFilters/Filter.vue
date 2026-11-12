@@ -1,5 +1,5 @@
 <template>
-  <SfAccordionItem v-if="facet" v-model="open">
+  <SfAccordionItem v-if="facet" v-model="open" class="ezy-filter-card">
     <template #summary>
       <div class="flex justify-between py-1 px-4 mb-2 select-none bg-neutral-100">
         <div class="py-1 rounded-none select-none">

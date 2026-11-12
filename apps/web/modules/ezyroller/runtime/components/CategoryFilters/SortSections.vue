@@ -1,5 +1,5 @@
 <template>
-  <div v-if="shouldRenderFacet" class="border border-neutral-200 mb-4">
+  <div v-if="shouldRenderFacet" class="ezy-filter-card border border-neutral-200 mb-4">
     <SfAccordionItem v-if="facet" v-model="open">
       <template #summary>
         <div class="flex justify-between py-1 px-4 mb-2 select-none bg-neutral-100">

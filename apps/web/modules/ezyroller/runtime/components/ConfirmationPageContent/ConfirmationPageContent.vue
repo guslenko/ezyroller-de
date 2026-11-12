@@ -12,7 +12,7 @@
 
     <div class="flex flex-col @md:flex-row w-full @md:w-auto @lg:w-3/4 flex-wrap gap-x-6">
       <div class="flex-1">
-        <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
+        <div class="border border-1 border-neutral-200 rounded bg-gray-200 p-4 w-full my-4 text-sm">
           <OrderDetails :order="order" />
         </div>
 
@@ -28,21 +28,21 @@
           </div>
         </div>
 
-        <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
+        <div class="border border-1 border-neutral-200 rounded bg-gray-200 p-4 w-full my-4 text-sm">
           <OrderTotals :order="order" />
         </div>
         <div>
           <a
             :tag="NuxtLink"
             :href="localePath('/widerrufsformular')"
-            class="inline-flex items-center justify-center font-medium text-base focus-visible:outline focus-visible:outline-offset rounded-md disabled:text-disabled-500 disabled:bg-disabled-300 disabled:shadow-none disabled:ring-0 disabled:cursor-not-allowed py-2 leading-6 px-4 gap-2 text-white shadow hover:shadow-md active:shadow bg-primary-500 hover:bg-primary-600 active:bg-primary-700 disabled:bg-disabled-300 mt-2"
+            class="inline-flex items-center justify-center font-medium text-base focus-visible:outline focus-visible:outline-offset rounded-md disabled:text-disabled-500 disabled:bg-disabled-300 disabled:shadow-none disabled:ring-0 disabled:cursor-not-allowed py-2 leading-6 px-4 gap-2 !text-white shadow hover:shadow-md active:shadow !bg-gray-800 hover:!bg-gray-900 active:!bg-gray-900 !no-underline disabled:bg-disabled-300 mt-2"
           >
             {{ $t('textWidgetL001') }}
           </a>
         </div>
       </div>
       <div class="flex-1">
-        <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
+        <div class="border border-1 border-neutral-200 rounded bg-gray-200 p-4 w-full my-4 text-sm">
           <OrderShippingSummary :order="order" />
           <OrderPaymentSummary :order="order" />
           <div v-if="bankDetails" class="mt-4">
@@ -59,7 +59,7 @@
 
         <div
           v-if="!isAuthorized"
-          class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full mt-4 text-sm items-center flex flex-col"
+          class="border border-1 border-neutral-200 rounded bg-gray-200 p-4 w-full mt-4 text-sm items-center flex flex-col"
         >
           <div class="font-bold text-primary-700 @md:text-lg text-center mt-5">
             {{ t('orderConfirmation.saveOrderToAccount') }}
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <UiButton :tag="NuxtLink" :href="localePath(paths.home)" class="@max-md:w-full mt-6 mb-8" variant="secondary">
+    <UiButton :tag="NuxtLink" :href="localePath(paths.home)" class="@max-md:w-full mt-6 mb-8 confirmation-continue" variant="secondary">
       {{ t('common.actions.continueShopping') }}
     </UiButton>
   </div>

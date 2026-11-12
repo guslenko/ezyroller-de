@@ -75,7 +75,7 @@
 
     <UiButton
       variant="tertiary"
-      class="bg-slate-700 text-white font-medium w-full text-base md:hidden whitespace-nowrap"
+      class="ezy-list-settings bg-slate-700 text-white font-medium w-full text-base md:hidden whitespace-nowrap"
       @click="open"
     >
       <template #prefix>

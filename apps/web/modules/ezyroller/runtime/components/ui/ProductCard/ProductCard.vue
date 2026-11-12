@@ -19,7 +19,7 @@
           data-testid="product-card-link"
         >
           <div
-            class="relative w-full px-3 py-0 rounded-md"
+            class="relative w-full px-2 py-0 rounded-md"
             style="background: rgba(0, 0, 0, 0.04); filter: brightness(96%)"
           >
             <div
@@ -107,7 +107,9 @@
           <div v-if="showBasePrice" class="mb-2 mt-2">
             <BasePriceInLine :base-price="basePrice" :unit-content="unitContent" :unit-name="unitName" />
           </div>
-          <div class="flex flex-col-reverse items-start md:flex-row md:items-center">
+          <div class="product-card-pricing">
+            <span v-if="crossedPrice && crossedPrice > price" class="product-card-discount">-{{ Math.round((1 - price / crossedPrice) * 100) }}%</span>
+            <div>
             <span
               class="block pb-2 font-medium typography-text-lg ml-1 md:ml-0 md:mt-2"
               data-testid="product-card-vertical-price"
@@ -118,10 +120,11 @@
             </span>
             <span
               v-if="crossedPrice && differentPrices(price, crossedPrice)"
-              class="typography-text-sm text-neutral-500 line-through mt-2 md:mt-0 md:ml-2 px-2 py-0 bg-amber-300 rounded-md"
+              class="block text-sm text-gray-500 line-through"
             >
               {{ format(crossedPrice) }}
             </span>
+            </div>
           </div>
         </template>
         <template v-if="key === 'addToCart' && configuration?.fields?.addToCart">
@@ -130,6 +133,7 @@
             size="sm"
             class="min-w-[80px] w-fit"
             data-testid="add-to-basket-short"
+            :aria-label="t('common.actions.add')"
             :disabled="loading"
             :variant="configuration?.addToCartStyle || 'primary'"
             @click="addWithLoader(Number(productGetters.getId(product)))"
@@ -138,7 +142,7 @@
               <SfIconShoppingCart size="sm" />
             </template>
             <SfLoaderCircular v-if="loading" class="flex justify-center items-center" size="sm" />
-            <span v-else>{{ t('common.actions.add') }}</span>
+            <span v-else class="product-cart-label">{{ t('common.actions.add') }}</span>
           </UiButton>
           <UiButton
             v-else
@@ -148,8 +152,11 @@
             :to="productPath"
             size="sm"
             class="w-fit"
+            :aria-label="t('common.actions.showOptions')"
+            data-testid="product-card-options"
           >
-            <span>{{ t('common.actions.showOptions') }}</span>
+            <SfIconShoppingCart size="sm" />
+            <span class="product-cart-label">{{ t('common.actions.showOptions') }}</span>
           </UiButton>
         </template>
       </template>
