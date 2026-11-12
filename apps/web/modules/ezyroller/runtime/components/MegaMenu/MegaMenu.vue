@@ -1,7 +1,7 @@
 <template>
   <header class="relative w-full md:sticky shadow-md z-10 bg-white">
     <!-- TOP BAR -->
-    <div class="flex items-center justify-between px-4 md:px-0 py-0.5 md:py-2 w-full max-w-screen-2xl mx-auto">
+    <div class="flex items-center justify-between px-4 lg:px-0 py-0.5 md:py-2 w-full max-w-screen-2xl mx-auto">
       <!-- MOBILE HEADER -->
       <div class="flex items-center justify-between w-full lg:hidden">
         <!-- BURGER -->

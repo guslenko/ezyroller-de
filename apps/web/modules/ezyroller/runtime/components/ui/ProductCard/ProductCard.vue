@@ -120,7 +120,7 @@
             </span>
             <span
               v-if="crossedPrice && differentPrices(price, crossedPrice)"
-              class="block text-sm text-gray-500 line-through"
+              class="product-card-old-price block text-sm text-gray-500 line-through"
             >
               {{ format(crossedPrice) }}
             </span>

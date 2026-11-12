@@ -4,7 +4,7 @@
       {{ title }}
     </h1>
     <div class="md:flex gap-6" data-testid="category-page-content">
-      <CategorySidebar class="md:w-[303px]" :is-open="isOpen" @close="close">
+      <CategorySidebar class="md:w-[23%]" :is-open="isOpen" @close="close">
         <NuxtLazyHydrate when-visible>
           <slot name="sidebar" />
         </NuxtLazyHydrate>
